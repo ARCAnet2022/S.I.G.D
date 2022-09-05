@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+}
+body.html{
+    overflow-x: hidden;
+}
+
+.cajasombra{
+    box-shadow: 
+    0 0 5px rgba(116, 121, 134, 0.733),
+    0 0 10px rgb(136, 139, 146),
+    0 0 15px rgb(196, 199, 207),
+    0 0 20px rgb(233, 238, 255);
+ 
+}
+.color{
+    background-color: rgb(255, 255, 255);
+    
+    border-bottom: white;
+    border-top: white;
+    border-left: white;
+    border-right: white;
+}
+
+.textoHeader{
+    margin:0;
+    width: 100%;
+    text-align: center;
+}
+
+.texto{
+    text-align:center;
+   
+}
+.textoprin{
+    color:#465c6dc7 !important;
+    white-space: nowrap;
+    font-family:'Franklin Gothic Medium';
+}
+.textoprin:hover{
+    background-color: #465c6dc7;
+    border-radius: 4%;
+    transition: 2s;
+    color:white !important;
+}
+
+
+
+
+
+.foto{
+    margin-top: 4%;
+    border-radius: 80%;
+    border: 1px solid rgb(129, 129, 129);
+}
+
+
+.color:hover{
+    color:rgb(17, 0, 255) !important;
+}
+
+
+.contenedor {
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.parrafo {
+    font-size: 1.6vmin;
+    height: 54vh;
+    margin: 3em;
+    overflow: auto;
+    color: rgb(71, 71, 71);
+    background-color:#cde8f1d2 ;
+    border-radius: 10%;
+    padding: 3%;
+}
+.row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+
+}
+
+.row .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.colorfondo {
+    max-width: 100%;
+    background-size:cover;
+    background-image: url(../../imagenes/deportes/fondo\ \(1\).png);
+    background-repeat: no-repeat ;
+    background-attachment:local;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+.contenedor-parrafo{
+    height: 70vh;
+    background-color: #644a4a; 
+   
+  
+}
+.contenido-parrafo{
+    height: 54vh;
+    margin: 3em;
+    font-size:0.9vw;
+    color: rgb(71, 71, 71);
+    padding: 2%;
+    border-radius: 15%;
+}
+
+.cajon{
+    margin-top: 5%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 
+     0 0 5px rgba(116, 121, 134, 0.733),
+     0 0 10px rgb(136, 139, 146),
+     0 0 15px rgb(196, 199, 207),
+     0 0 20px rgb(233, 238, 255);
+     width: 12%;
+     height: 60%;
+}
+.contenido{
+    padding: 1%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CDE8F1;
+}
+.imagen{
+    margin-top: 2%;
+    width: 80%;
+}
+
+.elementopie{
+    background-color: rgb(23, 37, 41);
+}
+.elementopie a{
+    color:white;
+}
+.modal-color{
+    width: 100%;
+    border-top:6px solid #000000;
+    background-color: #ffffff;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.modal-contenido{
+    background-color: #ffffff;
+    color: #494949;
+    width: 60%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+     
+}
+.modal-cabezera{
+    background-color: #b8dbeb;
+   color: #2c2c2c;
+}
+.formulario{
+    background-color: #a09f9f;
+}
+
+.jumbotron{
+   margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255) !important;
+}
+footer{
+    align-items: center;
+ 
+}
+.piedepagina{
+    background-size:auto;
+    background-image: url(../../imagenes/LogoArcanet3.png);
+    background-repeat: no-repeat ;
+    background-attachment:local;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.arca{
+    width: 4em;
+    margin-left: 6%;
+    display: block;
+    animation: float 3s linear infinite;
+   
+}
+@keyframes float{
+    0%, 100% {
+        transform:translateY(0rem) ;
+    }
+   
+    28%{
+        transform: translateY(-0.3rem);
+    }
+}
+
+
+                                              /*responsive*/
+
+
+@media only screen and (max-width:850px){
+    .imagen{
+        height:10vh;
+    }
+    .row{
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+       
+    }
+
+    .parrafo{
+       
+        height: 40vh;
+        font-size: 3vmin; 
+       
+    }
+    .colorfondo{
+       width: 100%;
+        height: 55vh;
+       
+    }
+    .jumbotron{
+        margin-top: 1%;
+     height: 100vh;
+    }
+}
+
+@media only screen and (max-width:1000px){
+    .card{
+        flex-direction: column;
+        
+        width: 100%;
+        
+       
+    }
+}
+
+.contenido-informativo{
+    background-color: #b8dbeb13 ;
+}
+.cabezera{
+    color: white;
+    background-color: #a2dcf7;
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 2%;
+    font-size: larger;
+    font-family: verdana;
+    border-left: 1px solid rgb(59, 121, 146);
+    border-right: 1px solid rgb(59, 121, 146);
+    border-bottom: 1px solid rgba(59, 121, 146, 0.116);
+}

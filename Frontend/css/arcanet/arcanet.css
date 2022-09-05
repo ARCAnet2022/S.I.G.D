@@ -1,0 +1,97 @@
+body{
+    background-color: rgb(12, 74, 102) !important;
+}
+
+.arca-contenedor{
+    background-image: url(../../imagenes/arcanet/agua.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.fondo-arcanet{
+    width: 30vw;
+  
+    background-image: url(../../imagenes/LogoArcanet3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.formulario{
+   width: 45%;
+   margin: 11%;
+}
+.boton{
+    float:right;
+    margin-top: 2%;
+    background-color: rgba(77, 104, 69, 0.466);
+    color: white;
+}
+
+.arca{
+    width: 20%;
+    margin-top: 3%;
+   animation: flotar 3s linear infinite; 
+}
+@keyframes flotar{
+    0%, 100% {
+        transform:translateY(0rem) ;
+    }
+   
+    28%{
+        transform: translateY(-0.6rem);
+    }
+}
+.navegacion{
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid rgb(255, 255, 255);
+}
+.letra-nav{
+    color:rgb(254, 254, 255) !important;
+    font-family: verdana;
+}
+.logo{
+    width: 15%;
+}
+.arcanet{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(12, 74, 102)!important;
+    border-bottom: 1px solid white;
+}
+
+.soporte{
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(12, 74, 102)!important; 
+}
+.preguntas{
+    width: 40%;
+    float: left;
+    color: black;
+    background-color: rgb(12, 74, 102)!important; 
+}
+.preguntas1{
+    width: 50%;
+    float: right;
+    color: black;
+    margin-right: 2%;
+    border-left: 10px solid rgba(39, 163, 115, 0.589);
+    border-top: 10px solid rgb(39, 163, 115, 0.589);
+    border-right: 10px solid rgb(39, 163, 115, 0.589);
+    border-bottom: 10px solid rgb(39, 163, 115, 0.589);
+    background-color: rgb(12, 74, 102)!important; 
+}
+
+
+.texto{
+    margin-top:2%;
+    margin-right: 5%;
+    text-align: center;
+    color: rgb(0, 0, 0) !important;
+}

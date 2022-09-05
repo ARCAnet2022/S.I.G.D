@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body.html{
+    overflow-x: hidden;
+}
+.cajasombra{
+    box-shadow: 
+    0 0 5px rgba(116, 121, 134, 0.733),
+    0 0 10px rgb(136, 139, 146),
+    0 0 15px rgb(196, 199, 207),
+    0 0 20px rgb(233, 238, 255);
+}
+
+.texto{
+    text-align:center;
+    
+}
+
+.elementopie{
+    background-color: rgb(23, 37, 41); 
+}
+.elementopie a{
+    color:white;
+}
+.fila{
+    margin-top: 2%;
+}
+
+.boton{
+    color:#465c6dc7 !important;
+    font-family:'Franklin Gothic Medium';
+}
+.boton:hover{
+    color:white!important;
+}
+
+.piedepagina{
+    background-size:auto;
+    background-image: url(../../imagenes/LogoArcanet3.png);
+    background-repeat: no-repeat ;
+    background-attachment:local;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.arca{
+    width: 4em;
+    margin-left: 6%;
+    display: block;
+    animation: float 3s linear infinite;
+   
+}
+@keyframes float{
+    0%, 100% {
+        transform:translateY(0rem) ;
+    }
+   
+    28%{
+        transform: translateY(-0.3rem);
+    }
+}
+.jumbotron{
+    top:0 !important;
+    background-color: white !important;
+    height:180vh;
+    padding: 0 !important;
+    overflow: auto;
+   
+}
+.modal-color{
+    width: 100%;
+   
+    background-color: #b8dbeb49;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    
+}
+.modal-contenido{
+    background-color: #465c6d;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+.modal-cabezera{
+   width: 100%;
+   background-image: url(../../imagenes/logo.png);
+   background-repeat: no-repeat ;
+   background-position: center;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+}
+
+.textoprin{
+    color:#465c6dc7 !important;
+    white-space: nowrap;
+    font-family:'Franklin Gothic Medium';
+}
+.textoprin:hover{
+    background-color: #465c6dc7;
+    border-radius: 4%;
+    transition: 2s;
+    color:white !important;
+}
+
+.color{
+    text-align: center!important;
+   color: white!important;
+}
+.color:hover{
+   color: rgb(24, 36, 54) !important;;
+ }
+.color-texto{
+    text-align: center;
+    color: white!important;
+}
+h2{
+    width: 100%;
+    background-color: #465c6dc7;
+    color:white;
+    border-radius: 2%;
+}
+.caja{
+     width: 100%;
+ 
+     padding: 4%;
+     display: grid;
+     place-items: center;
+}
+.formulario{
+    display: grid;
+    place-items: center;
+    height: 80vh;
+    padding: 1%;
+    padding-left: 8%;
+    width: 100%;
+   
+   
+
+}
+.row{
+    width: 100%;
+}
+.boton-enviar{
+   background-color: #4e8cdd;
+  
+   border:3px solid #ffffff !important;
+}
+.boton-enviar:hover{
+    background-color: #8db1c2;
+ 
+}
+
+h1{
+    padding: 2%;
+    border-bottom: 1px solid black;
+    text-align: center;
+    width: 90%;
+    color: #383838!important;
+}
+h3{
+    text-align: center;
+    width: 60%;
+    padding: 3%;
+    color: #4b4a4a !important;
+    border-bottom: 1px solid #6988a1;
+}
+
+.hamburguesa-boton{
+  background-color: #00000050!important;
+}
+.bg{
+    background-color: #465c6dc7!important;
+   border-bottom: 1px solid rgb(94, 94, 94);
+}
+.sidebar{
+    background-color: #247c9767!important;
+}
+.navegacion_lista{
+    list-style: none;
+    z-index: 2;
+    height: 100vh;
+  
+    overflow: auto;
+}
+.navegacion_lista li:hover{
+    transition: 2s;
+    background-color: #247c9767;
+    
+}
+.navegacion_lista li{
+    margin-top: 40%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-right: 3px solid #247c9767;
+}
+.navegacion_lista li a {
+    color:rgb(231, 230, 230);
+    white-space: nowrap;
+    font-size: 1.2vh;   
+    font-weight: bold;
+}
+.navegacion_lista li a:hover {
+   color:#2c2c2c;
+   font-weight: bold;
+}
+
+@media (min-width: 750px){
+    .navegacion_lista li{
+     margin-top: 50px;
+    }
+}
+.estadio{
+   padding: 2%;
+
+}
+.torneos{
+    background-color: #acb9b9;
+    height: 10vh;
+    border-bottom: 1px solid black;
+    display: grid;
+    place-items: center;
+}
+.datos-torneo p{
+   padding-top: 4%;
+}
+.equipos{
+    height: 50vh;
+    background-color: #8da2b9af;
+}
+.datos-personales{
+    
+    display: grid;
+    place-items: center;
+}
+.a{
+   background-color: #ffffff;
+    padding-top:2%;
+    border-bottom: 1px solid black; 
+    height: 30%;
+    
+}
+
+.formularios{
+    display: grid;
+    place-items: center;
+    height: 160vh;
+    padding: 1%;
+    padding-left: 1%;
+    width: 100%;
+    background-color:#3073b3af!important;
+    box-shadow: 
+    0 0 5px rgba(116, 121, 134, 0.733),
+    0 0 10px rgb(136, 139, 146),
+    0 0 15px rgb(196, 199, 207),
+    0 0 20px rgb(233, 238, 255);
+
+}
+#form-param{
+    padding: 20px;
+    background-color: #fff;
+    display:flex;
+}
+#form-param .container{
+    flex:2;
+}
+#form-param .buttons{
+    flex:1;
+    }
+input{
+    padding: 5px;
+    margin: 6px;
+    width: 42%;
+}
+button{
+    border:none;
+    padding: 9px;
+    display: block;
+    margin: 6px;
+}
+button:first-child{
+    background-color: #48e;
+    color: #fff;
+}
+.imagen{
+    width: 100%;
+}
+.columna{
+    padding-top: 5%;
+}
+col{
+    padding: 0%!important;
+
+}

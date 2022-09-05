@@ -1,192 +1,169 @@
 <?php
 
-class Usuario{
+include  'Usuarios.php';
+include  'Entrenadores.php';
+include  'Deportistas.php';
+include  'Administradores.php';
+include  'Administrativos.php';
+include  'Jueces.php';
+include  'Scouts.php';
+include  'Analistas.php';
 
-    private $ciUsuario
-    private $Nombre
-    private $Apellido
-    private $Telefono
-    private $Nacionalidad
-    private $FechaNac
-    private $Calle
-    private $Numero
-    private $Ciudad
 
-    /**
-     * Get the value of ciUsuario
-     */
-    public function getCiUsuario()
-    {
-        return $this->ciUsuario;
+/*Almaceno los valores de las superglobales que provienen de los formularios*/
+if (isset($_REQUEST['ci_usuario']) && isset($_REQUEST['contrasena'])  || isset($_REQUEST['ci_deportista'])) {
+
+    /*Instancio los objetos de cada clase y llamo a su funcion correspondiente para obtener la ci del usuario que va a ingresar. */
+    $user = $_REQUEST['ci_usuario'];  
+    $deport = $_REQUEST['ci_deportista'];  
+    $pw = $_REQUEST['contrasena'];
+
+    $deportistas = new Deportistas();
+    $deportista = $deportistas->getCiDeportistas($deportistas, $deport);
+    if (!$user && !$pw) {
+        foreach ($deportista[0] as $deportist) 
+            {
+                if ($deportist == $deport) {
+                    session_start();
+    
+                    $_SESSION["is_logged"] = true;
+    
+                    $_SESSION["user"] = $usr;
+    
+                    header("Location: ../../../Frontend/HTML/Roles/deportista/deportista.html");
+                    exit();
+                }     
+            }
     }
 
-    /**
-     * Set the value of ciUsuario
-     */
-    public function setCiUsuario($ciUsuario): self
-    {
-        $this->ciUsuario = $ciUsuario;
+    $tmp = new Usuarios();
+    $usuario = $tmp->getUserByNameAndPassword($usuarios, $user, $pw);
 
-        return $this;
-    }
+    $entrenadores = new Entrenadores();
+    $entrenador = $entrenadores->getCiEntrenadores($entrenadores, $user);
 
-    /**
-     * Get the value of Nombre
-     */
-    public function getNombre()
-    {
-        return $this->Nombre;
-    }
+    
 
-    /**
-     * Set the value of Nombre
-     */
-    public function setNombre($Nombre): self
-    {
-        $this->Nombre = $Nombre;
+    $analistas = new Analistas();
+    $analista = $analistas->getCiAnalistas($analistas, $user);
 
-        return $this;
-    }
+    $jueces = new Jueces();
+    $juez = $jueces->getCiJueces($jueces, $user);
 
-    /**
-     * Get the value of Apellido
-     */
-    public function getApellido()
-    {
-        return $this->Apellido;
-    }
+    $administrativos = new Administrativos();
+    $administrativo = $administrativos->getCiAdministrativos($administrativos, $user);
 
-    /**
-     * Set the value of Apellido
-     */
-    public function setApellido($Apellido): self
-    {
-        $this->Apellido = $Apellido;
+    $administradores = new Administradores();
+    $administrador = $administradores->getCiAdministradores($administradores, $user);
 
-        return $this;
-    }
-
-    /**
-     * Get the value of Telefono
-     */
-    public function getTelefono()
-    {
-        return $this->Telefono;
-    }
-
-    /**
-     * Set the value of Telefono
-     */
-    public function setTelefono($Telefono): self
-    {
-        $this->Telefono = $Telefono;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of Nacionalidad
-     */
-    public function getNacionalidad()
-    {
-        return $this->Nacionalidad;
-    }
-
-    /**
-     * Set the value of Nacionalidad
-     */
-    public function setNacionalidad($Nacionalidad): self
-    {
-        $this->Nacionalidad = $Nacionalidad;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of FechaNac
-     */
-    public function getFechaNac()
-    {
-        return $this->FechaNac;
-    }
-
-    /**
-     * Set the value of FechaNac
-     */
-    public function setFechaNac($FechaNac): self
-    {
-        $this->FechaNac = $FechaNac;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of Calle
-     */
-    public function getCalle()
-    {
-        return $this->Calle;
-    }
-
-    /**
-     * Set the value of Calle
-     */
-    public function setCalle($Calle): self
-    {
-        $this->Calle = $Calle;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of Numero
-     */
-    public function getNumero()
-    {
-        return $this->Numero;
-    }
-
-    /**
-     * Set the value of Numero
-     */
-    public function setNumero($Numero): self
-    {
-        $this->Numero = $Numero;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of Ciudad
-     */
-    public function getCiudad()
-    {
-        return $this->Ciudad;
-    }
-
-    /**
-     * Set the value of Ciudad
-     */
-    public function setCiudad($Ciudad): self
-    {
-        $this->Ciudad = $Ciudad;
-
-        return $this;
-    }
-
-    function __constructor( int $ciUsuario , string $Nombre , string $Apellido , int $Telefono , string $Nacionalidad , 
-                            int $FechaNac , string $Calle , int $Numero , string $Ciudad){
-
-        $this -> ciUsuario = $ciUsuario ;
-        $this -> Nombre = $Nombre ;
-        $this -> Apellido = $Apellido ;
-        $this -> Telefono = $Telefono ;
-        $this -> Nacionalidad = $Nacionalidad ;
-        $this -> FechaNac = $FechaNac ;
-        $this -> Calle = $Calle ;
-        $this -> Numero = $Numero ;
-        $this -> Ciudad = $Ciudad ;
-    } 
+    $scouts = new Scouts();
+    $scout = $scouts->getCiScouts($scouts, $user);
+}else {
+    header("Location: ../../../Frontend/Index.html");
 }
+
+
+
+/*Si el usuario no existe lo derivo a Index.html */
+if (!$usuario) {
+    header("Location: ../../../Frontend/Index.html");
+}
+else{
+    /*Si el usuario existe recorro la tabla usuario en la posicion 0 (donde está ubicado la id del usuario) */
+    foreach ($usuario[0] as $usr) {
+
+        /*Si el id de usuario que consegui desde la base de datos es igual al input que almacene en $user*/
+        if ($usr == $user ) 
+        {
+            /*Recorro las tablas de los distintos usuarios para validar que tipo de usuario es y a que index lo voy a derivar*/
+            foreach ($administrador[0] as $admin) 
+            {
+                if ($admin == $user) {
+                    /*Si encuentra un match y entra al if, se inicia la session, se almacena los datos de la sesion con la ci del usuario y un valor booleano que
+                    indica si la session esta iniciada.*/
+                    session_start();
+    
+                    $_SESSION["is_logged"] = true;
+    
+                    $_SESSION["user"] = $usr;
+                    /*Se redirige a la pagina del usuario*/
+                    header("Location: ../../../Frontend/html/roles/administrador/administrador.html");
+                    exit();
+                }     
+            } 
+
+            foreach ($administrativo[0] as $administ) 
+            {
+                if ($administ == $user) {
+                    session_start();
+    
+                    $_SESSION["is_logged"] = true;
+    
+                    $_SESSION["user"] = $usr;
+    
+                    header("Location: ../../../Frontend/html/roles/administrativo/administrativo.html");
+                    exit();
+                }     
+            }
+
+            foreach ($entrenador[0] as $ent) 
+            {
+                if ($ent == $user) {
+                    session_start();
+    
+                    $_SESSION["is_logged"] = true;
+    
+                    $_SESSION["user"] = $usr;
+    
+                    header("Location: ../../../Frontend/html/roles/entrenador/entrenador.html");
+                    exit();
+                }     
+            }
+
+            foreach ($juez[0] as $jz) 
+            {
+                if ($jz == $user) {
+                    session_start();
+    
+                    $_SESSION["is_logged"] = true;
+    
+                    $_SESSION["user"] = $usr;
+    
+                    header("Location: ../../../Frontend/html/roles/juez/juez.html");
+                    exit();
+                }     
+            }
+
+            foreach ($analista[0] as $anali) 
+            {
+                if ($anali == $user) {
+                    session_start();
+    
+                    $_SESSION["is_logged"] = true;
+    
+                    $_SESSION["user"] = $usr;
+    
+                    header("Location: ../../../Frontend/html/roles/analista/analista.html");
+                    exit();
+                }     
+            }
+
+            foreach ($scout[0] as $sct) 
+            {
+                if ($sct == $user) {
+                    session_start();
+    
+                    $_SESSION["is_logged"] = true;
+    
+                    $_SESSION["user"] = $usr;
+    
+                    header("Location: ../../../Frontend/html/roles/scouts/scouts.html");
+                    exit();
+                }     
+            }
+        }
+    }
+}
+
 
 ?>
