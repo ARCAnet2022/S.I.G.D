@@ -1,168 +1,209 @@
 <?php
 
-include  'Usuarios.php';
-include  'Entrenadores.php';
-include  'Deportistas.php';
-include  'Administradores.php';
-include  'Administrativos.php';
-include  'Jueces.php';
-include  'Scouts.php';
-include  'Analistas.php';
+include '../../config/Conexion.php';
 
 
-/*Almaceno los valores de las superglobales que provienen de los formularios*/
-if (isset($_REQUEST['ci_usuario']) && isset($_REQUEST['contrasena'])  || isset($_REQUEST['ci_deportista'])) {
+class Usuario{
+    public $user;
+    private $contrasena;
+    public $deportista;
+    public $ses;
 
-    /*Instancio los objetos de cada clase y llamo a su funcion correspondiente para obtener la ci del usuario que va a ingresar. */
-    $user = $_REQUEST['ci_usuario'];  
-    $deport = $_REQUEST['ci_deportista'];  
-    $pw = $_REQUEST['contrasena'];
-
-    $deportistas = new Deportistas();
-    $deportista = $deportistas->getCiDeportistas($deportistas, $deport);
-    if (!$user && !$pw) {
-        foreach ($deportista[0] as $deportist) 
-            {
-                if ($deportist == $deport) {
-                    session_start();
-    
-                    $_SESSION["is_logged"] = true;
-    
-                    $_SESSION["user"] = $usr;
-    
-                    header("Location: ../../../Frontend/HTML/Roles/deportista/deportista.html");
-                    exit();
-                }     
-            }
+    public function __construct(){
+        $this->db = new Conexion;
     }
 
-    $tmp = new Usuarios();
-    $usuario = $tmp->getUserByNameAndPassword($usuarios, $user, $pw);
-
-    $entrenadores = new Entrenadores();
-    $entrenador = $entrenadores->getCiEntrenadores($entrenadores, $user);
-
-    
-
-    $analistas = new Analistas();
-    $analista = $analistas->getCiAnalistas($analistas, $user);
-
-    $jueces = new Jueces();
-    $juez = $jueces->getCiJueces($jueces, $user);
-
-    $administrativos = new Administrativos();
-    $administrativo = $administrativos->getCiAdministrativos($administrativos, $user);
-
-    $administradores = new Administradores();
-    $administrador = $administradores->getCiAdministradores($administradores, $user);
-
-    $scouts = new Scouts();
-    $scout = $scouts->getCiScouts($scouts, $user);
-}else {
-    header("Location: ../../../Frontend/Index.html");
-}
-
-
-
-/*Si el usuario no existe lo derivo a Index.html */
-if (!$usuario) {
-    header("Location: ../../../Frontend/Index.html");
-}
-else{
-    /*Si el usuario existe recorro la tabla usuario en la posicion 0 (donde está ubicado la id del usuario) */
-    foreach ($usuario[0] as $usr) {
-
-        /*Si el id de usuario que consegui desde la base de datos es igual al input que almacene en $user*/
-        if ($usr == $user ) 
-        {
-            /*Recorro las tablas de los distintos usuarios para validar que tipo de usuario es y a que index lo voy a derivar*/
-            foreach ($administrador[0] as $admin) 
-            {
-                if ($admin == $user) {
-                    /*Si encuentra un match y entra al if, se inicia la session, se almacena los datos de la sesion con la ci del usuario y un valor booleano que
-                    indica si la session esta iniciada.*/
-                    session_start();
-    
-                    $_SESSION["is_logged"] = true;
-    
-                    $_SESSION["user"] = $usr;
-                    /*Se redirige a la pagina del usuario*/
-                    header("Location: ../../../Frontend/html/roles/administrador/administrador.html");
-                    exit();
-                }     
-            } 
-
-            foreach ($administrativo[0] as $administ) 
-            {
-                if ($administ == $user) {
-                    session_start();
-    
-                    $_SESSION["is_logged"] = true;
-    
-                    $_SESSION["user"] = $usr;
-    
-                    header("Location: ../../../Frontend/html/roles/administrativo/administrativo.html");
-                    exit();
-                }     
-            }
-
-            foreach ($entrenador[0] as $ent) 
-            {
-                if ($ent == $user) {
-                    session_start();
-    
-                    $_SESSION["is_logged"] = true;
-    
-                    $_SESSION["user"] = $usr;
-    
-                    header("Location: ../../../Frontend/html/roles/entrenador/entrenador.html");
-                    exit();
-                }     
-            }
-
-            foreach ($juez[0] as $jz) 
-            {
-                if ($jz == $user) {
-                    session_start();
-    
-                    $_SESSION["is_logged"] = true;
-    
-                    $_SESSION["user"] = $usr;
-    
-                    header("Location: ../../../Frontend/html/roles/juez/juez.html");
-                    exit();
-                }     
-            }
-
-            foreach ($analista[0] as $anali) 
-            {
-                if ($anali == $user) {
-                    session_start();
-    
-                    $_SESSION["is_logged"] = true;
-    
-                    $_SESSION["user"] = $usr;
-    
-                    header("Location: ../../../Frontend/html/roles/analista/analista.html");
-                    exit();
-                }     
-            }
-
-            foreach ($scout[0] as $sct) 
-            {
-                if ($sct == $user) {
-                    session_start();
-    
-                    $_SESSION["is_logged"] = true;
-    
-                    $_SESSION["user"] = $usr;
-    
-                    header("Location: ../../../Frontend/html/roles/scouts/scouts.html");
-                    exit();
-                }     
-            }
+    public function getUserByCiAndPassword($user, $contrasena){
+        $db = new Conexion();
+        $usuario = $db->query("SELECT ci_usuario, contrasena FROM usuario WHERE ci_usuario='$user' AND contrasena='$contrasena'");
+        if (count($usuario)) {
+            return $usuario;
+        }else {
+            return null;
         }
     }
+
+    public function getUserType($user){
+        $db = new Conexion();
+        $userType = $db->query("select (SELECT ci_administrador from administrador where ci_administrador='$user') as ci_administrador, 
+        (SELECT ci_administrativo from administrativo where ci_administrativo='$user') as ci_administrativo,
+        (SELECT ci_juez from juez where ci_juez='$user') as ci_juez,
+        (SELECT ci_scout from scout where ci_scout='$user') as ci_scout,
+        (SELECT ci_entrenador from entrenador where ci_entrenador='$user') as ci_entrenador,
+        (SELECT ci_analista from analista where ci_analista='$user') as ci_analista");
+        
+        foreach ($userType as $usuario) {
+            foreach ($usuario as $usr => $value) {                  
+                    if (!empty($value)) {
+                        $storeUsuario = [$usr,$value];
+                        return $storeUsuario[0];
+                    }
+            }
+        }
+    } 
+
+    public function getAdminProfile(){
+        $db = new conexion();
+        $sesion = new sessionController;
+        $ses = $sesion->checkSession();
+        $adminProfile = $db->query("SELECT u.nombre,u.apellido,u.fecha_nac,u.ci_usuario,u.nacionalidad,u.telefono,u.email,u.calle,u.numero,u.ciudad,a.horas_trabajo_semanales,a.experiencia
+        FROM usuario as u
+        INNER JOIN administrador as a on u.ci_usuario=a.ci_administrador
+        HAVING u.ci_usuario='$ses';");
+        if (count($adminProfile)) {
+            return $adminProfile;
+        }else {
+            return null;
+        }
+    }
+
+    public function getAdministrativeProfile(){
+        $db = new Conexion();
+        $sesion = new sessionController;
+        $ses = $sesion->checkSession();
+        $administrativeProfile = $db->query("SELECT u.nombre,u.apellido,u.fecha_nac,u.ci_usuario,u.nacionalidad,u.telefono,u.email,u.calle,u.numero,u.ciudad,a.horas_trabajo_semanales,a.experiencia
+        FROM usuario as u
+        INNER JOIN administrativo as ad on u.ci_usuario=ad.ci_administrador
+        HAVING u.ci_usuario=$ses;");
+        if (count($administrativeProfile)){
+            return $administrativeProfile;
+        }else {
+            return null;
+        }
+    }
+    
+    public function getAnalistaProfile(){
+        $db = new Conexion();
+        $sesion = new sessionController;
+        $ses = $sesion->checkSession();
+        $analistaProfile = $db->query("SELECT u.nombre,u.apellido,u.fecha_nac,u.ci_usuario,u.nacionalidad,u.telefono,u.email,u.calle,u.numero,u.ciudad,a.nro_funcionario,a.horas_trabajo_semanales
+        FROM usuario as u
+        INNER JOIN analista as a on u.ci_usuario=a.ci_analista
+        HAVING u.ci_usuario=$ses;");
+        if (count($analistaProfile)){
+            return $analistaProfile;
+        }else {
+            return null;
+        }
+    }
+
+    public function getEntrenadorProfile(){
+        $db = new Conexion();
+        $sesion = new sessionController;
+        $ses = $sesion->checkSession();
+        $entrenadorProfile = $db->query("SELECT u.nombre,u.apellido,u.fecha_nac,u.ci_usuario,u.nacionalidad,u.telefono,u.email,u.calle,u.numero,u.ciudad,e.nro_funcionario,e.horas_trabajo_semanales
+        FROM usuario as u
+        INNER JOIN entrenador as e on u.ci_usuario=e.ci_entrenador
+        HAVING u.ci_usuario=$ses;");
+        if (count($entrenadorProfile)){
+            return $entrenadorProfile;
+        }else {
+            return null;
+        }
+    }
+
+    public function getScoutProfile(){
+        $db = new Conexion();
+        $sesion = new sessionController;
+        $ses = $sesion->checkSession();
+        $scoutProfile = $db->query("SELECT u.nombre,u.apellido,u.fecha_nac,u.ci_usuario,u.nacionalidad,u.telefono,u.email,u.calle,u.numero,u.ciudad,s.experiencia
+        FROM usuario as u
+        INNER JOIN scout as s on u.ci_usuario=s.ci_scout
+        HAVING u.ci_usuario=$ses;");
+        if (count($scoutProfile)){
+            return $scoutProfile;
+        }else {
+            return null;
+        }
+    }
+
+    public function getJuezProfile(){
+        $db = new Conexion();
+        $sesion = new sessionController;
+        $ses = $sesion->checkSession();
+        $juezProfile = $db->query("SELECT u.nombre,u.apellido,u.fecha_nac,u.ci_usuario,u.nacionalidad,u.telefono,u.email,u.calle,u.numero,u.ciudad,j.carne_salud,j.horas_trabajo_semanales,j.experiencia
+        FROM usuario as u
+        INNER JOIN juez as j on u.ci_usuario=j.ci_juez
+        HAVING u.ci_usuario=$ses;");
+
+        if (count($juezProfile)){
+            return $juezProfile;
+        }else {
+            return null;
+        }
+    }
+
+
+    /*
+    public function getAdminCi(){
+        $db = new Conexion();
+        $admin = $db->query("SELECT ci_administrador from administrador WHERE ci_administrador='$user';");
+        if(count($admin)){
+            return $admin;
+        }else {
+            return null;
+        }
+    }
+
+    public function getAdministrativoCi(){
+        $db = new Conexion();
+        $administrativo = $db->query("SELECT ci_administrativo from administrativo WHERE ci_administrativo='$user';");
+        if(count($administrativo)){
+            return $administrativo;
+        }else {
+            return null;
+        }
+    }
+
+    public function getAnalistaCi(){
+        $db = new Conexion();
+        $analista = $db->query("SELECT ci_analista from analista WHERE ci_analista='$user';");
+        if(count($analista)){
+            return $analista;
+        }else {
+            return null;
+        }
+    }
+
+    public function getEntrenadorCi(){
+        $db = new Conexion();
+        $entrenador = $db->query("SELECT ci_entrenador from entrenador WHERE ci_entrenador='$user';");
+        if(count($entrenador)){
+            return $entrenador;
+        }else {
+            return null;
+        }
+    }
+
+    public function getScoutCi(){
+        $db = new Conexion();
+        $scout = $db->query("SELECT ci_scout from scout WHERE ci_scout='$user';");
+        if(count($scout)){
+            return $scout;
+        }else {
+            return null;
+        }
+    }
+
+    public function getDeportistaCi($deportista){
+        $deportistaCi = $this->db->query("SELECT ci_deportista from deportista WHERE ci_deportista='$deportista';");
+        if(count($deportistaCi)){
+            return $deportistaCi;
+        }else {
+            return null;
+        }
+    }
+
+    public function getJuezCi(){
+        $db = new Conexion();
+        $juez = $db->query("SELECT ci_juez from juez WHERE ci_juez='$user';");
+        if(count($juez)){
+            return $juez;
+        }else {
+            return null;
+        }
+    }
+    */
 }
 
 

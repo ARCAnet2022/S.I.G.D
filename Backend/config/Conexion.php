@@ -5,7 +5,7 @@
         protected $server = "localhost";
         protected $username = "root";
         protected $pass = "";
-        protected $database = "SIGD";
+        protected $database = "SIGDFinal";
         private $conexion = NULL;
 
         /*Constructor de la conexion */
@@ -15,7 +15,6 @@
         }
         /*Funcion query que transforma en array asociativos las consultas a la base de datos*/
         function query($query){
-
             $result = $this->conexion->query($query);
             return $result->fetch_all(MYSQLI_ASSOC);
         }

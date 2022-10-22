@@ -1,0 +1,10 @@
+<?php
+    include 'login.php';
+
+    class UsuarioController{
+        /*Controlo que este logeado*/
+
+
+    }
+
+?>

@@ -1,13 +1,15 @@
 <?php
+include "App/Controladores/login.php";
 
-session_start();
+$data = $_REQUEST['ci_deportista'];
+$login = new Login();
+$login->loginDeportista($data); 
 
 if(!isset($_SESSION['is_logged']) || !$_SESSION['is_logged']){
     header("location: App/Controladores/login.php");
     exit();
 }
 
-include "App/Controladores/header.php";
 
 
 
