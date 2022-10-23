@@ -23,6 +23,16 @@ class Usuario{
         }
     }
 
+    public function getDeportistaCi($deportista){
+        $db = new Conexion();
+        $deport = $db->query("SELECT ci_deportista FROM deportista WHERE ci_deportista='$deportista'");
+        if (count($deport)) {
+            return $deport;
+        }else {
+            return null;
+        }
+    }
+
     public function getUserType($user){
         $db = new Conexion();
         $userType = $db->query("select (SELECT ci_administrador from administrador where ci_administrador='$user') as ci_administrador, 
@@ -133,77 +143,6 @@ class Usuario{
         }
     }
 
-
-    /*
-    public function getAdminCi(){
-        $db = new Conexion();
-        $admin = $db->query("SELECT ci_administrador from administrador WHERE ci_administrador='$user';");
-        if(count($admin)){
-            return $admin;
-        }else {
-            return null;
-        }
-    }
-
-    public function getAdministrativoCi(){
-        $db = new Conexion();
-        $administrativo = $db->query("SELECT ci_administrativo from administrativo WHERE ci_administrativo='$user';");
-        if(count($administrativo)){
-            return $administrativo;
-        }else {
-            return null;
-        }
-    }
-
-    public function getAnalistaCi(){
-        $db = new Conexion();
-        $analista = $db->query("SELECT ci_analista from analista WHERE ci_analista='$user';");
-        if(count($analista)){
-            return $analista;
-        }else {
-            return null;
-        }
-    }
-
-    public function getEntrenadorCi(){
-        $db = new Conexion();
-        $entrenador = $db->query("SELECT ci_entrenador from entrenador WHERE ci_entrenador='$user';");
-        if(count($entrenador)){
-            return $entrenador;
-        }else {
-            return null;
-        }
-    }
-
-    public function getScoutCi(){
-        $db = new Conexion();
-        $scout = $db->query("SELECT ci_scout from scout WHERE ci_scout='$user';");
-        if(count($scout)){
-            return $scout;
-        }else {
-            return null;
-        }
-    }
-
-    public function getDeportistaCi($deportista){
-        $deportistaCi = $this->db->query("SELECT ci_deportista from deportista WHERE ci_deportista='$deportista';");
-        if(count($deportistaCi)){
-            return $deportistaCi;
-        }else {
-            return null;
-        }
-    }
-
-    public function getJuezCi(){
-        $db = new Conexion();
-        $juez = $db->query("SELECT ci_juez from juez WHERE ci_juez='$user';");
-        if(count($juez)){
-            return $juez;
-        }else {
-            return null;
-        }
-    }
-    */
 }
 
 

@@ -1,11 +1,13 @@
 <?php
 include '../Modelo/Usuario.php';
 
-class profileController(){
+class profileController{
+
+    public $ci_usuario=$_POST['ci_usuario'];
 
     public function profileAdminShow(){
         $init = new Usuario;
-        $admin = $init->getAdminProfile();
+        $admin = $init->getAdminProfile($ci_usuario);
         if (!empty($admin)) {
             foreach ($admin as $adm ) {
                 foreach ($adm as $ad ) {
@@ -89,5 +91,7 @@ class profileController(){
 
 
 }
+
+    
 
 ?>

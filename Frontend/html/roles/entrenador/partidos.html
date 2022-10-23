@@ -12,75 +12,71 @@
   </head>
   <body >
 
-    <!--Navegación primaria-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
+   <!--Navegación primaria-->
+   <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
      
-      <div class="col-2 navbar-brand">
-        <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
-     </div>
-     
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+    <div class="col-1 navbar-brand">
+      <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
+   </div>
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <ul class="navbar-nav mr-auto texto row">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        
-          <li class="nav-item col-2">
-            <a class="nav-link textoprin" href="../../roles/entrenador/entrenador.html">Inicio</a>
-          </li>
-     
+    <ul class="navbar-nav mr-auto texto row">
 
-        
+      
+        <li class="nav-item col-2">
+          <a class="nav-link textoprinPrincipal" href="../../roles/entrenador/entrenador.html">Inicio</a>
+        </li>
+   
+
+        <li class="nav-item col-1">
+          <a class="nav-link textoprin" href="Perfil.html">Perfil</a>
+        </li>
+    
         <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Deportes
+          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-equipo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Equipo
           </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            
-            <a class="dropdown-item" href="../../información/deportes/futbol.html">Fútbol</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown-equipo">
+            <a class="dropdown-item" href="equipo.html">Ver</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/deportes/basquetbol.html">Basquetbol</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/deportes/handbol.html">Handbol</a>
+            <a class="dropdown-item" href="crear_equipo.html">Crear equipo</a>
           </div>
         </li>
-       
-
+          
+    
+            <li class="nav-item col-1">
+              <a class="nav-link textoprin" href="torneo.html">Torneos</a>
+            </li>
+    
+            <li class="nav-item col-2">
+              <a class="nav-link textoprin" href="partidos.html">Partidos</a>
+            </li>
+             
+              <li class="nav-item dropdown col-2">
+                <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-estadisticas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Estadisticas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown-estadisticas">
+                  <a class="dropdown-item" href="estadisticas_personales.html">Mis jugadores</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="estadisticas.html">Generales</a>
+                </div>
+              </li>
      
-        <li class="nav-item dropdown col-2 ">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            EMT-Deporte
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../../../html/información/emt_deportes/historia.html">Historia</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/emt_deportes/objetivo.html">Objetivo</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/emt_deportes/egresados.html">Egresados</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://www.utu.edu.uy/educacion-media-tecnologica-deporte-y-recreacion">UTU-Deporte</a>
-          </div>
-        </li>
 
 
 
-        <li class="nav-item dropdown  col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            S.I.G.D.
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../../información/sigd/historia.html">Historia</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item " href="../../información/sigd/objetivos.html">Objetivo</a>        
-          </div>          
-        </li>
 
-          <li class="nav-item textoprin col-2">
-            <a href="../../../../Backend/App/Controladorlogout.php" class="btn boton" role="button">Salir</a>
-          </li>     
-        
+        <li class="nav-item  col-1">
+          <a href="../../../../Backend/App/Controladorlogout.php" class="btn textoprinPrincipal" role="button">Salir</a>
+        </li>     
+      
 </ul>
 </div> 
 
@@ -88,156 +84,237 @@
 <!--Fin de la navegación primaria-->
 
 
-<!--Navegación secundaria-->
-
-<nav class="navbar navbar-expand-lg navbar-light bg ">
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse " id="navbarText">
-
-   
-    <ul class="navbar-nav mr-auto row">
-     <span class="navbar-text col-3 color-texto">
-      Bienvenido Entrenador!
-    </span>
-
-    <li class="nav-item col-1">
-      <a class="nav-link color" href="Perfil.html">Perfil</a>
-    </li>
-
-    <li class="nav-item dropdown col-2">
-      <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Equipo
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="equipo.html">Ver</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="crear_equipo.html">Crear equipo</a>
-      </div>
-    </li>
-      
-
-        <li class="nav-item col-2">
-          <a class="nav-link color" href="torneo.html">Campeonatos</a>
-        </li>
-
-        <li class="nav-item col-2">
-          <a class="nav-link color" href="partidos.html">Partidos</a>
-        </li>
-         
-          <li class="nav-item dropdown col-2">
-            <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Estadisticas
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="estadisticas_personales.html">Mis jugadores</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="estadisticas.html">Generales</a>
-            </div>
-          </li>
-        
-    </ul>
-    
-  </div>
-</nav>
-<!--Fin de la navegación secundaria-->
 
 
 
-
-<!--Comienzo del cuerpo-->
+<!---inicio de el cuerpo-->
 
 <div class="jumbotron">
   <div class="row"> 
-   <div class="titulo col-md-12">MIS PARTIDOS</div>
 
+<div class="titulo col-md-12">TODOS LOS PARTIDOS</div>
+
+
+
+<div class="dropdown dropright col-md-6">
+      
+  <button class="btn boton-deporte dropdown-toggle col-6" type="button" id="dropdownMenuButton-deporte" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Elegir deportes
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-deporte">
+    <a class="dropdown-item" href="#">Fútbol</a>
+    <a class="dropdown-item" href="#">Basquetbol</a>
+    <a class="dropdown-item" href="#">Balonmano</a>
+  </div>
+</div>
+
+<div class="dropdown dropright col-md-6">
+
+  <button class="btn boton-deporte dropdown-toggle col-6" type="button" id="dropdownMenuButton-torneo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Elegir grupo
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-torneo">
+    <a class="dropdown-item" href="#">3BB</a>
+    <a class="dropdown-item" href="#">2BN</a>
+    <a class="dropdown-item" href="#">1MR</a>
+  </div>
+</div>
 
 <div class="container cuerpo-partido"> 
 
+
+ 
+<h4>Proximos</h4>
   <table class="table ">
    <thead class="cabezera">
      <tr>
-       <th scope="col">Lugar</th>
-       <th scope="col">Hora</th>
        <th scope="col">Fecha</th>
-     </tr>
+       <th scope="col">Lugar</th>
+       <th scope="col">Partido</th>
+       <th scope="col">Hora</th>
+       <th scope="col">Torneo</th>
+       </tr>
    </thead>
    <tbody class="borde-tabla">
      <tr>
-       <td>Regimiento 9</td>
-       <td> 12:50</td>
        <td>15/04/2022</td>
-       
-     </tr>
-      </tbody>
- </table>
- 
- <div class="row tabla-partido">
-   <div class="col-md-3 equipo">
+       <td>Regimiento 9</td>
+       <td>  
+ <div class="row ">
+   <div class="col-md-3">
      Danubio
    </div>
-   <div class="col-md-2">
-     <img class="foto-equipo"src="../../../imagenes/foto-equipo.png" alt="..." class="img-thumbnail">
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
    </div>
-<div class="alert alert-primary col-md-2" role="alert">
+<div class="alert alert-primary col-md-3" role="alert">
      VS
      </div>
 <div class="col-md-2">
-     <img class="foto-equipo"src="../../../imagenes/foto-equipo.png" alt="..." class="img-thumbnail">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
    </div>
-   <div class="col-md-3 equipo">
+   <div class="col-md-2">
      Danubio
    </div>
- </div>
+   </div> 
+   </td>
+       <td> 12:50</td>
+       <td>Nombre de torneo</td>
+      </tr>
+      <tr>
+       <td>15/04/2022</td>
+       <td>Regimiento 9</td>
+       <td>  
+ <div class="row ">
+   <div class="col-md-3">
+     Danubio
+   </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+   </div>
+<div class="alert alert-primary col-md-3" role="alert">
+     VS
+     </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+   </div>
+   <div class="col-md-2">
+     Danubio
+   </div>
+   </div> 
+   </td>
+       <td> 12:50</td>
+       <td>Nombre de torneo</td>
+      </tr>
+      <tr>
+       <td>15/04/2022</td>
+       <td>Regimiento 9</td>
+       <td>  
+ <div class="row ">
+   <div class="col-md-3">
+     Danubio
+   </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+   </div>
+<div class="alert alert-primary col-md-3" role="alert">
+     VS
+     </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+   </div>
+   <div class="col-md-2">
+     Danubio
+   </div>
+   </div> 
+   </td>
+       <td> 12:50</td>
+       <td>Nombre de torneo</td>
+      </tr>
 
+      </tbody>
+ </table>
 </div>
-
 
 <div class="container cuerpo-partido"> 
+   <h4>Ya jugados</h4>
+      <table class="table ">
+       <thead class="cabezera">
+         <tr>
+           <th scope="col">Fecha</th>
+           <th scope="col">Lugar</th>
+           <th scope="col">Partido</th>
+           <th scope="col">Hora</th>
+           <th scope="col">Torneo</th>
+           </tr>
+       </thead>
+       <tbody class="borde-tabla">
+         <tr>
+           <td>15/05/2022</td>
+           <td>Regimiento 9</td>
+           <td>  
+     <div class="row ">
+       <div class="col-md-3">
+         Danubio
+       </div>
+   <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+       </div>
+   <div class="alert alert-primary col-md-3" role="alert">
+         VS
+         </div>
+    <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+       </div>
+       <div class="col-md-2">
+         Danubio
+       </div>
+       </div> 
+       </td>
+           <td> 12:50</td>
+           <td>Nombre de torneo</td>
+          </tr>
+          <tr>
+           <td>15/05/2022</td>
+           <td>Regimiento 9</td>
+           <td>  
+     <div class="row ">
+       <div class="col-md-3">
+         Danubio
+       </div>
+   <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+       </div>
+   <div class="alert alert-primary col-md-3" role="alert">
+         VS
+         </div>
+    <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+       </div>
+       <div class="col-md-2">
+         Danubio
+       </div>
+       </div> 
+       </td>
+           <td> 12:50</td>
+           <td>Nombre de torneo</td>
+          </tr>
+          <tr>
+           <td>15/05/2022</td>
+           <td>Regimiento 9</td>
+           <td>  
+     <div class="row ">
+       <div class="col-md-3">
+         Danubio
+       </div>
+   <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+       </div>
+   <div class="alert alert-primary col-md-3" role="alert">
+         VS
+         </div>
+    <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+       </div>
+       <div class="col-md-2">
+         Danubio
+       </div>
+       </div> 
+       </td>
+           <td> 12:50</td>
+           <td>Nombre de torneo</td>
+          </tr>
+   
+          </tbody>
+     </table>
+    
+   
+   </div>
 
- <table class="table ">
-  <thead class="cabezera">
-    <tr>
-      <th scope="col">Lugar</th>
-      <th scope="col">Hora</th>
-      <th scope="col">Fecha</th>
-    </tr>
-  </thead>
-  <tbody class="borde-tabla">
-    <tr>
-      <td>Regimiento 9</td>
-      <td> 12:50</td>
-      <td>15/04/2022</td>
-    </tr>
-     </tbody>
-</table>
 
-<div class="row tabla-partido">
-  <div class="col-md-3 equipo">
-    Danubio
-  </div>
-  <div class="col-md-2">
-    <img class="foto-equipo"src="../../../imagenes/foto-equipo.png" alt="..." class="img-thumbnail">
-  </div>
-<div class="alert alert-primary col-md-2" role="alert">
-     15/04/2022
+
     </div>
-<div class="col-md-2">
-    <img class="foto-equipo"src="../../../imagenes/foto-equipo.png" alt="..." class="img-thumbnail">
-  </div>
-  <div class="col-md-3 equipo">
-    Danubio
-  </div>
-</div>
-
-</div>
-
-
-</div>
-</div>
-
+   </div>
 
 
   
@@ -255,9 +332,9 @@
     </div>
   <div class="row-12 ">
     <div class="col-12 nav d-flex justify-content-around elementopie ">
-         <a class="nav-link " href="../../arcanet/arcanet.html">Sobre nosotros</a>
-         <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/">arcanet2022@gmail.com</a>
-          <a class="nav-link" href="../../arcanet/ayuda_soporte.html">Ayuda y soporte</a>
+      <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
+      <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+       <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
          
          
         

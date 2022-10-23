@@ -1,7 +1,7 @@
 <?php
     include '../Modelo/Usuario.php';
     include '../Utils/util.php';
-    class LogoutController(){
+    class LogoutController{
         
         public function logout(){
             unset($_SESSION["user"]);

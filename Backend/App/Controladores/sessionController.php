@@ -4,7 +4,7 @@
         /*Control de sesiones*/
         private $user;
         private $deportista;
-        private $sessionId;
+        public $sessionId;
 
         /* */
         public function initSessionDeportista($deportista){
@@ -20,6 +20,7 @@
         }
 
         function checkSession(){
+
             if(isset($_SESSION['is_logged']) && $_SESSION['is_logged']){
                 $sessionId = $_SESSION["user"];
                 return $sessionId;

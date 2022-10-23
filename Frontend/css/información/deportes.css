@@ -16,13 +16,16 @@ body.html{
  
 }
 .color{
-    background-color: rgb(255, 255, 255);
-    
-    border-bottom: white;
-    border-top: white;
-    border-left: white;
-    border-right: white;
+    text-align: center;
+   color: white!important;
 }
+.color:hover{
+    color: rgb(24, 36, 54) !important;;
+  }
+.bg{
+    background-color: #465c6dc7!important;
+    border-bottom: 1px solid rgb(94, 94, 94);
+ }
 
 .textoHeader{
     margin:0;
@@ -34,20 +37,36 @@ body.html{
     text-align:center;
    
 }
+.row{
+    width: 100%;
+}
 .textoprin{
-    color:#465c6dc7 !important;
-    white-space: nowrap;
-    font-family:'Franklin Gothic Medium';
+    color: rgb(80, 125, 171) !important;
+     white-space: nowrap;
+     font-family:'Franklin Gothic Medium';
+ }
+ 
+ 
+ .textoprin:hover{
+     color:#212c34d8 !important;
+     border-radius: 4%;
+     transition: 0.5s;
+ }
+ 
+ .textoprinPrincipal{
+     color: rgb(23, 70, 99) !important; 
+     font-family:'Franklin Gothic Medium';
+  }
+  .textoprinPrincipal:hover{
+     color: rgb(80, 125, 171) !important;
+     font-family:'Franklin Gothic Medium';
+  }
+
+
+.color-texto{
+    text-align: center;
+    color: white!important;
 }
-.textoprin:hover{
-    background-color: #465c6dc7;
-    border-radius: 4%;
-    transition: 2s;
-    color:white !important;
-}
-
-
-
 
 
 .foto{
@@ -56,13 +75,43 @@ body.html{
     border: 1px solid rgb(129, 129, 129);
 }
 
-
-.color:hover{
-    color:rgb(17, 0, 255) !important;
+.modal-color{
+    width: 100%;
+   
+    background-color: #b8dbeb49;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    
 }
 
+.modal-cabezera{
+    width: 100%;
+    background-image: url(../../imagenes/logo.png);
+    background-repeat: no-repeat ;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+ }
+ .color-estudiante{
+    color: #383838;
+    background-color: rgba(0, 128, 255, 0.178);
+}
+
+.boton-enviar{
+    color: white;
+   background-color: #465c6dc7 !important;
+  font-weight: bolder;
+  margin-top: 3%;
+}
+.boton-enviar:hover{
+    background-color: #415869b2 !important;
+    color: #2c2c2c !important;
+}
 
 .contenedor {
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat ;
     background-position: center;
@@ -83,19 +132,9 @@ body.html{
     border-radius: 10%;
     padding: 3%;
 }
-.row {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
 
-}
 
-.row .col{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 .colorfondo {
     max-width: 100%;
     background-size:cover;
@@ -149,6 +188,7 @@ body.html{
 }
 
 .elementopie{
+    text-align: center;
     background-color: rgb(23, 37, 41);
 }
 .elementopie a{
@@ -156,15 +196,16 @@ body.html{
 }
 .modal-color{
     width: 100%;
-    border-top:6px solid #000000;
-    background-color: #ffffff;
-    color: white;
+   
+    background-color: #b8dbeb49;
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
+    
 }
 .modal-contenido{
     background-color: #ffffff;
-    color: #494949;
+    color: #666666;
     width: 60%;
     height: 60vh;
     display: flex;
@@ -173,24 +214,28 @@ body.html{
      
 }
 .modal-cabezera{
-    background-color: #b8dbeb;
-   color: #2c2c2c;
-}
+    width: 100%;
+    background-image: url(../../imagenes/logo.png);
+    background-repeat: no-repeat ;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+ }
 .formulario{
     background-color: #a09f9f;
 }
 
 .jumbotron{
-   margin-top: 1%;
+    
+    margin-top: 1%;
     display: flex;
     justify-content: center;
     background-color: rgb(255, 255, 255) !important;
 }
-footer{
-    align-items: center;
- 
-}
+
 .piedepagina{
+ 
     background-size:auto;
     background-image: url(../../imagenes/LogoArcanet3.png);
     background-repeat: no-repeat ;
@@ -200,9 +245,11 @@ footer{
     display: flex;
     justify-content: center;
 }
+
 .arca{
+    
     width: 4em;
-    margin-left: 6%;
+   margin-left: 4%;
     display: block;
     animation: float 3s linear infinite;
    
@@ -221,16 +268,11 @@ footer{
                                               /*responsive*/
 
 
-@media only screen and (max-width:850px){
+@media only screen and (max-width:412px){
     .imagen{
         height:10vh;
     }
-    .row{
-        flex-direction: column;
-        width: 100%;
-        height: 70vh;
-       
-    }
+  
 
     .parrafo{
        
@@ -244,10 +286,38 @@ footer{
        
     }
     .jumbotron{
-        margin-top: 1%;
-     height: 100vh;
+    margin-top: 1%;
+     height: 150vh;
     }
+     .piedepagina{
+        margin-left: 4%;
+        background-size:unset;
+        background-image: url(../../imagenes/LogoArcanet3.png);
+        background-repeat: no-repeat ;
+        background-attachment:local;
+        background-position: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .arca{
+    
+        width: 4em;
+       margin-left: 10%;
+        display: block;
+        animation: float 3s linear infinite;
+       
+    }
+    .contenido-informativo{
+        text-align:justify;
+        padding: 5%;
+        background-color: #a1cef023;
+        height: 80vh !important;
+        width: 100%;  
 }
+ 
+}
+
 
 @media only screen and (max-width:1000px){
     .card{
@@ -260,11 +330,29 @@ footer{
 }
 
 .contenido-informativo{
-    background-color: #b8dbeb13 ;
+        text-align:justify;
+        padding: 5%;
+        background-color: #a1cef023;
+        height: 60vh;
+        width: 100%;  
+}
+.contenido-informativoObjetivo{
+    text-align:justify;
+    padding: 5%;
+    background-color: #a1cef023;
+    height: 60vh;
+    width: 100%;  
+}
+.contenido-informativo-egresados{
+    text-align:justify;
+    padding: 5%;
+    background-color: #a1cef023;
+    height: 60vh;
+    width: 100%;  
 }
 .cabezera{
-    color: white;
-    background-color: #a2dcf7;
+    color: #666666;
+    background-color: rgba(0, 128, 255, 0.178);
     width: 100%;
     padding: 2%;
     margin-bottom: 2%;

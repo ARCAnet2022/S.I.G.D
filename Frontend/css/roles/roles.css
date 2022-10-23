@@ -18,6 +18,13 @@ body.html{
     text-align:center;
     
 }
+.titulo{
+    text-align: center;
+    font-family: verdana;
+    color: #666666;
+    font-size:xx-large;
+    background-color: rgba(0, 128, 255, 0.178);
+}
 
 .elementopie{
     background-color: rgb(23, 37, 41); 
@@ -99,17 +106,28 @@ body.html{
 }
 
 .textoprin{
-    color:#465c6dc7 !important;
+   color: rgb(80, 125, 171) !important;
     white-space: nowrap;
     font-family:'Franklin Gothic Medium';
 }
+
+
 .textoprin:hover{
-    background-color: #465c6dc7;
+    color:#212c34d8 !important;
     border-radius: 4%;
-    transition: 2s;
-    color:white !important;
+    transition: 0.5s;
 }
 
+.textoprinPrincipal{
+    color: rgb(23, 70, 99) !important;
+    
+     font-family:'Franklin Gothic Medium';
+ }
+ .textoprinPrincipal:hover{
+    color: rgb(80, 125, 171) !important;
+    font-family:'Franklin Gothic Medium';
+ }
+ 
 .color{
     text-align: center!important;
    color: white!important;

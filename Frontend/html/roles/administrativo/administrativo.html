@@ -15,13 +15,14 @@
     <!--Navegación primaria-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
      
-      <div class="col-2 navbar-brand">
+      <div class="col-1 navbar-brand">
         <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
      </div>
      
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <ul class="navbar-nav mr-auto row texto">
@@ -33,51 +34,40 @@
           </li>
       
        
-        <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Deportes
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            
-            <a class="dropdown-item" href="../../información/deportes/futbol.html">Fútbol</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/deportes/basquetbol.html">Basquetbol</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/deportes/handbol.html">Handbol</a>
-          </div>
-        </li>
-      
         
-        <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            EMT-Deporte
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../../../html/información/emt_deportes/historia.html">Historia</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/emt_deportes/objetivo.html">Objetivo</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/emt_deportes/egresados.html">Egresados</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://www.utu.edu.uy/educacion-media-tecnologica-deporte-y-recreacion">UTU-Deporte</a>
-          </div>
-        </li>
+ 
+          <li class="nav-item col-1">
+            <a class="nav-link textoprin" href="Perfil.html">Perfil</a>
+          </li>
+
+          <li class="nav-item dropdown col-2">
+            <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-cargardatos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Cargar datos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown-cargardatos">
+              <a class="dropdown-item" href="cargar_usuarios.html">Cargar usuarios</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="usuarios_cargados.html">Ver usuarios cargados</a>
+              
+           
+            </div>
+          </li>
+              <li class="nav-item col-2">
+                <a class="nav-link textoprin" href="partidos.html">Partidos</a>
+              </li>
+              <li class="nav-item col-2">
+                <a class="nav-link textoprin" href="torneo.html">Torneos</a>
+              </li>
+               
+              <li class="nav-item col-2">
+                <a class="nav-link textoprin" href="estadisticas.html">Estadisticas</a>
+              </li>
 
 
-        <li class="nav-item dropdown  col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            S.I.G.D.
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../../información/sigd/historia.html">Historia</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item " href="../../información/sigd/objetivos.html">Objetivo</a>
-            
-          </div>
-        </li>
+
     
 
-  <li class="nav-item col-2 textoprin">
+  <li class="nav-item col-1 textoprin">
     <a href="../../../../Backend/App/Controladores/logout.php" class="btn boton" role="button">Salir</a>
   </li>     
 
@@ -87,64 +77,23 @@
 <!--Fin de la navegación primaria-->
 
 
-<!--Navegación secundaria-->
-
-<nav class="navbar navbar-expand-lg navbar-light bg ">
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse " id="navbarText">
-
-   
-    <ul class="navbar-nav mr-auto row">
-     
-     <span class="navbar-text color-texto col-3">
-      Bienvenido Admisistrativo!
-    </span>
-    <li class="nav-item col-1">
-      <a class="nav-link color" href="Perfil.html">Perfil</a>
-    </li>
-    <li class="nav-item dropdown col-2">
-      <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-       Cargar datos
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="cargar_usuarios.html">Cargar usuarios</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="usuarios_cargados.html">Ver usuarios cargados</a>
-        
-     
-      </div>
-    </li>
-        <li class="nav-item col-2">
-          <a class="nav-link color" href="partidos.html">Partidos</a>
-        </li>
-        <li class="nav-item col-2">
-          <a class="nav-link color" href="torneo.html">Campeonatos</a>
-        </li>
-         
-        <li class="nav-item col-2">
-          <a class="nav-link color" href="estadisticas.html">Estadisticas</a>
-        </li>
-        
-         
-    </ul>
-    
-  </div>
-</nav>
-<!--Fin de la navegación secundaria-->
 
 <!--Cuerpo de la pagina-->
 
 
 <div class="row">
     <div class="box caja"> 
- 
+      
+      
+   <div class="titulo col-md-12">SISTEMA DE GESTIÓN DEPORTIVA</div>
+
+
  <div class="formulario">
    <div class="row">
-     <div class="col-md-6">Hola! estas en el sistema como administrativo, podras asignar los roles a los usuarios, además de modificar las contraseñas, 
-        a si mismo también tendras cargar los usuarios y viualizar los usuarios que ingresaste!
+     <div class="col-md-6">Hola! estas en el sistema como administrativo, al ingresar como administrativo, eres aquella persona que se dedica al conjunto de medios y
+       actividades necesarias para llevar a cabo y desarrollar una correcta utilización del deporte, con la misión de permitirle a los usuarios ejecutar sus actividades 
+       en las mejores condiciones posibles.<br><br>
+En el sistema podras asignar los tipos de usuarios, a si mismo también tendras cargar los usuarios y viualizar los usuarios que ingresaste!
          </div>
      <div class="col-md-5"><img src="../../../imagenes/inicio/administrativo.png" alt="hola" class="img-fluid imagen"></div>
      
@@ -165,9 +114,9 @@
             </div>
           <div class="row-12 ">
             <div class="col-12 nav d-flex justify-content-around elementopie ">
-                 <a class="nav-link " href="../../arcanet/arcanet.html">Sobre nosotros</a>
-                 <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/">arcanet2022@gmail.com</a>
-                  <a class="nav-link" href="../../arcanet/ayuda_soporte.html">Ayuda y soporte</a>
+              <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
+              <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+               <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
                  
                  
                 

@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(12, 74, 102) !important;
+    background-color: rgba(44, 144, 202, 0.644) !important;
 }
 
 .arca-contenedor{
@@ -60,7 +60,7 @@ body{
 .arcanet{
     display: flex;
     justify-content: center;
-    background-color: rgb(12, 74, 102)!important;
+    background-color: rgba(0, 0, 0, 0.267)!important;
     border-bottom: 1px solid white;
 }
 
@@ -68,13 +68,13 @@ body{
     padding: 3%;
     display: flex;
     justify-content: center;
-    background-color: rgb(12, 74, 102)!important; 
+    background-color: rgb(255, 255, 255)!important; 
 }
 .preguntas{
     width: 40%;
     float: left;
     color: black;
-    background-color: rgb(12, 74, 102)!important; 
+    background-color: rgb(255, 255, 255)!important; 
 }
 .preguntas1{
     width: 50%;

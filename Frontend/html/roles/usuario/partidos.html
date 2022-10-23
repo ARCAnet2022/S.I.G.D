@@ -8,34 +8,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="../../../css/bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <title>Equipo</title>
+    <title>partido</title>
   </head>
   <body >
 
     <!--Navegación primaria-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
      
-      
       <div class="col-2 navbar-brand">
         <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
      </div>
      
+        
      
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto  texto row">
-        
-          <li class="nav-item col-2">
-            <a class="nav-link textoprin" href="../../../index.html">Inicio</a>
+      <ul class="navbar-nav mr-auto texto row">
+       
+          <li class="nav-item col-1">
+            <a class="nav-link textoprinPrincipal" href="../../../index.html">Inicio</a>
           </li>
           
         <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-deporte" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Deportes
           </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown-deporte">
             
             <a class="dropdown-item" href="../../información/deportes/futbol.html">Fútbol</a>
             <div class="dropdown-divider"></div>
@@ -47,10 +47,10 @@
        
         
         <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-emt" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             EMT-Deporte
           </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown-emt">
             <a class="dropdown-item" href="../../información/emt_deportes/historia.html">Historia</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../../información/emt_deportes/objetivo.html">Objetivo</a>
@@ -62,215 +62,311 @@
         </li>
 
 
-        <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item dropdown  col-2">
+          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-sigd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             S.I.G.D.
           </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown-sigd">
             <a class="dropdown-item" href="../../información/sigd/historia.html">Historia</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item " href="../../información/sigd/objetivos.html">Objetivo</a>
-            
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item " href="../../roles/usuario/equipo_compañeros.html">Equipos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item " href="../../roles/usuario/torneo.html">Torneos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item " href="../../roles/usuario/partidos.html">Partidos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item " href="../../roles/usuario/estadisticas.html">Estadisticas</a>
           </div>
         </li>
 
       
+        <li class="nav-item col-md-1">
+          <a class="nav-link textoprin" href="../../información/sugerencias/sugerencia.html">Sugerencias</a>
+        </li>
 
-  <li class="nav-item col-2">
-    <!-- Modal Boton-->
-    <a class="nav-link textoprin" href="#" data-toggle="modal" data-target="#modalIngresar">Ingresar</a>
-    <!-- Modal -->
-      <div class="modal fade modal-contenido" id="modalIngresar" tabindex="-1" role="dialog" aria-labelledby="modalIngresarBody" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header ">
-              
-              <h5 class="modal-title modal-cabezera" id="modalIngresarBody"><img src="../../../imagenes/logo.png"></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              
-              <form >
-                <div class="form-group">
-                  <label class="modal-color" for="ci_usuario">Cédula:</label>
-                  <input type="text" class="form-control" id="ci_usuario" name="ci_usuario" >
-                </div>
-                <div class="form-group">
-                  <label  class="modal-color "for="contrasena">Contraseña:</label>
-                  <input type="password" class="form-control" id="contrasena" name="contrasena">
-                </div>
-                <div class="form-group">
-                  <h2>Estudiante</h2>
-                  <label class="modal-color" for="ci_deportista">Cédula:</label>
-                  <input type="text" class="form-control" id="ci_deportista" name="ci_deportista" >
-                </div>
-                <div class="form-group">
-                  <h4>¿Olvidaste tu contraseña?</h4>
-                  <label class="modal-color" for="email">Escribe tu correo para recuperarla</label>
-                  <input type="text" class="form-control" id="email" name="email" >
-                </div>
-<div class="modal-footer">
-              <button type="button" class="btn boton" data-dismiss="modal">Salir</button>
-              <button type="button" class="btn boton">Ingresar</button>
-             
-            </div>
-                
-              </form>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-  </li>     
+        <li class="nav-item col-2">
+          <!-- Modal Boton-->
+          <a class="nav-link textoprinPrincipal" href="#" data-toggle="modal" data-target="#modalIngresar">Ingresar</a>
+          <!-- Modal -->
+            <div class="modal fade modal-contenido" id="modalIngresar" tabindex="-1" role="dialog" aria-labelledby="modalIngresarBody" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header ">
+                    
+                    <h5 class="modal-title modal-cabezera" id="modalIngresarBody"><img src="../../../imagenes/logo.png" alt="logo"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    
+                    <form >
+                      <div class="form-group">
+                        <label class="modal-color" for="ci_usuario">Cédula:</label>
+                        <input type="text" class="form-control" id="ci_usuario" name="ci_usuario" >
+                      </div>
+                      <div class="form-group">
+                        <label  class="modal-color" for="contrasena">Contraseña:</label>
+                        <input type="password" class="form-control" id="contrasena" name="contrasena">
+                      </div>
+                      <div class="form-group">
+                        <h2 class="color-estudiante">ESTUDIANTES</h2>
+                        <label class="modal-color" for="ci_deportista">Cédula:</label>
+                        <input type="text" class="form-control" id="ci_deportista" name="ci_deportista" >
+                      </div>
+                      <div class="form-group">
+                        <a href="../../información/contraseña.html"> <h4>¿Olvidaste tu contraseña?</h4> </a>
+                         </div>
+                        
 
+                     
+      <div class="modal-footer">
+                    <button type="button" class="btn boton-enviar" data-dismiss="modal">Salir</button>
+                    <button type="button" class="btn boton-enviar">Ingresar</button>
+                   
+                  </div>
+
+                      
+                    </form>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+        </li> 
+
+</ul>
 </div>
-      </ul>
-    </div>
+      
+    
     
     </nav>
     
-<!--Navegación secundaria-->
+<!--Navegación primaria-->
 
     
-<!--Navegación secundaria-->
-
-<nav class="navbar navbar-expand-lg navbar-light bg ">
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse " id="navbarText">
-
-   
-    <ul class="navbar-nav mr-auto row">
-
-     <span class="navbar-text col-md-2 color-texto">
-      Bienvenidos!
-    </span>
-
-    
-    <li class="nav-item col-md-2">
-      <a class="nav-link color" href="../usuario/equipo_compañeros.html">Equipos</a>
-    </li>
-   
-
-    <li class="nav-item col-md-2">
-      <a class="nav-link color" href="../usuario/torneo.html">Campeonato</a>
-    </li>
-    <li class="nav-item col-md-2">
-      <a class="nav-link color" href="../usuario/partidos_equipo.html">Partidos</a>
-    </li>
-    <li class="nav-item col-md-2">
-      <a class="nav-link color" href="../usuario/estadisticas.html">Estadisticas</a>
-    </li>
-
-    
-         
-        
-        
-    </ul>
-    
-  </div>
-</nav>
-<!--Fin de la navegación secundaria-->
 
 
-<!--Comienzo del cuerpo-->
+<!---inicio de el cuerpo-->
 
 <div class="jumbotron">
-   <div class="row"> 
+  <div class="row"> 
+
     <div class="titulo col-md-12">PARTIDOS</div>
 
-
-<div class="container cuerpo-partido"> 
-
-   <table class="table ">
-    <thead class="cabezera">
-      <tr>
-        <th scope="col">Lugar</th>
-        <th scope="col">Hora</th>
-        <th scope="col">Fecha</th>
-      </tr>
-    </thead>
-    <tbody class="borde-tabla">
-      <tr>
-        <td>Regimiento 9</td>
-        <td> 12:50</td>
-        <td>15/04/2022</td>
-        
-      </tr>
-       </tbody>
-  </table>
-  
-  <div class="row tabla-partido">
-    <div class="col-md-3 equipo">
-      Danubio
-    </div>
-    <div class="col-md-2">
-      <img class="foto-equipo"src="../../../imagenes/foto-equipo.png" alt="..." class="img-thumbnail">
-    </div>
- <div class="alert alert-primary col-md-2" role="alert">
-      VS
+    <div class="dropdown dropright row">
+      <div class="col-md-5"></div>
+      <button class="btn boton-deporte dropdown-toggle " type="button" id="dropdownMenuButton-deportes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Elegir deporte
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-deportes">
+        <a class="dropdown-item" href="#">Fútbol</a>
+        <a class="dropdown-item" href="#">Basquetbol</a>
+        <a class="dropdown-item" href="#">Balonmano</a>
       </div>
- <div class="col-md-2">
-      <img class="foto-equipo"src="../../../imagenes/foto-equipo.png" alt="..." class="img-thumbnail">
     </div>
-    <div class="col-md-3 equipo">
-      Danubio
-    </div>
-  </div>
-
-</div>
-
-
 <div class="container cuerpo-partido"> 
 
+
+ 
+<h4>Abril,2022</h4>
   <table class="table ">
    <thead class="cabezera">
      <tr>
-       <th scope="col">Lugar</th>
-       <th scope="col">Hora</th>
        <th scope="col">Fecha</th>
-     </tr>
+       <th scope="col">Lugar</th>
+       <th scope="col">Partido</th>
+       <th scope="col">Hora</th>
+       <th scope="col">Torneo</th>
+       </tr>
    </thead>
    <tbody class="borde-tabla">
      <tr>
-       <td>Regimiento 9</td>
-       <td> 12:50</td>
        <td>15/04/2022</td>
-     </tr>
-      </tbody>
- </table>
- 
- <div class="row tabla-partido">
-   <div class="col-md-3 equipo">
+       <td>Regimiento 9</td>
+       <td>  
+ <div class="row ">
+   <div class="col-md-3">
      Danubio
    </div>
-   <div class="col-md-2">
-     <img class="foto-equipo"src="../../../imagenes/foto-equipo.png" alt="..." class="img-thumbnail">
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
    </div>
-<div class="alert alert-primary col-md-2" role="alert">
-      15/04/2022
+<div class="alert alert-primary col-md-3" role="alert">
+     VS
      </div>
 <div class="col-md-2">
-     <img class="foto-equipo"src="../../../imagenes/foto-equipo.png" alt="..." class="img-thumbnail">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
    </div>
-   <div class="col-md-3 equipo">
+   <div class="col-md-2">
      Danubio
    </div>
- </div>
+   </div> 
+   </td>
+       <td> 12:50</td>
+       <td>Nombre de torneo</td>
+      </tr>
+      <tr>
+       <td>15/04/2022</td>
+       <td>Regimiento 9</td>
+       <td>  
+ <div class="row ">
+   <div class="col-md-3">
+     Danubio
+   </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+   </div>
+<div class="alert alert-primary col-md-3" role="alert">
+     VS
+     </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+   </div>
+   <div class="col-md-2">
+     Danubio
+   </div>
+   </div> 
+   </td>
+       <td> 12:50</td>
+       <td>Nombre de torneo</td>
+      </tr>
+      <tr>
+       <td>15/04/2022</td>
+       <td>Regimiento 9</td>
+       <td>  
+ <div class="row ">
+   <div class="col-md-3">
+     Danubio
+   </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+   </div>
+<div class="alert alert-primary col-md-3" role="alert">
+     VS
+     </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+   </div>
+   <div class="col-md-2">
+     Danubio
+   </div>
+   </div> 
+   </td>
+       <td> 12:50</td>
+       <td>Nombre de torneo</td>
+      </tr>
 
+      </tbody>
+ </table>
 </div>
 
-
- </div>
-</div>
-
-
-
+<div class="container cuerpo-partido"> 
+   <h4>Mayo,2022</h4>
+      <table class="table ">
+       <thead class="cabezera">
+         <tr>
+           <th scope="col">Fecha</th>
+           <th scope="col">Lugar</th>
+           <th scope="col">Partido</th>
+           <th scope="col">Hora</th>
+           <th scope="col">Torneo</th>
+           </tr>
+       </thead>
+       <tbody class="borde-tabla">
+         <tr>
+           <td>15/05/2022</td>
+           <td>Regimiento 9</td>
+           <td>  
+     <div class="row ">
+       <div class="col-md-3">
+         Danubio
+       </div>
+   <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+       </div>
+   <div class="alert alert-primary col-md-3" role="alert">
+         VS
+         </div>
+    <div class="col-md-2">
+         <img class="foto-equipo"  src="../../../imagenes/foto-equipo.png" alt="equipo2">
+       </div>
+       <div class="col-md-2">
+         Danubio
+       </div>
+       </div> 
+       </td>
+           <td> 12:50</td>
+           <td>Nombre de torneo</td>
+          </tr>
+          <tr>
+           <td>15/05/2022</td>
+           <td>Regimiento 9</td>
+           <td>  
+     <div class="row ">
+       <div class="col-md-3">
+         Danubio
+       </div>
+   <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+       </div>
+   <div class="alert alert-primary col-md-3" role="alert">
+         VS
+         </div>
+    <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+       </div>
+       <div class="col-md-2">
+         Danubio
+       </div>
+       </div> 
+       </td>
+           <td> 12:50</td>
+           <td>Nombre de torneo</td>
+          </tr>
+          <tr>
+           <td>15/05/2022</td>
+           <td>Regimiento 9</td>
+           <td>  
+     <div class="row ">
+       <div class="col-md-3">
+         Danubio
+       </div>
+   <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+       </div>
+   <div class="alert alert-primary col-md-3" role="alert">
+         VS
+         </div>
+    <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+       </div>
+       <div class="col-md-2">
+         Danubio
+       </div>
+       </div> 
+       </td>
+           <td> 12:50</td>
+           <td>Nombre de torneo</td>
+          </tr>
    
+          </tbody>
+     </table>
+    
+   
+   </div>
+
+
+
+    </div>
+   </div>
+ 
+
+
+<!---fin del cuerpo-->
+  
 
  
 
@@ -285,9 +381,9 @@
      </div>
    <div class="row-12 ">
      <div class="col-12 nav d-flex justify-content-around elementopie ">
-          <a class="nav-link " href="../../arcanet/arcanet.html">Sobre nosotros</a>
-          <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/">arcanet2022@gmail.com</a>
-           <a class="nav-link" href="../../arcanet/ayuda_soporte.html">Ayuda y soporte</a>
+      <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
+      <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+       <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
           
           
          

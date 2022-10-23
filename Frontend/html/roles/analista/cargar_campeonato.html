@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="../../../css/bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <title>Cargar campeonato</title>
+    <title>Cargar torneos</title>
   </head>
   <body >
 
-    <!--Navegación primaria-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
+     <!--Navegación primaria-->
+     <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
      
       <div class="col-2 navbar-brand">
         <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
@@ -28,57 +28,43 @@
 
        
 
-          <li class="nav-item col-2 ">
-            <a class="nav-link textoprin" href="../../roles/analista/analista.html">Inicio</a>
+          <li class="nav-item col-1 ">
+            <a class="nav-link textoprinPrincipal" href="../../roles/analista/analista.html">Inicio</a>
           </li>
       
-       
-        <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Deportes
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            
-            <a class="dropdown-item" href="../../información/deportes/futbol.html">Fútbol</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/deportes/basquetbol.html">Basquetbol</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/deportes/handbol.html">Handbol</a>
-          </div>
-        </li>
+          <li class="nav-item col-2">
+            <a class="nav-link textoprin" href="Perfil.html">Perfil</a>
+          </li>
       
-        
-        <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            EMT-Deporte
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../../../html/información/emt_deportes/historia.html">Historia</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/emt_deportes/objetivo.html">Objetivo</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/emt_deportes/egresados.html">Egresados</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://www.utu.edu.uy/educacion-media-tecnologica-deporte-y-recreacion">UTU-Deporte</a>
-          </div>
-        </li>
+          <li class="nav-item dropdown col-1">
+            <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-cargardatos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Cargar datos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown-cargardatos">
+              <a class="dropdown-item" href="cargar_campeonato.html">Torneos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="cargar_partidos.html">Partidos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="cargar_actuaciones.html">Actuaciones</a>
+           
+            </div>
+          </li>
+          
+              <li class="nav-item col-2">
+                <a class="nav-link textoprin" href="partidos.html">Partidos</a>
+              </li>
+              <li class="nav-item col-1">
+                <a class="nav-link textoprin" href="torneo.html">Torneos</a>
+              </li>
+              <li class="nav-item col-2">
+                <a class="nav-link textoprin" href="estadisticas.html">Estadisticas</a>
+              </li>
 
 
-        <li class="nav-item dropdown  col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            S.I.G.D.
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../../información/sigd/historia.html">Historia</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item " href="../../información/sigd/objetivos.html">Objetivo</a>
-            
-          </div>
-        </li>
-    
-
-  <li class="nav-item col-2 textoprin">
-    <a href="../../../../Backend/App/Controladores/logout.php" class="btn boton" role="button">Salir</a>
+          
+       
+  <li class="nav-item col-1 ">
+    <a href="../../../../Backend/App/Controladores/logout.php" class="btn boton textoprinPrincipal" role="button">Salir</a>
   </li>     
 
 </ul>
@@ -87,82 +73,41 @@
 <!--Fin de la navegación primaria-->
 
 
-<!--Navegación secundaria-->
-
-<nav class="navbar navbar-expand-lg navbar-light bg ">
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse " id="navbarText">
-
-   
-    <ul class="navbar-nav mr-auto row">
-      
-     <span class="navbar-text color-texto col-3">
-      Bienvenido Analista!
-    </span>
-
-    <li class="nav-item col-1">
-      <a class="nav-link color" href="Perfil.html">Perfil</a>
-    </li>
-
-    <li class="nav-item dropdown col-2">
-      <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-       Cargar datos
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="cargar_campeonato.html">Campeonato</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="cargar_partidos.html">Partidos</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="cargar_estadisticas.html">Estadisticas</a>
-     
-      </div>
-    </li>
-    
-        <li class="nav-item col-2">
-          <a class="nav-link color" href="partidos.html">Partidos</a>
-        </li>
-        <li class="nav-item col-2">
-          <a class="nav-link color" href="torneo.html">Campeonatos</a>
-        </li>
-        <li class="nav-item col-2">
-          <a class="nav-link color" href="estadisticas.html">Estadisticas</a>
-        </li>
-        
-    </ul>
-    
-  </div>
-</nav>
-<!--Fin de la navegación secundaria-->
-
 <!---inicio del cuerpo-->
 <div class="jumbotron">
  
     <div class="row"> 
-<div class="titulo col-md-12">CARGAR CAMPEONATOS</div>
+<div class="titulo col-md-12">CARGAR TORNEOS</div>
+
+<div class="dropdown dropright row">
+  <div class="col-md-5"></div>
+  <button class="btn boton-deporte dropdown-toggle " type="button" id="dropdownMenuButton-torneo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Elegir torneos
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-torneo">
+    <a class="dropdown-item" href="#">NombreTorneo1</a>
+    <a class="dropdown-item" href="#">NombreTorneo2</a>
+    <a class="dropdown-item" href="#">NombreTorneo3</a>
+  </div>
+</div>
 
 <div class="container  cuerpo-partido">
 
     <div class="row">
         <table class="table">
             <thead class="cabezera">
+
             <tr>
-            <th scope="col">Nombre de campeonato</th>
-            <th scope="col">Número de jugadores</th>
-         
+            <th scope="col">Nombre de torneo</th>
             </tr>
+
             </thead>
+
             <tbody class="borde-tabla">
             <tr>
-            <td>
-                <input class="form-control" type="text" placeholder="...">
-            </td>
-            <td>
-                <input class="form-control" type="text" placeholder="...">
-            </td>
-           
+                <td>
+                    <input class="form-control" type="text" placeholder="Escribe aqui nombre del torneo">
+                </td>
             </tr>
             
             </tbody>
@@ -173,9 +118,8 @@
             <thead class="cabezera ">
             <tr>
             <th scope="col">Lugar</th>
-            <th scope="col">Jugadores</th>
-            <th scope="col">Fecha</th>
-            <th scope="col">Hora</th>
+            <th scope="col">Fecha inicio</th>
+            <th scope="col">Fecha fin</th>
             </tr>
             </thead>
             <tbody class="borde-tabla">
@@ -184,13 +128,10 @@
                 <input class="form-control" type="text" placeholder="...">
             </td>
             <td>
-                <input class="form-control" type="number" placeholder="...">
+                <input class="form-control" type="date">
             </td>
             <td>
-                <input class="form-control" type="date" placeholder="...">
-            </td>
-            <td>
-                <input class="form-control" type="time" placeholder="...">
+                <input class="form-control" type="date">
             </td>
            
             </tr>
@@ -200,6 +141,136 @@
     </div>
 </div>
 
+
+
+
+
+
+<table class="table">
+<thead class="cabezera cabezera-tabla">
+  <tr>
+    <th scope="col">Partido</th>
+    <th scope="col">Equipo 1</th>
+    <th scope="col">Hora inicio</th>
+    <th scope="col">Hora fin</th>
+    <th scope="col">Fecha</th>
+    <th scope="col">Equipo 2</th>
+  </tr>
+</thead>
+<tbody class="cuerpo-tabla">
+  <tr>
+    <th scope="row">1</th>
+    <td>
+      <input type="text" class="form-control" placeholder="Nombre del equipo">
+    </td>
+    <td>
+      <input type="time" class="form-control">
+    </td>
+    <td>
+      <input type="time" class="form-control">
+    </td>
+    <td>
+      <input type="date" class="form-control">
+    </td>
+    <td>
+      <input type="text" class="form-control" placeholder="Nombre del equipo">
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>
+      <input type="text" class="form-control" placeholder="Nombre del equipo">
+    </td>
+    <td>
+      <input type="time" class="form-control">
+    </td>
+    <td>
+      <input type="time" class="form-control">
+    </td>
+    <td>
+      <input type="date" class="form-control">
+    </td>
+    <td>
+      <input type="text" class="form-control" placeholder="Nombre del equipo">
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td>
+      <input type="text" class="form-control" placeholder="Nombre del equipo">
+    </td>
+    <td>
+      <input type="time" class="form-control">
+    </td>
+    <td>
+      <input type="time" class="form-control">
+    </td>
+    <td>
+      <input type="date" class="form-control">
+    </td>
+    <td>
+      <input type="text" class="form-control" placeholder="Nombre del equipo">
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">4</th>
+    <td>
+      <input type="text" class="form-control" placeholder="Nombre del equipo">
+    </td>
+    <td>
+      <input type="time" class="form-control">
+    </td>
+    <td>
+      <input type="time" class="form-control">
+    </td>
+    <td>
+      <input type="date" class="form-control">
+    </td>
+    <td>
+      <input type="text" class="form-control" placeholder="Nombre del equipo">
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">5</th>
+    <td>
+      <input type="text" class="form-control" placeholder="Nombre del equipo">
+    </td>
+    <td>
+      <input type="time" class="form-control">
+    </td>
+    <td>
+      <input type="time" class="form-control">
+    </td>
+    <td>
+      <input type="date" class="form-control">
+    </td>
+    <td>
+      <input type="text" class="form-control" placeholder="Nombre del equipo">
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">6</th>
+    <td>
+      <input type="text" class="form-control" placeholder="Nombre del equipo">
+    </td>
+    <td>
+      <input type="time" class="form-control">
+    </td>
+    <td>
+      <input type="time" class="form-control">
+    </td>
+    <td>
+      <input type="date" class="form-control">
+    </td>
+    <td>
+      <input type="text" class="form-control" placeholder="Nombre del equipo">
+    </td>
+  </tr>
+  
+
+</tbody>
+</table>
+
     </div><button type="button" class="btn boton-enviar">Enviar</button>
 </div>
 
@@ -208,9 +279,7 @@
 
 
 
-</div>
 
-</div>
 
 
 
@@ -229,9 +298,9 @@
        </div>
      <div class="row-12 ">
        <div class="col-12 nav d-flex justify-content-around elementopie ">
-            <a class="nav-link " href="../../arcanet/arcanet.html">Sobre nosotros</a>
-            <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/">arcanet2022@gmail.com</a>
-             <a class="nav-link" href="../../arcanet/ayuda_soporte.html">Ayuda y soporte</a>
+        <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
+        <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+         <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
             
             
            

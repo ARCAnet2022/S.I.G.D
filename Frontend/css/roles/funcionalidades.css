@@ -1,3 +1,25 @@
+html{
+    font-size: 1rem;
+  }
+  
+  @include media-breakpoint-up(sm) {
+    html {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @include media-breakpoint-up(md) {
+    html {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @include media-breakpoint-up(lg) {
+    html {
+      font-size: 1.6rem;
+    }
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -19,6 +41,7 @@ body.html{
 }
 
 .elementopie{
+    text-align:center ;
     background-color: rgb(23, 37, 41); 
 }
 .elementopie a{
@@ -28,7 +51,113 @@ body.html{
     margin-top: 2%;
 }
 
+.alinear-listas{
+    text-align: center;
+    background-color: #a2dcf7 !important;
+}
 
+.contenido-torneo{
+    display: grid;
+    justify-content: center;
+  margin-bottom: 5%;
+   padding-left: 4%;
+   
+}
+.tabla-torneo{
+    display: grid;
+    justify-content: center;
+    margin-top: 3%;
+    box-shadow: 
+    0 0 1px rgb(187, 182, 182),
+    0 0 2px rgb(138, 135, 135),
+    0 0 4px rgb(112, 112, 112);
+        padding: 2%;
+        background-color: #fffffff5;
+        margin-left: 4%;
+}
+.tabla-torneos{
+    display: grid;
+    justify-content: center;
+    margin-top: 3%;
+    box-shadow: 
+    0 0 1px rgb(187, 182, 182),
+    0 0 2px rgb(138, 135, 135),
+    0 0 4px rgb(112, 112, 112);
+        padding: 2%;
+        background-color: #fffffff5;
+       margin-left: 10%;
+}
+.linea{
+    padding-top: 1%;
+    margin-left: 5%;
+    border: 2px solid grey;
+    background-color: rgba(106, 156, 207, 0.5);
+    
+}
+.img-torneo{
+    margin-right: 25%; 
+} 
+.formulario-contraseña{
+    
+    display: grid;
+    justify-content:center;
+    height: 70vh;
+    padding: 3%;
+}
+.contorno-contraseña{
+    background-color: rgba(0, 128, 255, 0.178);
+    display: grid;
+    justify-content:center;
+    padding: 5%;
+ 
+}
+.borde-contraseña{
+    border: 2px solid rgba(0, 128, 255, 0.178);
+    display: grid;
+    justify-content:center;
+    margin: 2%;
+    padding-top: 2%;
+}
+
+@media (min-width: 280px) and (max-width: 500px){ 
+ .formulario-contraseña{
+    height: 180vh;
+ }
+
+ }
+ @media (min-width: 500px) and (max-width: 820px){ 
+    .formulario-contraseña{
+       height: 75vh;
+    }
+   
+    }
+    .color-estudiante{
+        color: #383838;
+        background-color: rgba(0, 128, 255, 0.178);
+    }
+
+.textito{
+    font: bold;
+    font-family: verdana;
+    color: #383838;
+    font-size: 2rem;
+    background-color: rgba(106, 156, 207, 0.5);
+    border-radius: 3px;
+    border-top: 1px solid grey;
+   padding: 1%;
+   margin-top: 3%;
+}
+
+.modificaciones-admin{
+    margin-top: 4%;
+    height: 80vh;
+}
+
+@media (min-width: 280px) and (max-width: 500px){ 
+    .modificaciones-admin{
+        height: 160vh;
+    }
+    }
 
 .piedepagina{
     background-size:auto;
@@ -67,7 +196,7 @@ body.html{
     
 }
 .modal-contenido{
-    background-color: #465c6d;
+    background-color: #465c6d9c;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -85,16 +214,27 @@ body.html{
 }
 
 .textoprin{
-    color:#465c6dc7 !important;
-    white-space: nowrap;
-    font-family:'Franklin Gothic Medium';
-}
-.textoprin:hover{
-    background-color: #465c6dc7;
-    border-radius: 4%;
-    transition: 2s;
-    color:white !important;
-}
+    color: rgb(80, 125, 171) !important;
+     white-space: nowrap;
+     font-family:'Franklin Gothic Medium';
+ }
+ 
+ 
+ .textoprin:hover{
+     color:#212c34d8 !important;
+     border-radius: 4%;
+     transition: 0.5s;
+ }
+ 
+ .textoprinPrincipal{
+     color: rgb(23, 70, 99) !important; 
+     font-family:'Franklin Gothic Medium';
+  }
+  .textoprinPrincipal:hover{
+     color: rgb(80, 125, 171) !important;
+     font-family:'Franklin Gothic Medium';
+  }
+  
 
 .color{
     text-align: center;
@@ -125,13 +265,14 @@ h2{
     width: 100%;
 }
 .boton-enviar{
-   background-color: #4e8cdd;
-  
-   border:3px solid #ffffff !important;
+    color: white;
+   background-color: #465c6dc7 !important;
+  font-weight: bolder;
+  margin-top: 3%;
 }
 .boton-enviar:hover{
-    background-color: #8db1c2;
- 
+    background-color: #415869b2 !important;
+    color: #2c2c2c !important;
 }
 
 h1{
@@ -245,14 +386,17 @@ button{
     margin: 6px;
 }
 button:first-child{
-    background-color: #48e;
-    color: #fff;
+    background-color: #465c6dc7;
 }
 .imagen{
-    width: 100%;
+    width: 80%;
 }
 .columna{
     padding-top: 5%;
+}
+.centrar-fecha{
+    display: grid;
+    justify-content: center;
 }
 
 /*------- ..............-------------?*/
@@ -261,21 +405,9 @@ button:first-child{
    padding: 5%!important;
    text-align: center;
 }
-.card{
-    margin-top:10% ;
-    box-shadow: 
-    0 0 5px rgba(116, 121, 134, 0.733),
-    0 0 10px rgb(136, 139, 146),
-    0 0 15px rgb(196, 199, 207),
-    0 0 20px rgb(233, 238, 255);
-}
-.card:hover{
-    background-color: rgb(117, 133, 141);
-    box-shadow: 
-    0 0 5px rgba(116, 121, 134, 0.733),
-    0 0 10px rgb(136, 139, 146),
-    0 0 15px rgb(196, 199, 207),
-    0 0 20px rgb(233, 238, 255);
+
+.tablas{
+    margin: 5%;
 }
 .drop-boton{
     background-color:#465c6dc7 !important;
@@ -286,8 +418,14 @@ button:first-child{
     text-align:center;
     margin-top: 5%;
 }
+.datos{
+    color: #364753fd;
+    border: 2px solid rgba(0, 128, 255, 0.178);
+background-color: rgba(0, 128, 255, 0.055);;
+    font-family: verdana;
+}
 .cabezera{
-    background-color: #465c6dc7;
+    background-color: #437499a2;
     color: white;
 }
 
@@ -300,7 +438,7 @@ button:first-child{
     width: 100%;
 }
 .boton{
-    color:#465c6dc7 !important;
+    color:#465c6dfb !important;
     font-family:'Franklin Gothic Medium';
 }
 .boton:hover{
@@ -332,6 +470,14 @@ button:first-child{
     padding: 6%; 
 
 }
+.boton-deporte{
+    margin: 3%;
+    color: white;
+    background-color: #465c6dc7 !important;
+    width: 12%;
+    text-align: center;
+}
+
 .cuerpo .row{
     margin: 5%;
 }
@@ -349,8 +495,9 @@ button:first-child{
     font-family: verdana;
     color: #666666;
     font-size:xx-large;
-    background-color: rgba(144, 238, 68, 0.151);
+    background-color: rgba(0, 128, 255, 0.178);
 }
+
 .borde-tabla{
     border: 1px solid rgba(0, 0, 0, 0.068);
    text-align: center;
@@ -430,4 +577,29 @@ table th{
     border-right: 1px solid rgba(128, 128, 128, 0.377);
     border-radius: 2%;
     text-align: center;
+}
+
+.deportista-fondo{
+    margin-top: 5%;
+    padding: 3px 10px;
+  
+    box-shadow:
+    0 0 5px #5c98c55b,
+    0 0 10px #5c98c54b,
+    0 0 15px #5c98c542;
+    background-color: #4b4a4a15;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  
+}
+.progress{
+    margin-bottom: 4%;
+    width: 80%;
+}
+
+
+
+.letra-barra{
+    background-color: #aec0c717;
+  padding-bottom: 12%;
 }

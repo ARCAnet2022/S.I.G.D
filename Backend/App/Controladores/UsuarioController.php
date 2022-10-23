@@ -63,7 +63,7 @@ class UsuarioController {
         if ($ciDeportista == $deportista) 
         {  
             $initSes->initSessionDeportista($deportista);
-            header("location:".basePathFrontend()."html/Roles/deportista/deportista.html");
+            header("location:".basePathFrontend()."html/roles/deportista/deportista.html");
             exit();
         }
         else

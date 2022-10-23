@@ -1,4 +1,5 @@
-*{
+
+*{ 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,12 +15,21 @@ body.html{
     0 0 20px rgb(233, 238, 255);
 }
 
+.modalError{
+    font-size: small;
+    color:red;
+}
+
+.modalChangeColor{
+    border: red,1px,solid;
+}
 .texto{
     text-align:center;
 }
 
 .elementopie{
     background-color: rgb(23, 37, 41); 
+    text-align: center;
 }
 .elementopie a{
     color:white;
@@ -27,10 +37,8 @@ body.html{
 .fila{
     margin-top: 2%;
 }
-
-
-
 .piedepagina{
+ 
     background-size:auto;
     background-image: url(../../imagenes/LogoArcanet3.png);
     background-repeat: no-repeat ;
@@ -40,9 +48,11 @@ body.html{
     display: flex;
     justify-content: center;
 }
+
 .arca{
+    
     width: 4em;
-    margin-left: 6%;
+    margin-left: 4%;
     display: block;
     animation: float 3s linear infinite;
    
@@ -67,7 +77,7 @@ body.html{
     
 }
 .modal-contenido{
-    background-color: #465c6d;
+    background-color: #465c6d9c;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -83,18 +93,32 @@ body.html{
    display: flex;
    justify-content: center;
 }
+.color-estudiante{
+    color: #666666;
+    background-color: rgba(0, 128, 255, 0.178);
+}
 
 .textoprin{
-    color:#465c6dc7 !important;
-    white-space: nowrap;
-    font-family:'Franklin Gothic Medium';
-}
-.textoprin:hover{
-    background-color: #465c6dc7;
-    border-radius: 4%;
-    transition: 2s;
-    color:white !important;
-}
+    color: rgb(80, 125, 171) !important;
+     white-space: nowrap;
+     font-family:'Franklin Gothic Medium';
+ }
+ 
+ .textoprin:hover{
+     color:#212c34d8 !important;
+     border-radius: 4%;
+     transition: 0.5s;
+ }
+ 
+ .textoprinPrincipal{
+     color: rgb(23, 70, 99) !important;
+     
+      font-family:'Franklin Gothic Medium';
+  }
+  .textoprinPrincipal:hover{
+     color: rgb(80, 125, 171) !important;
+     font-family:'Franklin Gothic Medium';
+  }
 
 .color{
     text-align: center;
@@ -125,13 +149,14 @@ h2{
     width: 100%;
 }
 .boton-enviar{
-   background-color: #4e8cdd;
-  
-   border:3px solid #ffffff !important;
+    color: white;
+   background-color: #465c6dc7 !important;
+  font-weight: bolder;
+  margin-top: 3%;
 }
 .boton-enviar:hover{
-    background-color: #8db1c2;
- 
+    background-color: #415869b2 !important;
+    color: #2c2c2c !important;
 }
 
 h1{
@@ -329,7 +354,7 @@ button:first-child{
     font-family: verdana;
     color: #666666;
     font-size:xx-large;
-    background-color: rgba(144, 238, 68, 0.151);
+    background-color: rgba(0, 128, 255, 0.178);
 }
 .borde-tabla{
     border: 1px solid rgba(0, 0, 0, 0.068);
@@ -344,6 +369,27 @@ button:first-child{
     padding-top: 5%;
     width: 100%;
 }
+.sugerencia{
+    margin-top: 7%;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+   
+}
+.formulario-sugerencia{
+    display: grid;
+    place-items: center;
+    background-color: #465c6d2c;
+    border-radius: 3%;
+}
+
+.img-sugerencia{
+    width: 130%;
+    margin-top: 6%;
+    margin-left: 25%;
+  }
+
+
 @media (max-width: 30em){
     table{
         width: 100%;
@@ -398,3 +444,22 @@ table th{
     margin:4%;
     padding-top:2vh;
 }
+
+@media only screen and (max-width:412px){
+    .sugerencia{
+        margin-top: 7%;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+       
+    }
+    .arca{
+    
+        width: 4em;
+       margin-left: 10%;
+        display: block;
+        animation: float 3s linear infinite;
+       
+    }
+}
+

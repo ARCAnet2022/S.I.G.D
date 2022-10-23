@@ -15,70 +15,66 @@
     <!--Navegación primaria-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
      
-      <div class="col-2 navbar-brand">
+      
+      <div class="col-1 navbar-brand">
         <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
      </div>
      
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <ul class="navbar-nav mr-auto texto row">
 
         
           <li class="nav-item col-2">
-            <a class="nav-link textoprin" href="../../roles/entrenador/entrenador.html">Inicio</a>
+            <a class="nav-link textoprinPrincipal" href="../../roles/entrenador/entrenador.html">Inicio</a>
           </li>
      
 
-        
-        <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Deportes
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
+          <li class="nav-item col-1">
+            <a class="nav-link textoprin" href="Perfil.html">Perfil</a>
+          </li>
+      
+          <li class="nav-item dropdown col-2">
+            <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-equipo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Equipo
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown-equipo">
+              <a class="dropdown-item" href="equipo.html">Ver</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="crear_equipo.html">Crear equipo</a>
+            </div>
+          </li>
             
-            <a class="dropdown-item" href="../../información/deportes/futbol.html">Fútbol</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/deportes/basquetbol.html">Basquetbol</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/deportes/handbol.html">Handbol</a>
-          </div>
-        </li>
+      
+              <li class="nav-item col-1">
+                <a class="nav-link textoprin" href="torneo.html">Torneos</a>
+              </li>
+      
+              <li class="nav-item col-2">
+                <a class="nav-link textoprin" href="partidos.html">Partidos</a>
+              </li>
+               
+                <li class="nav-item dropdown col-2">
+                  <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-estadisticas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Estadisticas
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown-estadisticas">
+                    <a class="dropdown-item" href="estadisticas_personales.html">Mis jugadores</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="estadisticas.html">Generales</a>
+                  </div>
+                </li>
        
 
-     
-        <li class="nav-item dropdown col-2 ">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            EMT-Deporte
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../../../html/información/emt_deportes/historia.html">Historia</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/emt_deportes/objetivo.html">Objetivo</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/emt_deportes/egresados.html">Egresados</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://www.utu.edu.uy/educacion-media-tecnologica-deporte-y-recreacion">UTU-Deporte</a>
-          </div>
-        </li>
 
 
 
-        <li class="nav-item dropdown  col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            S.I.G.D.
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../../información/sigd/historia.html">Historia</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item " href="../../información/sigd/objetivos.html">Objetivo</a>        
-          </div>          
-        </li>
-
-          <li class="nav-item textoprin col-2">
-            <a href="../../../../Backend/App/Controladorlogout.php" class="btn boton" role="button">Salir</a>
+          <li class="nav-item  col-1">
+            <a href="../../../../Backend/App/Controladorlogout.php" class="btn textoprinPrincipal" role="button">Salir</a>
           </li>     
         
 </ul>
@@ -87,61 +83,6 @@
 </nav>
 <!--Fin de la navegación primaria-->
 
-<!--Navegación secundaria-->
-
-<nav class="navbar navbar-expand-lg navbar-light bg ">
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse " id="navbarText">
-
-   
-    <ul class="navbar-nav mr-auto row">
-     <span class="navbar-text col-3 color-texto">
-      Bienvenido Entrenador!
-    </span>
-
-    <li class="nav-item col-1">
-      <a class="nav-link color" href="Perfil.html">Perfil</a>
-    </li>
-
-    <li class="nav-item dropdown col-2">
-      <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Equipo
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="equipo.html">Ver</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="crear_equipo.html">Crear equipo</a>
-      </div>
-    </li>
-      
-
-        <li class="nav-item col-2">
-          <a class="nav-link color" href="torneo.html">Campeonatos</a>
-        </li>
-
-        <li class="nav-item col-2">
-          <a class="nav-link color" href="partidos.html">Partidos</a>
-        </li>
-         
-          <li class="nav-item dropdown col-2">
-            <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Estadisticas
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="estadisticas_personales.html">Mis jugadores</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="estadisticas.html">Generales</a>
-            </div>
-          </li>
-        
-    </ul>
-    
-  </div>
-</nav>
-<!--Fin de la navegación secundaria-->
 
 
 
@@ -154,6 +95,30 @@
     <div class="titulo col-md-12">CREAR EQUIPOS</div>
 
  <div class="row ">
+
+  <div class="dropdown dropright col-md-6">
+      
+    <button class="btn boton-deporte dropdown-toggle col-6" type="button" id="dropdownMenuButton-deporte" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Elegir deportes
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-deporte">
+      <a class="dropdown-item" href="#">Fútbol</a>
+      <a class="dropdown-item" href="#">Basquetbol</a>
+      <a class="dropdown-item" href="#">Balonmano</a>
+    </div>
+  </div>
+
+  <div class="dropdown dropright col-md-6">
+  
+    <button class="btn boton-deporte dropdown-toggle col-6" type="button" id="dropdownMenuButton-torneo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Elegir grupo
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-torneo">
+      <a class="dropdown-item" href="#">3BB</a>
+      <a class="dropdown-item" href="#">2BN</a>
+      <a class="dropdown-item" href="#">1MR</a>
+    </div>
+  </div>
    
  <div class="col-9 buscador">
   
@@ -168,7 +133,8 @@
         <th>Nombre:</th>
         <th>Apellido:</th>
         <th>Cédula:</th>
-        <th>Tipo de usuario:</th>
+        <th>Grupos:</th>
+        <th>Seleccionar:</th>
       </tr>
     </thead>
     <tbody id="myTable">
@@ -176,25 +142,37 @@
         <td>John</td>
         <td>Doe</td>
         <td>783899429</td>
-        <td>Scout</td>
+        <td>3-BB</td>
+        <td><div class="form-check">
+          <input class="form-check-input position-static" type="checkbox" id="validar-1" value="option1" aria-label="...">
+        </div></td>
       </tr>
       <tr>
         <td>Mary</td>
         <td>Moe</td>
         <td>124899429</td>
-        <td>Administrador</td>
+        <td>3-BN</td>
+        <td><div class="form-check">
+          <input class="form-check-input position-static" type="checkbox" id="validar-2" value="option1" aria-label="...">
+        </div></td>
       </tr>
       <tr>
         <td>July</td>
         <td>Dooley</td>
         <td>600899429</td>
-        <td>Entrenador</td>
+        <td>3-BN</td>
+        <td><div class="form-check">
+          <input class="form-check-input position-static" type="checkbox" id="validar-3" value="option1" aria-label="...">
+        </div></td>
       </tr>
       <tr>
         <td>Anja</td>
         <td>Ravendale</td>
         <td>083899429</td>
-        <td>Estudiante</td>
+        <td>3-BN</td>
+        <td><div class="form-check">
+          <input class="form-check-input position-static" type="checkbox" id="validar-4" value="option1" aria-label="...">
+        </div></td>
       </tr>
     </tbody>
   </table>
@@ -203,12 +181,12 @@
     <thead class="cabezera">
       <tr>
         <th>Nombre equipo:</th>
-        <th>Grupo:</th>
-        <th>Color camiseta</th>
+        <th>Posicion:</th>
+        <th>Número de camiseta</th>
        
       </tr>
     </thead>
-    <tbody id="myTable">
+    <tbody id="tabla1">
       <tr>
         <td><input class="form-control" type="text" placeholder="..."></td>
        <td><input class="form-control" type="text" placeholder="..."></td>
@@ -234,9 +212,9 @@
             </div>
           <div class="row-12 ">
             <div class="col-12 nav d-flex justify-content-around elementopie ">
-                 <a class="nav-link " href="../../arcanet/arcanet.html">Sobre nosotros</a>
-                 <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/">arcanet2022@gmail.com</a>
-                  <a class="nav-link" href="../../arcanet/ayuda_soporte.html">Ayuda y soporte</a>
+               <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
+               <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+               <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
                  
                  
                 
@@ -244,7 +222,7 @@
             </div>
           </footer>   
    
-         
+         <script src="../../../js/buscador.js"></script>
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

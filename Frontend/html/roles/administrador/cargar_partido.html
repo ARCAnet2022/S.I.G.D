@@ -22,63 +22,83 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
 
-      <ul class="navbar-nav mr-auto row texto">
+      <ul class="navbar-nav mr-auto  row texto">
 
        
-
-          <li class="nav-item col-2 ">
-            <a class="nav-link textoprin" href="../../roles/administrador/administrador.html">Inicio</a>
+          <li class="nav-item col-1">
+            <a class="nav-link textoprinPrincipal" href="../../roles/administrador/administrador.html">Inicio</a>
           </li>
       
-       
-        <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Deportes
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            
-            <a class="dropdown-item" href="../../información/deportes/futbol.html">Fútbol</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/deportes/basquetbol.html">Basquetbol</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/deportes/handbol.html">Handbol</a>
-          </div>
-        </li>
-      
-        
-        <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            EMT-Deporte
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../../../html/información/emt_deportes/historia.html">Historia</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/emt_deportes/objetivo.html">Objetivo</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../información/emt_deportes/egresados.html">Egresados</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://www.utu.edu.uy/educacion-media-tecnologica-deporte-y-recreacion">UTU-Deporte</a>
-          </div>
-        </li>
+          <li class="nav-item dropdown col-md-2">
+            <a class="nav-link dropdown-toggle textoprin" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Usuarios</a>
+            <div class="dropdown-menu col-12 ">
+              <a class="dropdown-item " href="Perfil.html">Mi perfil</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="cargar_usuarios.html">Cargar usuarios</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="usuarios_cargados.html">Ver usuarios</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="modificar_usuario.html">Modificar usuarios</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="eliminar_usuario.html">Eliminar usuarios</a>
+              </div>
+          </li>
 
 
-        <li class="nav-item dropdown  col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            S.I.G.D.
-          </a>
-          <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../../información/sigd/historia.html">Historia</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item " href="../../información/sigd/objetivos.html">Objetivo</a>
-            
-          </div>
-        </li>
-    
 
-  <li class="nav-item col-2 textoprin">
-    <a href="../../../../Backend/App/Controladores/logout.php" class="btn boton" role="button">Salir</a>
+          <li class="nav-item dropdown col-md-1">
+            <a class="nav-link dropdown-toggle textoprin" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Equipos</a>
+             <div class="dropdown-menu col-12 ">
+              <a class="dropdown-item " href="crear_equipo.html">Crear equipos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="ver_equipo.html">Ver equipos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="equipo.html">Todos los equipos</a>
+            </div>
+          </li>
+
+
+          <li class="nav-item dropdown col-md-2">
+            <a class="nav-link dropdown-toggle textoprin" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Partidos</a>
+            <div class="dropdown-menu col-12 ">
+              <a class="dropdown-item " href="cargar_partido.html">Cargar partidos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="partidos.html">Ver partidos</a>
+             </div>
+          </li>
+   
+          <li class="nav-item dropdown col-md-1">
+            <a class="nav-link dropdown-toggle textoprin" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Torneos</a>
+            <div class="dropdown-menu col-12 ">
+              <a class="dropdown-item " href="cargar_campeonato.html">Cargar torneo</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="torneo.html">Ver torneo</a>
+              </div>
+          </li>
+         
+          <li class="nav-item dropdown col-md-2">
+            <a class="nav-link dropdown-toggle textoprin" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estadisticas</a>
+            <div class="dropdown-menu col-12 ">
+              <a class="dropdown-item " href="estadisticas_personales.html">Estadisticas personales</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="validar_sancion.html">Validar sansión</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="cargar_estadisticas.html">Cargar estadisticas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="estadisticajugador.html">Estadisticas comparativas</a>
+              
+              </div>
+          </li>
+
+          <li class="nav-item col-md-1">
+            <a class="nav-link textoprin" href="modificaciones.html">Sistema</a>
+          </li> 
+
+
+  <li class="nav-item col-1 ">
+    <a href="../../../../Backend/App/Controladores/logout.php" class="btn boton textoprinPrincipal" role="button">Salir</a>
   </li>     
 
 </ul>
@@ -86,221 +106,124 @@
 </nav>
 <!--Fin de la navegación primaria-->
 
-<!--Navegación secundaria-->
-
-<nav class="navbar navbar-expand-lg navbar-light bg">
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse " id="navbarText">
-
-   
-    <ul class="navbar-nav mr-auto  row">
-      
-     <span class="navbar-text color-texto col-3">
-      Bienvenido Administrador!
-    </span>
-
-    <li class="nav-item col-1">
-      <a class="nav-link color" href="Perfil.html">Perfil</a>
-    </li>
-    <li class="nav-item col-2">
-      <a class="nav-link color" href="equipo.html">Equipos</a>
-    </li>
-    <li class="nav-item col-2">
-          <a class="nav-link color" href="torneo.html">Campeonatos</a>
-        </li>
-   
-        <li class="nav-item col-2">
-          <a class="nav-link color" href="partidos.html">Partidos</a>
-        </li>
-        
-        <li class="nav-item col-2">
-          <a class="nav-link color" href="estadisticas.html">Estadisticas</a>
-        </li>
-         
-         
-        
-    </ul>
-  </div>
-</nav>
-<!--Fin de la navegación secundaria-->
-
-<!--Navegacion teciaria-->
 
 
-<div class="pos-f-t">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg p-4">
-      
-      <ul class="nav justify-content-center">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Analista</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/html/roles/administrador/cargar_campeonato.html">cargar campeonato</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/html/roles/administrador/cargar_partido.html">cargar partido</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/html/roles/administrador/cargar_estadisticas.html">Cargar estadisticas</a>
-            </div>
-        </li>
+<!---inicio del cuerpo-->
+<div class="jumbotron">
+ 
+  <div class="row"> 
+<div class="titulo col-md-12">CARGAR PARTIDOS</div>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Scout</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/html/roles/administrador/graficacomparativa.html">Estadistica comparativa</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/html/roles/administrador/estadisticas_personales.html">Estadistica detallada</a>
-          </div>
-        </li>
-
-      <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Entrenador</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/html/roles/administrador/crear_equipo.html">Crear equipos</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/html/roles/administrador/ver_equipo.html">Ver equipos</a>
-                  </div>
-              </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Juez</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/html/roles/administrador/estadisticas_personales.html">Estadisticas personales</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/html/roles/administrador/validar_sancion.html">validar sanción</a>
-           </div>
-        </li>
-
-        
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administrativo</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/html/roles/administrador/cargar_usuarios.html">Cargar usuarios</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/html/roles/administrador/usuarios_cargados.html">Ver usuarios cargados</a>
-           </div>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administrador</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/html/roles/administrador/cargar_usuarios.html">Cargar usuarios</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/html/roles/administrador/modificar_usuario.html">Modificar usuarios</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/html/roles/administrador/eliminar_usuario.html">Eliminar usuarios</a>
-            </div>
-        </li>
-
-      </ul>
-    </div>
-  </div>
-  <nav class="navbar navbar-dark boton">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
+<div class="dropdown dropright row">
+<div class="col-md-5"></div>
+<button class="btn boton-deporte dropdown-toggle " type="button" id="dropdownMenuButton-torneo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Elegir deportes
+</button>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton-torneo">
+  <a class="dropdown-item" href="#">Fútbol</a>
+  <a class="dropdown-item" href="#">Basquetbol</a>
+  <a class="dropdown-item" href="#">Balonmano</a>
+</div>
 </div>
 
-<!--Fin de la navegacion terciaria-->
-
-<!--inicio del cuerpo-->
+<div class="container  cuerpo-partido">
 
 
-<div class="jumbotron ">
-  <div class="row">
-  <div class="titulo col-md-12">CARGAR PARTIDOS</div>
+
+  <div class="row ">  
     
-        <div class=" caja">
-<table class="table tabla">
-   <thead>
-    <tr>
-        <th scope="col" class="tabla-contenido-th"><h4>Estadisticas</h4></th>
-        <th scope="col" class="tabla-contenido-th"><h4>Primer equipo</h4></th>
-        <th scope="col" class="tabla-contenido-th"><h4>Segundo equipo</h4></th>
-        
-    </tr>
-
-   </thead>
-   <tbody>
-   <tr>
-        <td class="col-2 tabla-contenido">Faltas</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        
-    </tr>
-     <tr>
-        <td class="col-2 tabla-contenido">Tiros</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        
-    </tr>
-    <tr>
-        <td class="col-2 tabla-contenido">Rebotes</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-      
-    </tr>
-    <tr>
-        <td class="col-2 tabla-contenido">Pases</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-    </tr>
-
-    <tr class="row-12">
-        <td class="col-2 tabla-contenido">Sanciones</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-    </tr>
+    <table class="table">
+<thead class="cabezera cabezera-tabla">
+<tr>
+  <th scope="col">Equipo 1</th>
+  <th scope="col">Equipo 2</th>
+  <th scope="col">Fecha</th>
   
-    <tr>
-        <td class="col-2 tabla-contenido">Posesión</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-    </tr>   
-    <tr class="row-12">
-        <td class="col-2 tabla-contenido">Anotaciones</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-    </tr>
-    <tr>
-        <td class="col-2 tabla-contenido">Jugador estrella</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-    </tr>
-    <tr>
-        <td class="col-2 tabla-contenido">Empatados</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-    </tr>
-    <tr>
-        <td class="col-2 tabla-contenido">Ganados</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-    </tr>
-    <tr>
-        <td class="col-2 tabla-contenido">Perdidos</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder=""> </td>
-    </tr>
-   
-   
-   </tbody>
+</tr>
+</thead>
+<tbody class="cuerpo-tabla">
+<tr>
 
+  <td>
+    <div class="dropdown  col-md-10">
+    
+      <button class="btn boton-deporte dropdown-toggle col-12" type="button" id="dropdownMenuButton-deporte" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Equipos
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-deporte">
+        <a class="dropdown-item" href="#">NombreEquipo1</a>
+        <a class="dropdown-item" href="#">NombreEquipo2</a>
+        <a class="dropdown-item" href="#">NombreEquipo3</a>
+      </div>
+    </div>
+  </td>
+  <td>
+    <div class="dropdown col-md-10">
+    
+      <button class="btn boton-deporte dropdown-toggle col-12" type="button" id="dropdownMenuButton-deporte" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Equipos
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-deporte">
+        <a class="dropdown-item" href="#">NombreEquipo1</a>
+        <a class="dropdown-item" href="#">NombreEquipo2</a>
+        <a class="dropdown-item" href="#">NombreEquipo3</a>
+      </div>
+    </div>
+  </td>
+  <td>
+    <input type="date" class="form-control">
+  </td>
+</tbody>
 </table>
+
+
+      <table class="table cuerpo-partido">
+          <thead class="cabezera ">
+          <tr>
+          <th scope="col">Lugar</th>
+          <th scope="col">Hora inicio</th>
+          <th scope="col">Hora fin</th>
+          </tr>
+          </thead>
+          <tbody class="borde-tabla">
+          <tr>
+          <td>
+              <input class="form-control" type="text" placeholder="...">
+          </td>
+          <td>
+              <input class="form-control" type="time">
+          </td>
+          <td>
+              <input class="form-control" type="time">
+          </td>
+         
+          </tr>
+          
+          </tbody>
+          </table>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+  </div><button type="button" class="btn boton-enviar">Enviar</button>
 </div>
-<button type="button" class="btn boton-enviar">Enviar</button>
-</div>
 
 
 
 
 
-</div>
+
+
+
+
+
+
 
 
 
@@ -315,9 +238,9 @@
      </div>
    <div class="row-12 ">
      <div class="col-12 nav d-flex justify-content-around elementopie ">
-          <a class="nav-link " href="../../arcanet/arcanet.html">Sobre nosotros</a>
-          <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/">arcanet2022@gmail.com</a>
-           <a class="nav-link" href="../../arcanet/ayuda_soporte.html">Ayuda y soporte</a>
+      <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
+      <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+       <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
           
           
          
