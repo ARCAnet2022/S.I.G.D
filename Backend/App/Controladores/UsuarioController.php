@@ -18,7 +18,12 @@ class UsuarioController {
 
         $user = $_REQUEST['ci_usuario'];
         $contrasena = $_REQUEST['contrasena'];
+        $deportistaCi = $_REQUEST['ci_deportista'];
+
         $usuario = $init->getUserByCiAndPassword($user,$contrasena);
+        $deportista = $init->getDeportistaCi($deportistaCi);
+
+        $ciDeportista = $deportista[0]['ci_deportista'];
 
         $ci = $usuario[0]['ci_usuario'];
         $pass = $usuario[0]['contrasena'];
@@ -45,10 +50,13 @@ class UsuarioController {
                 header("Location: ".basePathFrontend()."html/roles/".$userType."/".$userType.".html");
                 exit();
 
-                }else {
-                    header("Location: ".basePathFrontend()."index.html");
-                    exit();
-                }
+            }else if($ciDeportista == $deportistaCi){
+                header("Location: ".basePathFrontend()."html/roles/deportista/deportista.html");
+                exit();
+            }else {
+                return null;
+                exit();
+            }
         }
     }
 
@@ -78,21 +86,15 @@ class UsuarioController {
       
     public function validateForms(){
         /*Si solo la CI del deportista es enviada, entonces:*/
-        if (empty($_REQUEST['ci_deportista']) == false && empty($_REQUEST['ci_usuario']) == true && empty($_REQUEST['contrasena']) == true && empty($_REQUEST['email']) == true){
+        if (empty($_REQUEST['ci_deportista']) == false && empty($_REQUEST['ci_usuario']) == true && empty($_REQUEST['contrasena']) == true ){
             $init = new UsuarioController;
             $init->loginDeportista();
         }
         /*Si la CI del usuario y su contraseña es enviada, entonces:*/
-        elseif (empty($_REQUEST['ci_usuario'] && $_REQUEST['contrasena']) == false && empty($_REQUEST['ci_deportista']) && empty($_REQUEST['email']) == true) {
+        elseif (empty($_REQUEST['ci_usuario'] && $_REQUEST['contrasena']) == false && empty($_REQUEST['ci_deportista'])) {
             $init = new UsuarioController;
             $init->loginUsuario();
-        }
-        /*Si solo quiere recuperar el mail, entonces:*/
-        elseif (empty($_REQUEST['email']) == false && empty($_REQUEST['ci_deportista']) == true && empty($_REQUEST['ci_usuario']) == true && empty($_REQUEST['contrasena']) == true) {
-            echo "hola3";
-        }
-        /*En todo otro caso, entonces: */
-        else {
+        }else {
             header("Location:".basePathFrontend()."index.html");
             exit(); 
         }

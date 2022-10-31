@@ -13,6 +13,7 @@
             
                 $this->conexion = new mysqli($this->server, $this->username, $this->pass, $this->database);            
         }
+        
         /*Funcion query que transforma en array asociativos las consultas a la base de datos*/
         function query($query){
             $result = $this->conexion->query($query);
