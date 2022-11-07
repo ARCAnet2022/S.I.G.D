@@ -28,6 +28,17 @@ class analistaCargarCampeonato{
                     '</tr>';
                     
             }
+            if (dat == 'Datos cargados con exito.') {
+                        
+                document.getElementById('mostrarForm').setAttribute("class", "alert alert-success mx-auto");
+                document.getElementById('mostrarForm').innerHTML = 'Datos cargados con exito!';
+                document.getElementById('mostrarForm').setAttribute("style","display:grid; justify-content:center;");
+                
+                setTimeout(function(){
+                    window.location.reload();
+                }, 2000);
+                
+            }
             
 
         }).fail(function() 
@@ -91,7 +102,18 @@ class analistaCargarCampeonato{
         jQuery.get(url, {nombre_torneo: name_torneo, deporte: deporte, fecha_inicio: fecha_inicio, fecha_fin: fecha_fin, lugar: lugar, ci_analista: ci_analis}, function(data) 
         { 
             let dat = JSON.parse(data);
-            
+
+            if (dat == 'Datos cargados con exito...') {
+                        
+                document.getElementById('mostrarForm').setAttribute("class", "alert alert-success mx-auto");
+                document.getElementById('mostrarForm').innerHTML = 'Datos cargados con exito!';
+                document.getElementById('mostrarForm').setAttribute("style","display:grid; justify-content:center;");
+                
+                setTimeout(function(){
+                    window.location.reload();
+                }, 2000);
+                
+            }
 
         }).fail(function() 
         { 
@@ -102,6 +124,7 @@ class analistaCargarCampeonato{
     }
 
     cargarPartidos(){
+        
         
         for (let i=1; i<arrayPartidos.length;i++) {
             let ci_analis = localStorage.getItem('ci_usuario');
@@ -116,6 +139,9 @@ class analistaCargarCampeonato{
             let hora_inicio = document.getElementById('hora_inicio'+i).value;
             let hora_start = JSON.stringify(hora_inicio);
 
+            let lugar = document.getElementById('lugar').value;
+            let lug = JSON.stringify(lugar);
+
             let hora_fin = document.getElementById('hora_fin'+i).value;
             let hora_end = JSON.stringify(hora_fin);
 
@@ -124,15 +150,28 @@ class analistaCargarCampeonato{
 
             let juez =JSON.stringify(ci_juez);
             
+
+            let nameTorneo = document.getElementById('nombre_torneo').value;
+            let nombre_torneo = JSON.stringify(nameTorneo);
                 ajax.open(method, url, asynchronus); 
 
 
                 jQuery.get(url, {ci_analista:ci_analista, nombre_equipo: nameEquipo, nombre_equipo2: nameEquipo2, hora_inicio: hora_start, hora_fin: hora_end, fecha: date,
-                    ci_juez:juez}, function(data) 
+                    ci_juez:juez, lugar: lug, nombre_tournament: nombre_torneo}, function(data) 
                 { 
                     let dat = JSON.parse(data);
-                    alert('Datos cargados con exito');
-                    
+
+                    if (dat == 'Datos cargados con exito.') {
+                        
+                        document.getElementById('mostrarForm').setAttribute("class", "alert alert-success mx-auto");
+                        document.getElementById('mostrarForm').innerHTML = 'Datos cargados con exito!';
+                        document.getElementById('mostrarForm').setAttribute("style","display:grid; justify-content:center;");
+                        
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 2000);
+                        
+                    }
 
                 }).fail(function() 
                 { 
