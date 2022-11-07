@@ -81,7 +81,7 @@
   <div class="titulo col-md-12">MI PERFIL</div>
 
 
-  <div class="caja cuerpo_roles">
+  <div class="caja cuerpo">
     <div class="row">
       <div class="col-md-5">
         <img src="../../../imagenes/perfil.png" alt="foto_perfil" class="img-thumbnail">
@@ -91,28 +91,30 @@
         <table class="table table-bordered">
           <thead class="cabezera">
             <tr>
-              <th>Datos personales:</th>
+              <th colspan="2">Datos personales:</th>
               
             </tr>
           </thead>
           <tbody id="datos_personales">
             <tr>
               <td>Nombre</td>
-             
+              <td id="nombre"></td>
             </tr>
             <tr>
               <td>Apellido</td>
-             
+              <td id="apellido"></td>
             </tr>
             <tr>
               <td>Fecha de nacimiento</td>
-             
+              <td id="fecha_nac"></td>
             </tr>
             <tr>
               <td>Cédula</td>
+              <td id="ci_usuario"></td>
             </tr>
             <tr>
               <td>Nacionalidad</td>
+              <td id="nacionalidad"></td>
             </tr>
           </tbody>
         </table>
@@ -126,25 +128,18 @@
         <table class="table table-bordered">
           <thead class="cabezera">
             <tr>
-              <th>Datos generales:</th>
-              
+              <th colspan="2">Datos generales:</th>
             </tr>
           </thead>
           <tbody id="datos_generales">
             <tr>
               <td>Teléfono</td>
-             
+              <td id="telefono"></td>
             </tr>
-            <tr>
-              <td>Cédula</td>
-             
-            </tr>
+
             <tr>
               <td>Correo</td>
-             
-            </tr>
-            <tr>
-              <td>Contraseña</td>
+              <td id="email"></td>
             </tr>
             
           </tbody>
@@ -157,49 +152,48 @@
         <table class="table table-bordered">
           <thead class="cabezera">
             <tr>
-              <th>Datos de dirección:</th>
+              <th colspan="2">Datos de dirección:</th>
             </tr>
           </thead>
           <tbody id="datos_direccion">
             <tr>
               <td>Ciudad</td>
+              <td id="ciudad"></td>
             </tr>
             <tr>
               <td>Calle</td>
+              <td id="calle"></td>
             </tr>
             <tr>
               <td>Número</td>
+              <td id="numero"></td>
             </tr>
           </tbody>
         </table>
 
 
-     
-    </div> </div>
-      <div class="row">
-      <div class="col">
-        
-<table class="table table-bordered">
-  <thead class="cabezera">
-    <tr>
-      <th>Datos profesionales:</th>
-    </tr>
-  </thead>
-  <tbody id="datos_profecionales">
-  <tr>
-      <td>Número de funcionario:</td>
-    </tr>
-    <tr>
-      <td>Horas de trabajo semanales:</td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-
       </div>
+
+      <table class="table table-bordered">
+        <thead class="cabezera">
+          <tr>
+            <th colspan="2">Datos profesionales:</th>
+          </tr>
+        </thead>
+        <tbody id="datos_profecionales">
+        <tr>
+            <td>Número de funcionario:</td>
+            <td id="nro_funcionario"></td>
+          </tr>
+          <tr>
+            <td>Horas de trabajo semanales:</td>
+            <td id="horas_trabajo_semanales"></td>
+          </tr>
+        </tbody>
+      </table>
+     
     </div>
+  </div>
   </div>
 
   </div>
@@ -225,7 +219,8 @@
             </div>
           </footer>   
           
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+          <script src="../../../js/perfiles.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
          

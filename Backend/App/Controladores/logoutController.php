@@ -9,7 +9,7 @@
             /*Destruyo la sesion */
             session_destroy();
             /*Redirecciono a login.php para volver a iniciar la secuencia*/
-            header("Location:".basePathFrontend()."/index.html");
+            header("Location:".basePathFrontend()."index.html");
             exit();        
         }
 

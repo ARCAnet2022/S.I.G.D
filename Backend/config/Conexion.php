@@ -19,5 +19,9 @@
             $result = $this->conexion->query($query);
             return $result->fetch_all(MYSQLI_ASSOC);
         }
+
+        function queryInsert($query){
+            $result = $this->conexion->query($query);
+        }
     }
 ?>

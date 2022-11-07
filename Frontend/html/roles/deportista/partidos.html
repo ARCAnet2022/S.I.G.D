@@ -81,16 +81,19 @@
 
 
 <div class="dropdown dropright row">
-  <div class="col-md-5"></div>
-  <button class="btn boton-deporte dropdown-toggle " type="button" id="dropdownMenuButton-deportes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Elegir deporte
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-deportes">
-    <a class="dropdown-item" href="#">Fútbol</a>
-    <a class="dropdown-item" href="#">Basquetbol</a>
-    <a class="dropdown-item" href="#">Balonmano</a>
+
+  <div class="dropdown dropright col-md-12">
+      
+    <select name="dropdownMenuButton-deporte" id="dropdownMenuButton-deporte" onchange="javascript:init.mostrarPartidosJugados();" class="btn boton-deporte dropdown-toggle col-6" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <option >Elegir Deporte</option>
+     <option class="dropdown-item" value="Futbol">Futbol</a>
+     <option class="dropdown-item" value="Basquetbol">Basquetbol</a>
+     <option class="dropdown-item" value="Balonmano">Balonmano</a>
+    </select>
+    <div id="mostrarErrorDeporte"></div>
   </div>
 </div>
+
 <div class="container cuerpo-partido"> 
 
 
@@ -106,84 +109,9 @@
        <th scope="col">Torneo</th>
        </tr>
    </thead>
-   <tbody class="borde-tabla">
-     <tr>
-       <td>15/04/2022</td>
-       <td>Regimiento 9</td>
-       <td>  
- <div class="row ">
-   <div class="col-md-3">
-     Danubio
-   </div>
-<div class="col-md-2">
-     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
-   </div>
-<div class="alert alert-primary col-md-3" role="alert">
-     VS
-     </div>
-<div class="col-md-2">
-     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
-   </div>
-   <div class="col-md-2">
-     Danubio
-   </div>
-   </div> 
-   </td>
-       <td> 12:50</td>
-       <td>Nombre de torneo</td>
-      </tr>
-      <tr>
-       <td>15/04/2022</td>
-       <td>Regimiento 9</td>
-       <td>  
- <div class="row ">
-   <div class="col-md-3">
-     Danubio
-   </div>
-<div class="col-md-2">
-     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
-   </div>
-<div class="alert alert-primary col-md-3" role="alert">
-     VS
-     </div>
-<div class="col-md-2">
-     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
-   </div>
-   <div class="col-md-2">
-     Danubio
-   </div>
-   </div> 
-   </td>
-       <td> 12:50</td>
-       <td>Nombre de torneo</td>
-      </tr>
-      <tr>
-       <td>15/04/2022</td>
-       <td>Regimiento 9</td>
-       <td>  
- <div class="row ">
-   <div class="col-md-3">
-     Danubio
-   </div>
-<div class="col-md-2">
-     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
-   </div>
-<div class="alert alert-primary col-md-3" role="alert">
-     VS
-     </div>
-<div class="col-md-2">
-     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
-   </div>
-   <div class="col-md-2">
-     Danubio
-   </div>
-   </div> 
-   </td>
-       <td> 12:50</td>
-       <td>Nombre de torneo</td>
-      </tr>
+   <tbody class="borde-tabla" id="mostrarPartido">
 
-      </tbody>
+    </tbody>
  </table>
 </div>
 
@@ -199,88 +127,11 @@
            <th scope="col">Torneo</th>
            </tr>
        </thead>
-       <tbody class="borde-tabla">
-         <tr>
-           <td>15/05/2022</td>
-           <td>Regimiento 9</td>
-           <td>  
-     <div class="row ">
-       <div class="col-md-3">
-         Danubio
-       </div>
-   <div class="col-md-2">
-         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
-       </div>
-   <div class="alert alert-primary col-md-3" role="alert">
-         VS
-         </div>
-    <div class="col-md-2">
-         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
-       </div>
-       <div class="col-md-2">
-         Danubio
-       </div>
-       </div> 
-       </td>
-           <td> 12:50</td>
-           <td>Nombre de torneo</td>
-          </tr>
-          <tr>
-           <td>15/05/2022</td>
-           <td>Regimiento 9</td>
-           <td>  
-     <div class="row ">
-       <div class="col-md-3">
-         Danubio
-       </div>
-   <div class="col-md-2">
-         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
-       </div>
-   <div class="alert alert-primary col-md-3" role="alert">
-         VS
-         </div>
-    <div class="col-md-2">
-         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
-       </div>
-       <div class="col-md-2">
-         Danubio
-       </div>
-       </div> 
-       </td>
-           <td> 12:50</td>
-           <td>Nombre de torneo</td>
-          </tr>
-          <tr>
-           <td>15/05/2022</td>
-           <td>Regimiento 9</td>
-           <td>  
-     <div class="row ">
-       <div class="col-md-3">
-         Danubio
-       </div>
-   <div class="col-md-2">
-         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
-       </div>
-   <div class="alert alert-primary col-md-3" role="alert">
-         VS
-         </div>
-    <div class="col-md-2">
-         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
-       </div>
-       <div class="col-md-2">
-         Danubio
-       </div>
-       </div> 
-       </td>
-           <td> 12:50</td>
-           <td>Nombre de torneo</td>
-          </tr>
-   
-          </tbody>
-     </table>
-    
-   
-   </div>
+       <tbody class="borde-tabla" id="mostrarProximos">
+         
+      </tbody>
+  </table>
+</div>
 
 
 
@@ -313,10 +164,10 @@
      </div>
    </footer>   
    
-   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
+   <script src="../../../js/partidos.js"></script>
 </body>
 </html>
 

@@ -4,35 +4,45 @@
     class torneoController{
 
         public function getEquiposByType(){
-                                               
-            $deporte = json_decode($_GET['Deporte']);          
-            $nombreTorneo = json_decode($_GET['NombreTorneo']);
+            
+            if (isset($_GET['Deporte'])) {
+                $deporte = json_decode($_GET['Deporte']); 
+            }
+
+            if(isset($_GET['NombreTorneo'])) {
+                $nombreTorneo = json_decode($_GET['NombreTorneo']);
+            }       
+            
+            
 
             $init = new Torneo;
 
-            if ($deporte == 'Futbol') {
+            if (isset($deporte) && $deporte == 'Futbol') {
 
                 $TorneosFutbol = $init->getTorneoFutbol();
                 echo json_encode($TorneosFutbol);
                 
-            }elseif ($deporte == 'Basquetbol') {
+            }elseif (isset($deporte) && $deporte == 'Basquetbol') {
 
                 $TorneosBasket = $init->getTorneoBasket();
                 echo json_encode($TorneosBasket);
                 
-            }elseif ($deporte == 'Balonmano') {
+            }elseif (isset($deporte) && $deporte == 'Balonmano') {
 
                 $TorneosHandball = $init->getTorneoHandball();
                 echo json_encode($TorneosHandball);
                 
-            }elseif($nombreTorneo != 'Elegir Torneo'){
+            }elseif(isset($nombreTorneo) && $nombreTorneo != 'Elegir Torneo'){
                 
                 $TorneoData = $init->getSpecificTorneo($nombreTorneo);
                 echo json_encode($TorneoData);
                 
-            }else {
-                echo json_encode('Error cargando los datos.');
-                
+            }else if(!isset($nombreTorneo) && isset($_GET['IdTorneo'])){
+                $id_torneo = json_decode($_GET['IdTorneo']);
+                $partidosTorneo = $init->getPartidosTorneo($id_torneo);
+                echo json_encode($partidosTorneo);
+            }else{
+                echo "Error cargando los datos";
             }
 
         }

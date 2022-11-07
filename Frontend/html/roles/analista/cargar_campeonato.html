@@ -7,7 +7,8 @@
     <link rel="icon" href="../../../imagenes/icon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>Cargar torneos</title>
   </head>
   <body >
@@ -74,22 +75,18 @@
 
 
 <!---inicio del cuerpo-->
-<div class="jumbotron">
+<div class="jumbotron" id="mostrarTodo">
  
     <div class="row"> 
 <div class="titulo col-md-12">CARGAR TORNEOS</div>
 
 <div class="dropdown dropright row">
-  <div class="col-md-5"></div>
-  <button class="btn boton-deporte dropdown-toggle " type="button" id="dropdownMenuButton-torneo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Elegir torneos
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-torneo">
-    <a class="dropdown-item" href="#">NombreTorneo1</a>
-    <a class="dropdown-item" href="#">NombreTorneo2</a>
-    <a class="dropdown-item" href="#">NombreTorneo3</a>
+
+  
+ 
+  
+    
   </div>
-</div>
 
 <div class="container  cuerpo-partido">
 
@@ -99,14 +96,28 @@
 
             <tr>
             <th scope="col">Nombre de torneo</th>
+            <th>Deporte</th>
             </tr>
-
+            
+            
             </thead>
 
             <tbody class="borde-tabla">
             <tr>
                 <td>
-                    <input class="form-control" type="text" placeholder="Escribe aqui nombre del torneo">
+                    <input class="form-control" type="text" placeholder="Escribe aqui el nombre del torneo" id="nombre_torneo">
+                </td>
+                <td>
+                  <div class="dropdown dropright col-md-12 mx-auto">
+      
+                    <select name="dropdownMenuButton-deporte" id="dropdownMenuButton-deporte" class="btn boton-deporte dropdown-toggle col-6" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <option >Elegir Deporte</option>
+                     <option class="dropdown-item" value="Futbol">Futbol</option>
+                     <option class="dropdown-item" value="Basquetbol">Basquetbol</option>
+                     <option class="dropdown-item" value="Handbol">Handbol</option>
+                    </select>
+                    <div id="mostrarError"></div>
+                  </div>
                 </td>
             </tr>
             
@@ -125,13 +136,13 @@
             <tbody class="borde-tabla">
             <tr>
             <td>
-                <input class="form-control" type="text" placeholder="...">
+                <input class="form-control" type="text" placeholder="..." id="lugar">
             </td>
             <td>
-                <input class="form-control" type="date">
+                <input class="form-control" type="date" id="fecha_inicio">
             </td>
             <td>
-                <input class="form-control" type="date">
+                <input class="form-control" type="date" id="fecha_fin">
             </td>
            
             </tr>
@@ -141,151 +152,48 @@
     </div>
 </div>
 
+<div class=" row mt-3 caja" id="jueces">
+  <h1 class="mx-auto ">Jueces Disponibles</h1>
+  <table class="table table-bordered">
+    <thead class="cabezera">
+      <tr>
+        <th>Nombre:</th>
+        <th>Apellido:</th>
+        <th>Cédula:</th>
+        <th>Seleccionar:</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      
+    </tbody>
+  </table>
 
-
-
-
-
-<table class="table">
-<thead class="cabezera cabezera-tabla">
-  <tr>
-    <th scope="col">Partido</th>
-    <th scope="col">Equipo 1</th>
-    <th scope="col">Hora inicio</th>
-    <th scope="col">Hora fin</th>
-    <th scope="col">Fecha</th>
-    <th scope="col">Equipo 2</th>
-  </tr>
-</thead>
-<tbody class="cuerpo-tabla">
-  <tr>
-    <th scope="row">1</th>
-    <td>
-      <input type="text" class="form-control" placeholder="Nombre del equipo">
-    </td>
-    <td>
-      <input type="time" class="form-control">
-    </td>
-    <td>
-      <input type="time" class="form-control">
-    </td>
-    <td>
-      <input type="date" class="form-control">
-    </td>
-    <td>
-      <input type="text" class="form-control" placeholder="Nombre del equipo">
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">2</th>
-    <td>
-      <input type="text" class="form-control" placeholder="Nombre del equipo">
-    </td>
-    <td>
-      <input type="time" class="form-control">
-    </td>
-    <td>
-      <input type="time" class="form-control">
-    </td>
-    <td>
-      <input type="date" class="form-control">
-    </td>
-    <td>
-      <input type="text" class="form-control" placeholder="Nombre del equipo">
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">3</th>
-    <td>
-      <input type="text" class="form-control" placeholder="Nombre del equipo">
-    </td>
-    <td>
-      <input type="time" class="form-control">
-    </td>
-    <td>
-      <input type="time" class="form-control">
-    </td>
-    <td>
-      <input type="date" class="form-control">
-    </td>
-    <td>
-      <input type="text" class="form-control" placeholder="Nombre del equipo">
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">4</th>
-    <td>
-      <input type="text" class="form-control" placeholder="Nombre del equipo">
-    </td>
-    <td>
-      <input type="time" class="form-control">
-    </td>
-    <td>
-      <input type="time" class="form-control">
-    </td>
-    <td>
-      <input type="date" class="form-control">
-    </td>
-    <td>
-      <input type="text" class="form-control" placeholder="Nombre del equipo">
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">5</th>
-    <td>
-      <input type="text" class="form-control" placeholder="Nombre del equipo">
-    </td>
-    <td>
-      <input type="time" class="form-control">
-    </td>
-    <td>
-      <input type="time" class="form-control">
-    </td>
-    <td>
-      <input type="date" class="form-control">
-    </td>
-    <td>
-      <input type="text" class="form-control" placeholder="Nombre del equipo">
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">6</th>
-    <td>
-      <input type="text" class="form-control" placeholder="Nombre del equipo">
-    </td>
-    <td>
-      <input type="time" class="form-control">
-    </td>
-    <td>
-      <input type="time" class="form-control">
-    </td>
-    <td>
-      <input type="date" class="form-control">
-    </td>
-    <td>
-      <input type="text" class="form-control" placeholder="Nombre del equipo">
-    </td>
-  </tr>
-  
-
-</tbody>
-</table>
-
-    </div><button type="button" class="btn boton-enviar">Enviar</button>
 </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
+<h1 class="mx-auto">Agregar partidos</h1>
+<table class="table">
+  <thead class="cabezera cabezera-tabla">
+    <tr>
+      <th scope="col">Equipo 1</th>
+      <th scope="col">Hora inicio</th>
+      <th scope="col">Hora fin</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Equipo 2</th>
+    </tr>
+  </thead>
+  <tbody class="cuerpo-tabla" id="mostrarForms">
+    
+  </tbody>
+</table>
+  <i class="fas btn btn-info fa-plus fa-2x iconoHover mx-auto" id="agregarPartido" onclick="javascript:init.agregarPartido();"></i>
+</div>
+<div class="row">
+  <button type="button" class="btn boton-enviar mx-auto col-md-1" onclick="javascript:init.limpiarPartidos();">Limpiar</button>
+  <button type="button" class="btn boton-enviar mx-auto col-md-1" onclick="javascript:init.cargarTorneo();">Enviar</button>
+</div>
+</div>
 
 <!--Inicio de pie de pagina-->
 <footer class="row-12">
@@ -308,10 +216,10 @@
        </div>
      </footer>   
      
-     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../../../js/analistaCargarCampeonato.js"></script>
 </body>
 </html>
 

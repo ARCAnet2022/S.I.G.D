@@ -8,7 +8,7 @@ class Equipo{
        $ci = json_decode($ci_deportista);
 
        $deportistaEstadisticas = $db->query('SELECT sum(a.tiros) as Tiros,sum(a.anotaciones) as Anotaciones,sum(a.pases) as Pases,e.nombre_equipo as "NombreEquipo", 
-       sum(a.posesion) as Posesion, sum(a.rebotes) as "Rebotes", round(((a.anotaciones/a.tiros)*100),1) as "Eficiencia"
+       sum(a.posesion) as "Posesion", sum(a.rebotes) as "Rebotes", round(((a.anotaciones/a.tiros)*100),1) as "Eficiencia"
        from actuacion as a
        inner join equipo as e on a.nombre_equipo=e.nombre_equipo
        inner join deportista as d on d.nombre_equipo=e.nombre_equipo

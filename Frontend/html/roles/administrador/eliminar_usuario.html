@@ -116,13 +116,25 @@
  
     <div class="titulo col-md-12">ELIMINAR USUARIO</div>
 
- <div class="row ">
+ <div class="row">
    
- <div class="col-9 buscador">
-  
-  <p class="h6 col-md-2">Buscar usuario:</p>
-    <input class="form-control col-md-4" id="myInput" type="text" placeholder="Buscar..">
-    </div>
+<div class="col-12 buscador">
+  <div class="row buscador ">
+    <p class="h6 col-md-2">Elige el tipo de usuario:</p>
+    <select  class="form-control col-md-2 " name="rol" id="dropdownRol" onchange="javascript:init.dropdownFiltrarValores();">
+      <option>Tipo de usuario</option> 
+      <option>juez</option>
+      <option>analista</option>
+      <option>scout</option>
+      <option>administrativo</option>
+      <option>deportista</option>
+      <option>entrenador</option>
+      <option>administrador</option>
+    </select><br>
+    <p class="h6 col-md-2">Buscar usuario:</p>
+    <input class="form-control col-md-3 " id="myInput" type="text" placeholder="Buscar..">
+  </div>
+</div>
 
 <div class=" row caja mt-3">
   <table class="table table-bordered">
@@ -136,57 +148,17 @@
       </tr>
     </thead>
     <tbody id="myTable">
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>783899429</td>
-        <td>Scout</td>
-        <td>
-            <div class="form-check">
-                <input class="form-check-input position-static" type="checkbox" id="checkbox_1" value="option1" aria-label="...">
-              </div>
-        </td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>124899429</td>
-        <td>Administrador</td>
-        <td>
-            <div class="form-check">
-                <input class="form-check-input position-static" type="checkbox" id="checkbox_2" value="option1" aria-label="...">
-              </div>
-        </td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>600899429</td>
-        <td>Entrenador</td>
-        <td>
-            <div class="form-check">
-                <input class="form-check-input position-static" type="checkbox" id="checkbox_3" value="option1" aria-label="...">
-              </div>
-        </td>
-      </tr>
-      <tr>
-        <td>Anja</td>
-        <td>Ravendale</td>
-        <td>083899429</td>
-        <td>Estudiante</td>
-        <td>
-            <div class="form-check">
-                <input class="form-check-input position-static" type="checkbox" id="checkbox_4" value="option1" aria-label="...">
-              </div>
-        </td>
-      </tr>
+      
     </tbody>
   </table>
-</div>
 
- </div>
-    </div><button type="button" class="btn boton-enviar">Eliminar</button>
- </div>
+</div>
+</div>
+</div>
+</div>
+<div id="mostrarForm">
+</div>
+ 
  
 
 <!--Inicio de pie de pagina-->
@@ -210,11 +182,11 @@
             </div>
           </footer>   
    
-         
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-         
+          <script src="../../../js/buscador.js"></script>
+          <script src="../../../js/adminEliminarUsuario.js"></script>
   </body>
 </html>
 

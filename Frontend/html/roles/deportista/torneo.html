@@ -84,27 +84,22 @@
 
  <div class="dropdown dropright col-md-6">
      
-   <button class="btn boton-deporte dropdown-toggle col-6" type="button" id="dropdownMenuButton-deporte" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   Elegir deportes
-   </button>
-   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-deporte">
-     <a class="dropdown-item" href="#">Fútbol</a>
-     <a class="dropdown-item" href="#">Basquetbol</a>
-     <a class="dropdown-item" href="#">Balonmano</a>
-   </div>
+   <select name="dropdownMenuButton-deporte" id="dropdownMenuButton-deporte" onchange="javascript:init.llenarDropdown();" class="btn boton-deporte dropdown-toggle col-6" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <option >Elegir Deporte</option>
+    <option class="dropdown-item" value="Futbol">Futbol</option>
+    <option class="dropdown-item" value="Basquetbol">Basquetbol</option>
+    <option class="dropdown-item" value="Balonmano">Balonmano</option>
+   </select>
+   <div id="mostrarErrorDeporte"></div>
  </div>
  
- <div class="dropdown dropright col-md-6">
- 
-   <button class="btn boton-deporte dropdown-toggle col-6" type="button" id="dropdownMenuButton-torneo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   Elegir torneo
-   </button>
-   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-torneo">
-     <a class="dropdown-item" href="#">Torneo1</a>
-     <a class="dropdown-item" href="#">Torneo2</a>
-     <a class="dropdown-item" href="#">Torneo3</a>
-   </div>
- </div>
+<div class="dropdown dropright col-md-6">
+  <select class="btn boton-deporte dropdown-toggle col-6 mostrarTorneos" type="button" onchange="javascript:init.llenarTorneo();" id="dropdownMenuButton-deporte2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <option>Elegir Torneo</option>
+    
+  </select>
+  <div id="mostrarError"></div>
+</div>
  
    
  </div>
@@ -120,449 +115,64 @@
 
        </div>
        <div class="col cuerpo-partido">
- <div class="container-fluid col-6 datos-torneo"> 
-       <h1>Torneos</h1>
-       <p>Deporte:</p> 
-       <p>Lugar:</p>
-       <p>Fecha de inicio:</p>
-       <p>Fecha final:</p>
-       <p>Cantidad de equipos:</p>
-     </div>
+
+ <div class="container-fluid col-12 datos-torneo"> 
+  <div class="col-12">
+    <h1 id="nameTorneo">TORNEO</h1>
+    <table class="table">
+     <thead>
+       <tr>
+         <th class="cabezera">Deporte</th>
+        </tr>
+        <td id="Deporte"></td>
+       <tr>
+         <th class="cabezera">Lugar</th>
+        </tr>
+        <td id="Lugar"></td>
+       <tr>
+         <th class="cabezera">Fecha de Inicio</th>
+        </tr>
+        <td id="FechaInicio"></td>
+       <tr>
+         <th class="cabezera">Fecha Final</th>
+        </tr>
+        <td id="FechaFinal"></td>
+       <tr>
+         <th class="cabezera">Cantidad de equipos</th>
+        </tr>
+        <td id="CantidadEquipos"></td>
+     </thead>
+     <tbody></tbody>
+    </table>
+  </div>
+  <div class="col-6">
+    
+  </div>
+    
+  </div>
+
+
  </div>
 </div> 
 </div>
 
 
 
-     <div class="col-12"><h4 class="textito">JORNADA 1</h4></div>
+<div class="col-12"><h4 class="textito">PARTIDOS</h4></div>
 
-       <div class="row ">
-         <div class="col-4 tabla-torneos">
+<div class="row" >
 
-           <div class="row contenido-torneo">
-         
-             <div class="col-md-12 bg-info text-white">
-               <div class="col-md-12 bg-light text-dark">Hora 12:30</div>
-               <div class="col-md-12 bg-light text-dark">  Fecha 23/4/2022</div>
-             </div>
-         
-           </div>   
-         
-           <div class="card-deck">
-             <div class="card border-info mb-3" style="max-width: 18rem;">
-               <div class="card-header">NombreCuardro1</div>
-               <div class="card-body text-info">
-              
-                 <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-         
-               </div>
-             </div>
-         
-             <div class="card border-info mb-3" style="max-width: 18rem;">
-               <div class="card-header">NombreCuardro2</div>
-               <div class="card-body text-info">
-               
-                 <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-         
-               </div>
-             </div>
-           </div>
-         
-         </div>
+  <div class="col-12">
+    <div class="row mx-auto tabla-torneos" id="partido">
 
+      
+      <div id="infoPartidos">Seleccione un deporte y luego un torneo para cargar los partidos...</div>
 
-         <div class="col-4 tabla-torneos">
-
-           <div class="row contenido-torneo">
-
-             <div class="col-md-12 bg-info text-white">
-               <div class="col-md-12 bg-light text-dark">Hora 17:00</div>
-               <div class="col-md-12 bg-light text-dark">  Fecha 07/5/2022</div>
-             </div>
-
-           </div>   
-
-           <div class="card-deck">
-             <div class="card border-info mb-3" style="max-width: 18rem;">
-               <div class="card-header">NombreCuardro1</div>
-               <div class="card-body text-info">
-             
-                 <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-
-               </div>
-             </div>
-
-             <div class="card border-info mb-3" style="max-width: 18rem;">
-               <div class="card-header">NombreCuardro2</div>
-               <div class="card-body text-info">
-               
-                 <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-
-               </div>
-             </div>
-           </div>
-       </div>
-
-   </div> 
-
-   <div class="row ">
-     <div class="col-4 tabla-torneos">
-
-       <div class="row contenido-torneo">
-     
-         <div class="col-md-12 bg-info text-white">
-           <div class="col-md-12 bg-light text-dark">Hora 12:30</div>
-           <div class="col-md-12 bg-light text-dark">  Fecha 23/4/2022</div>
-         </div>
-     
-       </div>   
-     
-       <div class="card-deck">
-         <div class="card border-info mb-3" style="max-width: 18rem;">
-           <div class="card-header">NombreCuardro1</div>
-           <div class="card-body text-info">
-          
-             <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-     
-           </div>
-         </div>
-     
-         <div class="card border-info mb-3" style="max-width: 18rem;">
-           <div class="card-header">NombreCuardro2</div>
-           <div class="card-body text-info">
-           
-             <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-     
-           </div>
-         </div>
-       </div>
-     
-     </div>
-
-
-     <div class="col-4 tabla-torneos">
-
-       <div class="row contenido-torneo">
-
-         <div class="col-md-12 bg-info text-white">
-           <div class="col-md-12 bg-light text-dark">Hora 17:00</div>
-           <div class="col-md-12 bg-light text-dark">  Fecha 07/5/2022</div>
-         </div>
-
-       </div>   
-
-       <div class="card-deck">
-         <div class="card border-info mb-3" style="max-width: 18rem;">
-           <div class="card-header">NombreCuardro1</div>
-           <div class="card-body text-info">
-         
-             <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-
-           </div>
-         </div>
-
-         <div class="card border-info mb-3" style="max-width: 18rem;">
-           <div class="card-header">NombreCuardro2</div>
-           <div class="card-body text-info">
-           
-             <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-
-           </div>
-         </div>
-       </div>
-   </div>
+    
+    </div>
 
 </div> 
-
-
-
-<!--Empieza la jornada 2-->
-
-
-<div class="col-12"><h4 class="textito">JORNADA 2</h4></div>
-
-<div class="row ">
- <div class="col-4 tabla-torneos">
-
-   <div class="row contenido-torneo">
- 
-     <div class="col-md-12 bg-info text-white">
-       <div class="col-md-12 bg-light text-dark">Hora 12:30</div>
-       <div class="col-md-12 bg-light text-dark">  Fecha 23/4/2022</div>
-     </div>
- 
-   </div>   
- 
-   <div class="card-deck">
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro1</div>
-       <div class="card-body text-info">
-      
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
- 
-       </div>
-     </div>
- 
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro2</div>
-       <div class="card-body text-info">
-       
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
- 
-       </div>
-     </div>
-   </div>
- 
- </div>
-
-
- <div class="col-4 tabla-torneos">
-
-   <div class="row contenido-torneo">
-
-     <div class="col-md-12 bg-info text-white">
-       <div class="col-md-12 bg-light text-dark">Hora 17:00</div>
-       <div class="col-md-12 bg-light text-dark">  Fecha 07/5/2022</div>
-     </div>
-
-   </div>   
-
-   <div class="card-deck">
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro1</div>
-       <div class="card-body text-info">
-     
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-
-       </div>
-     </div>
-
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro2</div>
-       <div class="card-body text-info">
-       
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-
-       </div>
-     </div>
-   </div>
-</div>
-
-</div>  
-
-<div class="row ">
- <div class="col-4 tabla-torneos">
-
-   <div class="row contenido-torneo">
- 
-     <div class="col-md-12 bg-info text-white">
-       <div class="col-md-12 bg-light text-dark">Hora 12:30</div>
-       <div class="col-md-12 bg-light text-dark">  Fecha 23/4/2022</div>
-     </div>
- 
-   </div>   
- 
-   <div class="card-deck">
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro1</div>
-       <div class="card-body text-info">
-      
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
- 
-       </div>
-     </div>
- 
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro2</div>
-       <div class="card-body text-info">
-       
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
- 
-       </div>
-     </div>
-   </div>
- 
- </div>
-
-
- <div class="col-4 tabla-torneos">
-
-   <div class="row contenido-torneo">
-
-     <div class="col-md-12 bg-info text-white">
-       <div class="col-md-12 bg-light text-dark">Hora 17:00</div>
-       <div class="col-md-12 bg-light text-dark">  Fecha 07/5/2022</div>
-     </div>
-
-   </div>   
-
-   <div class="card-deck">
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro1</div>
-       <div class="card-body text-info">
-     
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-
-       </div>
-     </div>
-
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro2</div>
-       <div class="card-body text-info">
-       
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-
-       </div>
-     </div>
-   </div>
-</div>
-
 </div> 
-<!--Termina la jornada 2-->
-
-<!--Empieza la jornada 3-->
-
-
-<div class="col-12"><h4 class="textito">JORNADA 3</h4></div>
-
-<div class="row ">
- <div class="col-4 tabla-torneos">
-
-   <div class="row contenido-torneo">
- 
-     <div class="col-md-12 bg-info text-white">
-       <div class="col-md-12 bg-light text-dark">Hora 12:30</div>
-       <div class="col-md-12 bg-light text-dark">  Fecha 23/4/2022</div>
-     </div>
- 
-   </div>   
- 
-   <div class="card-deck">
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro1</div>
-       <div class="card-body text-info">
-      
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
- 
-       </div>
-     </div>
- 
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro2</div>
-       <div class="card-body text-info">
-       
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
- 
-       </div>
-     </div>
-   </div>
- 
- </div>
-
-
- <div class="col-4 tabla-torneos">
-
-   <div class="row contenido-torneo">
-
-     <div class="col-md-12 bg-info text-white">
-       <div class="col-md-12 bg-light text-dark">Hora 17:00</div>
-       <div class="col-md-12 bg-light text-dark">  Fecha 07/5/2022</div>
-     </div>
-
-   </div>   
-
-   <div class="card-deck">
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro1</div>
-       <div class="card-body text-info">
-     
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-
-       </div>
-     </div>
-
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro2</div>
-       <div class="card-body text-info">
-       
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-
-       </div>
-     </div>
-   </div>
-</div>
-
-</div>  
-
-<div class="row ">
- <div class="col-4 tabla-torneos">
-
-   <div class="row contenido-torneo">
- 
-     <div class="col-md-12 bg-info text-white">
-       <div class="col-md-12 bg-light text-dark">Hora 12:30</div>
-       <div class="col-md-12 bg-light text-dark">  Fecha 23/4/2022</div>
-     </div>
- 
-   </div>   
- 
-   <div class="card-deck">
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro1</div>
-       <div class="card-body text-info">
-      
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
- 
-       </div>
-     </div>
- 
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro2</div>
-       <div class="card-body text-info">
-       
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
- 
-       </div>
-     </div>
-   </div>
- 
- </div>
-
-
- <div class="col-4 tabla-torneos">
-
-   <div class="row contenido-torneo">
-
-     <div class="col-md-12 bg-info text-white">
-       <div class="col-md-12 bg-light text-dark">Hora 17:00</div>
-       <div class="col-md-12 bg-light text-dark">  Fecha 07/5/2022</div>
-     </div>
-
-   </div>   
-
-   <div class="card-deck">
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro1</div>
-       <div class="card-body text-info">
-     
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-
-       </div>
-     </div>
-
-     <div class="card border-info mb-3" style="max-width: 18rem;">
-       <div class="card-header">NombreCuardro2</div>
-       <div class="card-body text-info">
-       
-         <img class="imagen" src="../../../imagenes/funcionalidades/escudo1.jpg" alt="equipo">
-
-       </div>
-     </div>
-   </div>
-</div>
-
-</div> 
-<!--Termina la jornada 3-->
 
   </div>
 </div>
@@ -588,11 +198,11 @@
               </div>
             </div>
           </footer>   
-          
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-         
+          <script src="../../../js/torneo.js"></script>
   </body>
 </html>
 

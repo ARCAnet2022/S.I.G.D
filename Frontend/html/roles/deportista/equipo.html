@@ -77,8 +77,10 @@
 <div class="jumbotron">
  
   <div class="row"> 
-<div class="titulo col-md-12">MI EQUIPO</div>
+<div class="titulo col-md-12" id="miEquipo"></div>
 
+
+<div id="mostrar" class="titulo"></div>
 <div class="container  cuerpo-partido">
   <div class="row">
     <div class="table-responsive">
@@ -89,35 +91,21 @@
               <th scope="col">Partidos</th>
               <th scope="col">Pases</th>
               <th scope="col">Anotaciones</th>
-              <th scope="col">Poseciones</th>
+              <th scope="col" id="Pos">Posesión Promedio</th>
               <th scope="col">Tiros</th>
-              <th scope="col">Rebotes</th>
+              <th scope="col" id="Efic"></th>
+              <th scope="col" id="Rebote"></th>
             </tr>
           </thead>
           <tbody id="tabla-actuaciones">
             <tr>
-              <th scope="row">Fecha_1:</th>
-              <td>5</td>
-              <td>10</td>
-              <td>34</td>
-              <td>7</td>
-              <td>67</td>
-            </tr>
-            <tr>
-              <th scope="row">Fecha_2:</th>
-              <td>5</td>
-              <td>10</td>
-              <td>34</td>
-              <td>7</td>
-              <td>67</td>
-            </tr>
-            <tr>
-              <th scope="row">Fecha_3:</th>
-              <td>5</td>
-              <td>10</td>
-              <td>34</td>
-              <td>7</td>
-              <td>67</td>
+              <td id="Partidos"></td>
+              <td id="Pases"></td>
+              <td id="Anotaciones"></td>
+              <td id="Posesion"></td>
+              <td id="Tiros"></td>
+              <td id="Eficiencia"></td>
+              <td id="Rebotes"></td>
             </tr>
           </tbody>
     </table>
@@ -125,296 +113,132 @@
 
   </div>
 </div>
-  </div>
 
+  </div>
+  <div class="row">
+    
+      <div class="container  cuerpo-partido">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="cabezera">
+              <tr>
+                <th scope="col">Partidos ganados</th>
+                <th scope="col">Partidos empatados</th>
+                <th scope="col">Partidos perdidos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="Ganados"></td>
+                <td id="Perdidos"></td>
+                <td id="Empatados"></td>
+              </tr>
+          </table>
+  
+          <table class="table">
+            <thead class="cabezera">
+              <tr>
+                <th scope="col" id="TarjAmar"></th>
+                <th scope="col" id="TarjRoja"></th>
+                <th scope="col" id="Exclusion"></th>
+                <th scope="col" id="FaltaPers"></th>
+                <th scope="col" id="FaltaAntidepor"></th>
+                <th scope="col" id="FaltaDescal"></th>
+                <th scope="col" id="FaltaTec"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="TarjetasAmarillas"></td>
+                <td id="TarjetasRojas"></td>
+                <td id="Exclusion"></td>
+                <td id="FaltaPersonal"></td>
+                <td id="FaltaAntideportiva"></td>
+                <td id="FaltaDescalificante"></td>
+                <td id="FaltaTecnica"></td>
+              </tr>
+            </table>
+  
+          </div>
+    </div>
+  </div>
 
       
 
-    <div class="titulo col-md-12">PLANTEL</div>
-<div class="row">
-  <div class="container cuerpo-partido">
-      <div class="row">
-        <div class="col-sm">
+<div class="titulo col-md-12">PLANTEL</div>
 
-          <table class="table">
-              <thead class="cabezera">
-                <tr>
-                  <th scope="col">N° camiseta</th>
-                </tr>
-              </thead>
-              <tbody class="borde-tabla">
-                  <tr>
-                      <td>Nombre jugador</td>
-                    </tr>
-                <tr>
-                  <td>Apellido jugador</td>
-                </tr>
-                <tr>
-                <td>Edad de jugador</td>
-                </tr>
-              </tbody>
-            </table>
+<div id="mostrarPlantel" class="row"></div> 
 
 
-        </div>
-        <div class="col-sm">
-           <table class="table">
-              <thead class="cabezera">
-                <tr>
-                  <th scope="col">N° camiseta</th>
-                </tr>
-              </thead>
-              <tbody class="borde-tabla">
-                  <tr>
-                      <td>Nombre jugador</td>
-                    </tr>
-                <tr>
-                  <td>Apellido jugador</td>
-                </tr>
-                <tr>
-                <td>Edad de jugador</td>
-                </tr>
-              </tbody>
-            </table>
-        </div>
-        <div class="col-sm">
-          <table class="table">
-              <thead class="cabezera">
-                <tr>
-                  <th scope="col">N° camiseta</th>
-                </tr>
-              </thead>
-              <tbody class="borde-tabla">
-                  <tr>
-                      <td>Nombre jugador</td>
-                    </tr>
-                <tr>
-                  <td>Apellido jugador</td>
-                </tr>
-                <tr>
-                <td>Edad de jugador</td>
-                </tr>
-              </tbody>
-            </table>
-        </div>
-      </div>
-
-      <div class="row">
-          <div class="col-sm">
-              <table class="table">
-                  <thead class="cabezera">
-                    <tr>
-                      <th scope="col">N° camiseta</th>
-                    </tr>
-                  </thead>
-                  <tbody class="borde-tabla">
-                      <tr>
-                          <td>Nombre jugador</td>
-                        </tr>
-                    <tr>
-                      <td>Apellido jugador</td>
-                    </tr>
-                    <tr>
-                    <td>Edad de jugador</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-
-          </div>
-          <div class="col-sm">
-              <table class="table">
-                  <thead class="cabezera">
-                    <tr>
-                      <th scope="col">N° camiseta</th>
-                    </tr>
-                  </thead>
-                  <tbody class="borde-tabla">
-                      <tr>
-                          <td>Nombre jugador</td>
-                        </tr>
-                    <tr>
-                      <td>Apellido jugador</td>
-                    </tr>
-                    <tr>
-                    <td>Edad de jugador</td>
-                    </tr>
-                  </tbody>
-                </table>
-          </div>
-          <div class="col-sm">
-              <table class="table">
-                  <thead class="cabezera">
-                    <tr>
-                      <th scope="col">N° camiseta</th>
-                    </tr>
-                  </thead>
-                  <tbody class="borde-tabla">
-                      <tr>
-                          <td>Nombre jugador</td>
-                        </tr>
-                    <tr>
-                      <td>Apellido jugador</td>
-                    </tr>
-                    <tr>
-                    <td>Edad de jugador</td>
-                    </tr>
-                  </tbody>
-                </table>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm">
-              <table class="table">
-                  <thead class="cabezera">
-                    <tr>
-                      <th scope="col">N° camiseta</th>
-                    </tr>
-                  </thead>
-                  <tbody class="borde-tabla">
-                      <tr>
-                          <td>Nombre jugador</td>
-                        </tr>
-                    <tr>
-                      <td>Apellido jugador</td>
-                    </tr>
-                    <tr>
-                    <td>Edad de jugador</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-
-          </div>
-          <div class="col-sm">
-              <table class="table">
-                  <thead class="cabezera">
-                    <tr>
-                      <th scope="col">N° camiseta</th>
-                    </tr>
-                  </thead>
-                  <tbody class="borde-tabla">
-                      <tr>
-                          <td>Nombre jugador</td>
-                        </tr>
-                    <tr>
-                      <td>Apellido jugador</td>
-                    </tr>
-                    <tr>
-                    <td>Edad de jugador</td>
-                    </tr>
-                  </tbody>
-                </table>
-          </div>
-          <div class="col-sm">
-              <table class="table">
-                  <thead class="cabezera">
-                    <tr>
-                      <th scope="col">N° camiseta</th>
-                    </tr>
-                  </thead>
-                  <tbody class="borde-tabla">
-                      <tr>
-                          <td>Nombre jugador</td>
-                        </tr>
-                    <tr>
-                      <td>Apellido jugador</td>
-                    </tr>
-                    <tr>
-                    <td>Edad de jugador</td>
-                    </tr>
-                  </tbody>
-                </table>
-          </div>
-        </div>
-    </div>
-</div>
  
 
 
 
  
 <div class="row">
-<div class="titulo col-md-12">JUGADOR ESTRELLA</div>
+<div class="titulo col-md-12">JUGADORES ESTRELLA</div>
 
 <div class="container cuerpo-partido">
 <table class="table">
 <thead class="cabezera">
 <tr>
-<th scope="col">Nombre</th>
-<th scope="col">Pases</th>
-<th scope="col">Anotaciones</th>
-<th scope="col">Posesión</th>
-<th scope="col">Tiros</th>
-<th scope="col">Rebotes</th>
-<th scope="col">Partidos jugados</th>
+  <th></th>
+  <th scope="col" >Nº Camiseta</th>
+  <th scope="col">Nombre</th>
+  <th scope="col">Anotaciones</th>
+  <th scope="col">Asistencias</th>
+  <th scope="col">Pases</th>
+  <th scope="col">Tiros</th>
+  <th scope="col">Quites</th>
+  <th scope="col" id="Rebot"></th>
+  <th scope="col">Partidos jugados</th>
 </tr>
 </thead>
 <tbody class="borde-tabla">
 <tr>
-<td>Mark</td>
-<td>Otto</td>
-<td>Mark</td>
-<td>Otto</td>
-<td>Mark</td>
-<td>Otto</td>
-<td>Mark</td>
+  <td><strong>MAS ANOTACIONES:</strong></td>
+  <td id="NumeroCamisetaMVPGoles"></td>
+  <td id="NombreMVPGoles"></td>
+  <td id="AnotacionesMVPGoles"></td>
+  <td id="AsistenciasMVPGoles"></td>
+  <td id="PasesMVPGoles"></td>
+  <td id="TirosMVPGoles"></td>
+  <td id="QuitesMVPGoles"></td>
+  <td id="RebotesMVPGoles"></td>
+  <td id="PartidosJugadosMVPGoles"></td>
 </tr>
-
+<tr>
+  <td><strong>MAS PASES:</strong></td>
+  <td id="NumeroCamisetaMVPPases"></td>
+  <td id="NombreMVPPases"></td>
+  <td id="AnotacionesMVPPases"></td>
+  <td id="AsistenciasMVPPases"></td>
+  <td id="PasesMVPPases"></td>
+  <td id="TirosMVPPases"></td>
+  <td id="QuitesMVPPases"></td>
+  <td id="RebotesMVPPases"></td>
+  <td id="PartidosJugadosMVPPases"></td>
+</tr>
+<tr>
+  <td><strong>MAS ASISTENCIAS:</strong></td>
+  <td id="NumeroCamisetaMVPAsistencias"></td>
+  <td id="NombreMVPAsistencias"></td>
+  <td id="AnotacionesMVPAsistencias"></td>
+  <td id="AsistenciasMVPAsistencias"></td>
+  <td id="PasesMVPAsistencias"></td>
+  <td id="TirosMVPAsistencias"></td>
+  <td id="QuitesMVPAsistencias"></td>
+  <td id="RebotesMVPAsistencias"></td>
+  <td id="PartidosJugadosMVPAsistencias"></td>
+</tr>
 </tbody>
 </table>
+
 </div>
 </div>
 
 
-<div class="row">
-      <div class="titulo col-md-12">RESULTADOS</div>
 
-      <div class="container  cuerpo-partido">
-        
-
-        <div class="table-responsive">
-            <table class="table">
-              <thead class="cabezera">
-                <tr>
-            
-                  <th scope="col">Partidos ganados</th>
-                  <th scope="col">Partidos empatados</th>
-                  <th scope="col">Partidos perdidos</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-               
-                  <td>6</td>
-                  <td>2</td>
-                  <td>3</td>
-                </tr>
-             </table>
-
-        
-              <table class="table">
-                <thead class="cabezera">
-                  <tr>
-                  
-                    <th scope="col">Tarjeta roja</th>
-                    <th scope="col">Tarjeta verde</th>
-                    <th scope="col">Tarjeta amarilla</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                  
-                    <td>2</td>
-                    <td>0</td>
-                    <td>4</td>
-                  </tr>
-               </table>
-
-        </div>
-</div>
-
-      </div>
 
 
 
@@ -443,9 +267,11 @@
             </div>
           </footer>   
           
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <script src="../../../js/equipo.js"></script>
+         
          
   </body>
 </html>

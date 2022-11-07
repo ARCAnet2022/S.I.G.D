@@ -10,7 +10,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Modificar usuarios</title>
   </head>
-  <body >
+  <body onload="javascript:init.esconderForm()">
 
      <!--Navegación primaria-->
      <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
@@ -119,52 +119,40 @@
  
     <div class="row ">
    
-        <div class="col-9 buscador">
-         
-         <p class="h6 col-md-2">Buscar usuario:</p>
-           <input class="form-control col-md-4" id="myInput" type="text" placeholder="Buscar..">
-           </div>
+        <div class="col-12 buscador mx-auto">
+          <p class="h6 col-md-12">Elige el tipo de usuario:</p>
+          <select  class="form-control col-md-12 mx-auto" name="rol" id="dropdownRol" onchange="javascript:init.dropdownFiltrarValores();">
+           <option>Tipo de usuario</option> 
+           <option>juez</option>
+            <option>analista</option>
+            <option>scout</option>
+            <option>administrativo</option>
+            <option>deportista</option>
+            <option>entrenador</option>
+            <option>administrador</option>
+            
+          </select><br>
+          <p class="h6 col-md-12">Buscar usuario:</p>
+          <input class="form-control col-md-12 mx-auto" id="myInput" type="text" placeholder="Buscar..">
+           
+           
+           
+        </div>
        
-       <div class=" row caja mt-3">
+       <div class=" row caja mt-3" >
+        
          <table class="table table-bordered">
            <thead class="cabezera">
              <tr>
-               <th>Nombre:</th>
-               <th>Apellido:</th>
-               <th>Cédula:</th>
-               <th>Tipo de usuario:</th>
-               <th>Seleccionar:</th>
+               <th>Nombre</th>
+               <th>Apellido</th>
+               <th>Cédula</th>
+               <th>Tipo de usuario</th>
+               <th>Modificar</th>
              </tr>
            </thead>
            <tbody id="myTable">
-             <tr>
-               <td>John</td>
-               <td>Doe</td>
-               <td>783899429</td>
-               <td>Scout</td>
-               <td><input type="checkbox" id="seleccionar"></td>
-             </tr>
-             <tr>
-               <td>Mary</td>
-               <td>Moe</td>
-               <td>124899429</td>
-               <td>Administrador</td>
-               <td><input type="checkbox" id="seleccionar"></td>
-             </tr>
-             <tr>
-               <td>July</td>
-               <td>Dooley</td>
-               <td>600899429</td>
-               <td>Entrenador</td>
-               <td><input type="checkbox" id="seleccionar"></td>
-             </tr>
-             <tr>
-               <td>Anja</td>
-               <td>Ravendale</td>
-               <td>083899429</td>
-               <td>Estudiante</td>
-               <td><input type="checkbox" id="seleccionar"></td>
-             </tr>
+             
            </tbody>
          </table>
        
@@ -173,87 +161,102 @@
 
 
 
-         <div class="row caja mt-3">
-  <table class="table ">
-    <thead class="cabezera">
-      <tr>
-      
-        <th scope="col"></th>
-        <th scope="col">INGRESE LOS DATOS BÁSICOS</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody class="borde-tabla">
-      <tr>
-        <td>Nombre:</td>
-        <td>Telefono:</td>
-        <td>Ciudad:</td>
-      </tr>
-      <tr>
-        <td> <input type="text" class="form-control" placeholder="..."></td>
-        <td> <input type="tel" class="form-control" placeholder="..."></td>
-        <td> <input type="text" class="form-control" placeholder="..."></td>
-      </tr>
-      <tr>
-        <td>Apellido:</td>
-        <td>Cédula:</td>
+         <div class="row caja mt-3" id="formularioMod">
+          <h1 class="border border-info col-12">Modifique los datos deseados: </h1>
+          <table class="table ">
+            <thead class="cabezera">
+              <tr>
+                
+                <th scope="col">Datos personales</th>
+                <th scope="col">Datos generales</th>
+                <th scope="col">Datos de dirección</th>
+               </tr>
+             </thead>
+             <tbody class="borde-tabla">
+             <form action="" >
+             <tr>
+               <td class="bg-light"><label for="nombre">Nombre:</label></td>
+               <td><label for="telefono">Telefono:</label></td>
+               <td class="bg-light"><label for="ciudad">Ciudad:</label></td>
+             </tr>
+             <tr>
+               <td class="bg-light"> <input type="text" class="form-control" placeholder="..." id="nombre" name="nombre"></td>
+               <td> <input type="tel" class="form-control" placeholder="..." id="telefono" name="telefono"></td>
+               <td class="bg-light"> <input type="text" class="form-control" placeholder="..." id="ciudad" name="ciudad"></td>
+             </tr>
        
-        <td>Calle:</td>
-      </tr>
-      <tr>
-        <td> <input type="text" class="form-control" placeholder="..."></td>
-        <td> <input type="email" class="form-control" placeholder="..."></td>
-        <td> <input type="text" class="form-control" placeholder="..."></td>
-      </tr>
-      <tr>
-        <td>Fecha nacimiento:</td> 
-        <td>Correo:</td>
-        <td>Número:</td>
-      
-      </tr>
-      <tr>
-        <td> <input type="date" class="form-control"></td>
-        <td> <input type="email" class="form-control" placeholder="..."></td>
-        <td> <input type="number" class="form-control" placeholder="..."></td>
-      
-      </tr>
-
-      <tr>
-        <td>Nacionalidad:</td>
-        <td>Contraseña:</td>
-        <td>Tipo de usuarios:</td>
-      </tr>
-
-        <tr>
-          <td> <input type="text" class="form-control" placeholder="..."></td>
-          <td> <input type="password" class="form-control" placeholder="..."></td>
-          <td>
-          <select id="inputState" class="form-control col">
-                     <option>....</option> 
-                     <option>Juez</option>
-                    <option>Analista</option>
-                    <option>Scout</option>
-                    <option>Administrativo</option>
-                    <option>Deportista</option>
-                    <option>Entrenador</option>
-                    <option>Administrador</option>
-                  
-                  </select>
-          </td>
-        </tr>
-
- <tr>
-      <td></td>
-      <td><button type="button" class="btn boton-enviar col-2">Guardar</button></td>
-      <td></td>
-        
-  </tr>
-      
-    </tbody>
-    
-  </table>
+             <tr>
+               <td class="bg-light"> <label for="apellido">Apellido:</label></td>
+               <td><label for="ci_cargado">Cedula:</label></td>
+               <td class="bg-light"><label for="calle">Calle:</label></td>
+             </tr>
+       
+             <tr>
+               <td class="bg-light"> <input type="text" class="form-control" placeholder="..." id="apellido" name="apellido"></td>
+               <td> <input type="text" class="form-control" placeholder="..." id="ci_cargado" name="ci_cargado"></td>
+               <td class="bg-light"> <input type="text" class="form-control" placeholder="..." id="calle" name="calle"></td>
+             </tr>
+       
+             <tr>
+                <td class="bg-light"><label for="fecha_nac">Fecha de nacimiento:</label></td> 
+                <td><label for="email">Email:</label></td>
+                <td class="bg-light"><label for="numero">Número:</label></td>
+             </tr>
+       
+             <tr>
+               <td class="bg-light"> <input type="date" class="form-control" id="fecha_nac" name="fecha_nac"></td>
+               <td> <input type="email" class="form-control" placeholder="..." id="email" name="email"></td>
+               <td class="bg-light"> <input type="number" class="form-control" placeholder="..." id="numero" name="numero"></td>
+             </tr>
+       
+             <tr>
+               <td class="bg-light"><label for="nacionalidad">Nacionalidad:</label></td>
+               <td></td>
+               <td class="bg-light"></td>
+             </tr>
+       
+               <tr>
+                 <td class="bg-light"> <input type="text" class="form-control" placeholder="..." id="nacionalidad" name="nacionalidad"></td>
+                 <td></td>
+                 <td class="bg-light"></td>
+               </tr>
+       
+          <tr>
+           <td class="bg-light">
+               <div class="form-group row ">
+                 <div class="buscador col-12">
+                 <label for="inputState" class="col">Tipo de usuario:</label>
+                 <select  class="form-control col" name="rol" id="dropdownRoles" onchange="javascript:init.formularioRoles();" disabled>
+                  <option>....</option> 
+                  <option value="juez">juez</option>
+                   <option value="analista">analista</option>
+                   <option value="scout">scout</option>
+                   <option value="administrativo">administrativo</option>
+                   <option value="deportista">deportista</option>
+                   <option value="entrenador">entrenador</option>
+                   <option value="administrador">administrador</option>
+                   
+                 </select></div>
+               </div>
+              </td>
+               <td ></td>
+               <td class="bg-light"></td>
+             </tr>
+             <tr id="mostrarSegunRol">
+               <!--Tipo de usuario lo cargado-->
+               
+       
+             </tr>
+             <tr id="mostrarSegunRolFormularios">
+       
+             </tr >
+           </tbody>
+         </table>
          </div>
-<
+         <div class="row">
+           <div id="mostrarForm"></div>
+         </div>
+         <button  onclick="javascript:init.modificarUsuario();" type="button"class="btn boton-enviar col-2 mx-auto" value="enviar" id="botonModificar">Modificar</button></div>
 
  <div class="row ">
   <div class="col-12 caja">
@@ -287,9 +290,10 @@
             </div>
           </footer>   
           
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-         
+          <script src="../../../js/adminModificarUsuario.js"></script>
+          <script src="../../../js/buscador.js"></script>
   </body>
 </html>
