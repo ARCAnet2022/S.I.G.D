@@ -16,7 +16,6 @@
                 $ci_juez = json_decode($_REQUEST['ci_juez']);
                 $lugar = json_decode($_REQUEST['lugar']);
                 $ci_analista = json_decode($_REQUEST['ci_analista']);
-
                 $response = $initPartido->uploadMatch($equipo1,$equipo2,$fecha,$hora_inicio,$hora_fin,$deporte,$ci_juez,$lugar,$ci_analista);
                 echo json_encode($response);
                 exit();

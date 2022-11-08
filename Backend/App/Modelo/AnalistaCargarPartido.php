@@ -35,6 +35,7 @@
         }
 
         public function uploadMatch($equipo1,$equipo2,$fecha,$hora_inicio,$hora_fin,$deporte,$ci_juez,$lugar,$ci_analista){
+
             $db = new Conexion;
             $insertPartido = $db->queryInsert('INSERT into partido (lugar,hora_inicio,hora_fin,fecha,ci_analista,ci_juez) values ("'.$lugar.'","'.$hora_inicio.'","'.$hora_fin.'","'.$fecha.'",'.$ci_analista.','.$ci_juez.');');
             

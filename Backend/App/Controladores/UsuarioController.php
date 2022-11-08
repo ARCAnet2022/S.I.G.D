@@ -22,6 +22,9 @@ class UsuarioController {
 
         $usuario = $init->getUserByCiAndPassword($user,$contrasena);
         $deportista = $init->getDeportistaCi($deportistaCi);
+        if (!$usuario || $deportista) {
+            header("Location:".basePathFrontend()."index.html");
+        }
 
         $ciDeportista = $deportista[0]['ci_deportista'];
 
@@ -54,7 +57,8 @@ class UsuarioController {
                 header("Location: ".basePathFrontend()."html/roles/deportista/deportista.html");
                 exit();
             }else {
-                return null;
+                $error = "Usuario o contraseña incorrectos.";
+                return $error;
                 exit();
             }
         }

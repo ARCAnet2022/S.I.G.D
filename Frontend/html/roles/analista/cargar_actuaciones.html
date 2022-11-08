@@ -83,137 +83,50 @@
 
   <div class="col-md-4"></div>
 
-    <div class="dropdown dropright col-md-4">
+    <div class="dropdown dropright col-md-12 mx-auto">
       
-      <button class="btn boton-deporte dropdown-toggle col-6" type="button" id="dropdownMenuButton-deporte" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Elegir deportes
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-deporte">
-        <a class="dropdown-item" href="#">Fútbol</a>
-        <a class="dropdown-item" href="#">Basquetbol</a>
-        <a class="dropdown-item" href="#">Balonmano</a>
-      </div>
+      <select name="dropdownMenuButton-deporte" id="dropdownMenuButton-deporte" class="btn boton-deporte dropdown-toggle col-6" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onchange="javascript:init.getEquiposBySport();">
+       <option >Elegir Deporte</option>
+       <option class="dropdown-item" value="Futbol">Futbol</option>
+       <option class="dropdown-item" value="Basquetbol">Basquetbol</option>
+       <option class="dropdown-item" value="Handbol">Handbol</option>
+      </select>
+      <div id="mostrarError"></div>
     </div>
 
-    <div class=" caja">
-    <table class="table tabla">
-      <thead class="cabezera">
-        <tr>
-          <th scope="col">NombreEquipo1</th> 
-          <th scope="col">Fecha</th>
-          <th scope="col">NombreEquipo2</th>
-          <th scope="col">Seleccione partido</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Mark</td>
-          <th scope="row">23-9-2022</th>
-          <td>Otto</td>
-          <td><button class="btn boton-enviar" type="submit">Cargar</button></td>
-        </tr>
-        <tr>
-          <td>Mark</td>
-          <th scope="row">23-9-2022</th>
-          <td>Otto</td>
-          <td><button class="btn boton-enviar" type="submit">Cargar</button></td>
-        </tr>
-        <tr>
-          <td>Mark</td>
-          <th scope="row">23-9-2022</th>
-          <td>Otto</td>
-          <td><button class="btn boton-enviar" type="submit">Cargar</button></td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
+<h1 class="mx-auto">Ultimas actuaciones que necesitan validación</h1>
+<table class="table table-striped w-auto">
+  <thead class="tabla">
+    <tr>
+      <th>#</th>
+      <th>Equipo</th>
+      <th>Juez</th>
+      <th>Entrenador</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody id="mostrarActuaciones">
     
-        <div class=" caja">
-<table class="table tabla">
-   <thead class="cabezera">
-    <tr>
-        <th scope="col" class="tabla-contenido-th"> <div class="col-sm">
-         
-        </div></th>
-        <th class="col-5"> <div class="col-sm">
-          Nombre de equipo 1
-        </div></th>
-        <th class="col-5"> <div class="col-sm">
-          Nombre de equipo 2
-        </div></th>
-        
-    </tr>
-
-   </thead>
-   <tbody>
-   <tr>
-        <td class="col-2 tabla-contenido">Faltas</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        
-    </tr>
-     <tr>
-        <td class="col-2 tabla-contenido">Tiros</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        
-    </tr>
-    <tr>
-        <td class="col-2 tabla-contenido">Rebotes</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-      
-    </tr>
-    <tr>
-        <td class="col-2 tabla-contenido">Pases</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-    </tr>
-
-    <tr class="row-12">
-        <td class="col-2 tabla-contenido">Sanciones</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-    </tr>
-  
-    <tr>
-        <td class="col-2 tabla-contenido">Posesión</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-    </tr>   
-    <tr class="row-12">
-        <td class="col-2 tabla-contenido">Anotaciones</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-    </tr>
-    <tr>
-        <td class="col-2 tabla-contenido">Jugador estrella</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-    </tr>
-    <tr>
-        <td class="col-2 tabla-contenido">Empatados</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-    </tr>
-    <tr>
-        <td class="col-2 tabla-contenido">Ganados</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-    </tr>
-    <tr>
-        <td class="col-2 tabla-contenido">Perdidos</td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-        <td class="col-5"><input type="text" class="form-control" placeholder="..."> </td>
-    </tr>
-   
-   
-   </tbody>
-
+  </tbody>
 </table>
+
+<div class="mx-auto" id="mostrarSiguiente">
+  
+</div>
+
+<div class="row" id="mostrarJugadores">
+
+
+
+</div>
+
+
 </div>
 </div>
-<button type="button" class="btn boton-enviar">Enviar</button>
+<div id="mostrarForm"></div>
+<div class="row" id="botonEnviar">
+  
+</div>
 </div>
 
 
@@ -245,9 +158,9 @@
      </div>
    </footer>   
    
-   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../../../js/analistaCargarActuacion.js"></script>
 </body>
 </html>

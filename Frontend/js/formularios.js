@@ -25,6 +25,8 @@ function validar(){
         document.getElementById("mostrarContrasena").innerHTML = '<p></p>';
         document.getElementById("mostrarCedula").innerHTML = '<p></p>';
         return false;
+    }else{
+        alert("Usuario o contraseña incorrectos.");
     }
     
     
@@ -35,6 +37,7 @@ function validar(){
 function logout(){
     localStorage.removeItem('ci_usuario');
     localStorage.removeItem('ci_deportista');
+    localStorage.clear();
     document.location.href="/S.I.G.D/Frontend/index.html";
     alert('Saliendo del sistema');
 }

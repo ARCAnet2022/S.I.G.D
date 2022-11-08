@@ -1,6 +1,6 @@
 <?php
 
-include '../Modelo/AdminiCargarUsuario.php';
+include '../Modelo/AdminCargarUsuario.php';
 
 class AdminCargarUsuarioController{
     
