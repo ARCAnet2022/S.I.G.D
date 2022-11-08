@@ -113,6 +113,13 @@ class analistaCargarCampeonato{
                     window.location.reload();
                 }, 2000);
                 
+            }else{
+                document.getElementById('mostrarForm').setAttribute("class", "alert alert-danger mx-auto");
+                document.getElementById('mostrarForm').innerHTML = 'No se cargaron los datos!';
+                document.getElementById('mostrarForm').setAttribute("style","display:grid; justify-content:center;");
+                setTimeout(function(){
+                    window.location.reload();
+                }, 2000);
             }
 
         }).fail(function() 

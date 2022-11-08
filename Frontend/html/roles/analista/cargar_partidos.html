@@ -79,17 +79,17 @@
     <div class="row"> 
 <div class="titulo col-md-12">CARGAR PARTIDOS</div>
 
-<div class="dropdown dropright row">
-  <div class="col-md-5"></div>
-  <button class="btn boton-deporte dropdown-toggle " type="button" id="dropdownMenuButton-torneo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Elegir deportes
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-torneo">
-    <a class="dropdown-item" href="#">Fútbol</a>
-    <a class="dropdown-item" href="#">Basquetbol</a>
-    <a class="dropdown-item" href="#">Balonmano</a>
-  </div>
+<div class="dropdown dropright col-md-12 mx-auto">
+      
+  <select name="dropdownMenuButton-deporte" id="dropdownMenuButton-deporte" class="btn boton-deporte dropdown-toggle col-6" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onchange="javascript:init.getEquiposBySport();">
+   <option >Elegir Deporte</option>
+   <option class="dropdown-item" value="Futbol">Futbol</option>
+   <option class="dropdown-item" value="Basquetbol">Basquetbol</option>
+   <option class="dropdown-item" value="Handbol">Handbol</option>
+  </select>
+  <div id="mostrarError"></div>
 </div>
+
 
 <div class="container  cuerpo-partido">
 
@@ -100,9 +100,9 @@
       <table class="table">
 <thead class="cabezera cabezera-tabla">
   <tr>
-    <th scope="col">Equipo 1</th>
-    <th scope="col">Equipo 2</th>
-    <th scope="col">Fecha</th>
+    <th scope="col"><label for="dropdownMenuButton-equipo">Equipo 1</label></th>
+    <th scope="col"><label for="dropdownMenuButton-equipo2">Equipo 2</label></th>
+    <th scope="col"><label for="fecha">Fecha</label></th>
     
   </tr>
 </thead>
@@ -110,33 +110,22 @@
   <tr>
 
     <td>
-      <div class="dropdown  col-md-10">
-      
-        <button class="btn boton-deporte dropdown-toggle col-12" type="button" id="dropdownMenuButton-deporte" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Equipos
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-deporte">
-          <a class="dropdown-item" href="#">NombreEquipo1</a>
-          <a class="dropdown-item" href="#">NombreEquipo2</a>
-          <a class="dropdown-item" href="#">NombreEquipo3</a>
-        </div>
+      <div class="dropdown dropright col-md-12 mx-auto">
+        <select name="dropdownMenuButton-equipo" id="dropdownMenuButton-equipo" class="btn boton-deporte dropdown-toggle col-6" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onchange="javascript:init.validarEquiposDistintos();">
+         <option value="default">Elegir equipo</option>
+         
+        </select>
       </div>
     </td>
     <td>
-      <div class="dropdown col-md-10">
-      
-        <button class="btn boton-deporte dropdown-toggle col-12" type="button" id="dropdownMenuButton-deporte" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Equipos
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-deporte">
-          <a class="dropdown-item" href="#">NombreEquipo1</a>
-          <a class="dropdown-item" href="#">NombreEquipo2</a>
-          <a class="dropdown-item" href="#">NombreEquipo3</a>
-        </div>
+      <div class="dropdown dropright col-md-12 mx-auto">
+        <select name="dropdownMenuButton-equipo2" id="dropdownMenuButton-equipo2" class="btn boton-deporte dropdown-toggle col-6" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onchange="javascript:init.validarEquiposDistintos();">
+         <option value="default">Elegir 2° equipo</option>
+        </select>
       </div>
     </td>
     <td>
-      <input type="date" class="form-control">
+      <input type="date" class="form-control" id="fecha" name="fecha" onchange="javascript:init.validarFecha();">
     </td>
  </tbody>
 </table>
@@ -145,21 +134,21 @@
         <table class="table cuerpo-partido">
             <thead class="cabezera ">
             <tr>
-            <th scope="col">Lugar</th>
-            <th scope="col">Hora inicio</th>
-            <th scope="col">Hora fin</th>
+            <th scope="col"><labe for="lugar">Lugar</labe></th>
+            <th scope="col"><label for="hora_inicio">Hora inicio</label></th>
+            <th scope="col"><label for="hora_fin">Hora fin</label></th>
             </tr>
             </thead>
             <tbody class="borde-tabla">
             <tr>
             <td>
-                <input class="form-control" type="text" placeholder="...">
+                <input class="form-control" type="text" placeholder="..." id="lugar" name="lugar" required>
             </td>
             <td>
-                <input class="form-control" type="time">
+                <input class="form-control" type="time" id="hora_inicio" name="hora_inicio">
             </td>
             <td>
-                <input class="form-control" type="time">
+                <input class="form-control" type="time" id="hora_fin" name="hora_fin">
             </td>
            
             </tr>
@@ -169,14 +158,32 @@
     </div>
 </div>
 
+<div class=" row mt-3 caja" id="jueces">
+  <h1 class="mx-auto ">Jueces Disponibles</h1>
+  <table class="table table-bordered">
+    <thead class="cabezera">
+      <tr>
+        <th>Nombre:</th>
+        <th>Apellido:</th>
+        <th>Cédula:</th>
+        <th>Seleccionar:</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      
+    </tbody>
+  </table>
+
+</div>
+<div id="mostrarForm">
+
+</div>
 
 
 
 
 
-
-
-    </div><button type="button" class="btn boton-enviar">Enviar</button>
+    </div><button type="button" class="btn boton-enviar" onclick="javascript:init.cargarPartido();">Enviar</button>
 </div>
 
 
@@ -213,10 +220,10 @@
        </div>
      </footer>   
      
-     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../../../js/analistaCargarPartido.js"></script>
 </body>
 </html>
 
