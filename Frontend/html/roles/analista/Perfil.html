@@ -12,65 +12,73 @@
   </head>
   <body >
 
-   <!--Navegación primaria-->
-   <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
+    <!--Navegación primaria-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra row">
      
-    <div class="col-2 navbar-brand">
-      <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
-   </div>
-   
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-    <ul class="navbar-nav mr-auto row texto">
-
+      <div class="col-2 navbar-brand">
+        <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
+     </div>
      
-
-        <li class="nav-item col-1 ">
-          <a class="nav-link textoprinPrincipal" href="../../roles/analista/analista.html">Inicio</a>
-        </li>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
     
-        <li class="nav-item col-2">
-          <a class="nav-link textoprin" href="Perfil.html">Perfil</a>
-        </li>
+      <ul class="navbar-nav mx-auto col-12 texto">
     
-        <li class="nav-item dropdown col-1">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-cargardatos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Cargar datos
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown-cargardatos">
-            <a class="dropdown-item" href="cargar_campeonato.html">Torneos</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="cargar_partidos.html">Partidos</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="cargar_actuaciones.html">Actuaciones</a>
-         
-          </div>
-        </li>
-        
-            <li class="nav-item col-2">
-              <a class="nav-link textoprin" href="partidos.html">Partidos</a>
+       
+    
+          <li class="nav-item col-1 ">
+            <a class="nav-link textoprinPrincipal lenguaje" data-key="1" href="../../roles/analista/analista.html">Inicio</a>
+          </li>
+      
+          <li class="nav-item col-2">
+            <a class="nav-link textoprin lenguaje" href="Perfil.html" data-key="perfil">Perfil</a>
+          </li>
+      
+          <li class="nav-item dropdown col-1">
+            <a class="nav-link dropdown-toggle textoprin lenguaje" href="#" id="navbarDropdown-cargardatos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-key="cargarDatos">
+             Cargar datos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown-cargardatos">
+              <a class="dropdown-item lenguaje" href="cargar_campeonato.html" data-key="4.3">Torneos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item lenguaje" href="cargar_partidos.html" data-key="4.4">Partidos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item lenguaje" href="cargar_actuaciones.html" data-key="actuacion">Actuaciones</a>
+           
+            </div>
+          </li>
+          
+              <li class="nav-item col-2">
+                <a class="nav-link textoprin lenguaje" href="partidos.html" data-key="4.4">Partidos</a>
+              </li>
+              <li class="nav-item col-1">
+                <a class="nav-link textoprin lenguaje" href="torneo.html" data-key="4.3">Torneos</a>
+              </li>
+              <li class="nav-item col-2">
+                <a class="nav-link textoprin lenguaje" href="estadisticas.html" data-key="4.5">Estadisticas</a>
+              </li>
+    
+    
+          
+       
+              <li class="nav-item col-2 ">
+                <a href="../../../../Backend/App/Controladores/logoutController.php" class="btn textoprinPrincipal lenguaje" role="button" onclick="logout()" data-key="7">Salir</a>
+              </li>    
+    
+    
+              <li class="nav-item col-md-1">
+                <div class="idiomas">
+                <button  class="idioma" type="button" id="esp">ESP <img src="../../../imagenes/ingles/Español.png" alt="ingles" class="imaIdioma"> </button><br>
+                <button  class=" idioma" type="submit" id="ing">ING  <img src="../../../imagenes/ingles/Ingles.png" alt="español" class="imaIdioma"></button>
+              </div>
             </li>
-            <li class="nav-item col-1">
-              <a class="nav-link textoprin" href="torneo.html">Torneos</a>
-            </li>
-            <li class="nav-item col-2">
-              <a class="nav-link textoprin" href="estadisticas.html">Estadisticas</a>
-            </li>
-
-
-        
-     
-<li class="nav-item col-1 ">
-  <a href="../../../../Backend/App/Controladores/logout.php" class="btn boton textoprinPrincipal" role="button">Salir</a>
-</li>     
-
-</ul>
-</div>
-</nav>
-<!--Fin de la navegación primaria-->
+    
+    </ul>
+    </div>
+    </nav>
+    <!--Fin de la navegación primaria-->
 
 <!--Cuerpo de la pagina-->
 
@@ -78,115 +86,124 @@
 <div class="jumbotron">
   <div class="row "> 
 
-  <div class="titulo col-md-12">MI PERFIL</div>
+    <div class="titulo col-md-12 lenguaje" data-key="miPerfil">MI PERFIL</div>
 
 
-  <div class="caja cuerpo">
-    <div class="row">
-      <div class="col-md-5">
-        <img src="../../../imagenes/perfil.png" alt="foto_perfil" class="img-thumbnail">
+    <div class="caja cuerpo">
+      <div class="row">
+        <div class="col-md-5">
+          <img src="../../../imagenes/perfil.png" alt="foto_perfil" class="img-thumbnail">
+        </div>
+        <div class="col-md-5">
+         
+          <table class="table table-bordered">
+            <thead class="cabezera">
+              <tr>
+                <th colspan="2" class="lenguaje" data-key="datosPersonales">Datos personales:</th>
+                
+              </tr>
+            </thead>
+            <tbody id="datos_personales">
+              <tr>
+                <td class="lenguaje" data-key="nombre">Nombre</td>
+                <td id="nombre"></td>
+              </tr>
+              <tr>
+                <td class="lenguaje" data-key="apellido">Apellido</td>
+                <td id="apellido"></td>
+              </tr>
+              <tr>
+                <td class="lenguaje" data-key="fechaNac">Fecha de nacimiento</td>
+                <td id="fecha_nac"></td>
+              </tr>
+              <tr>
+                <td class="lenguaje" data-key="cedula">Cédula</td>
+                <td id="ci_usuario"></td>
+              </tr>
+              <tr>
+                <td class="lenguaje" data-key="nacionalidad">Nacionalidad</td>
+                <td id="nacionalidad"></td>
+              </tr>
+            </tbody>
+          </table>
+  
+        </div>
       </div>
-      <div class="col">
-       
-        <table class="table table-bordered">
-          <thead class="cabezera">
-            <tr>
-              <th colspan="2">Datos personales:</th>
+  
+      <div class="row">
+        <div class="col">
+        
+          <table class="table table-bordered">
+            <thead class="cabezera">
+              <tr>
+                <th colspan="2" class="lenguaje" data-key="datosGenerales">Datos generales:</th>
+              </tr>
+            </thead>
+            <tbody id="datos_generales">
+              <tr>
+                <td class="lenguaje" data-key="telefono">Teléfono</td>
+                <td id="telefono"></td>
+              </tr>
+  
+              <tr>
+                <td>Correo</td>
+                <td id="email"></td>
+              </tr>
               
-            </tr>
-          </thead>
-          <tbody id="datos_personales">
-            <tr>
-              <td>Nombre</td>
-              <td id="nombre"></td>
-            </tr>
-            <tr>
-              <td>Apellido</td>
-              <td id="apellido"></td>
-            </tr>
-            <tr>
-              <td>Fecha de nacimiento</td>
-              <td id="fecha_nac"></td>
-            </tr>
-            <tr>
-              <td>Cédula</td>
-              <td id="ci_usuario"></td>
-            </tr>
-            <tr>
-              <td>Nacionalidad</td>
-              <td id="nacionalidad"></td>
-            </tr>
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+  
+        </div>
+        <div class="col">
+         
+  
+          <table class="table table-bordered">
+            <thead class="cabezera">
+              <tr>
+                <th colspan="2" class="lenguaje" data-key="datosDireccion">Datos de dirección:</th>
+              </tr>
+            </thead>
+            <tbody id="datos_direccion">
+              <tr>
+                <td class="lenguaje" data-key="ciudad">Ciudad</td>
+                <td id="ciudad"></td>
+              </tr>
+              <tr>
+                <td class="lenguaje" data-key="calle">Calle</td>
+                <td id="calle"></td>
+              </tr>
+              <tr>
+                <td class="lenguaje" data-key="numero">Número</td>
+                <td id="numero"></td>
+              </tr>
+            </tbody>
+          </table>
+  
+  
+        </div>
+        <div class="row">
+        <div class="col">
+          
 
-      </div>
-    </div>
+  
+        </div>
 
-    <div class="row">
-      <div class="col">
-      
-        <table class="table table-bordered">
-          <thead class="cabezera">
-            <tr>
-              <th colspan="2">Datos generales:</th>
-            </tr>
-          </thead>
-          <tbody id="datos_generales">
-            <tr>
-              <td>Teléfono</td>
-              <td id="telefono"></td>
-            </tr>
-
-            <tr>
-              <td>Correo</td>
-              <td id="email"></td>
-            </tr>
-            
-          </tbody>
-        </table>
-
-      </div>
-      <div class="col">
-       
-
-        <table class="table table-bordered">
-          <thead class="cabezera">
-            <tr>
-              <th colspan="2">Datos de dirección:</th>
-            </tr>
-          </thead>
-          <tbody id="datos_direccion">
-            <tr>
-              <td>Ciudad</td>
-              <td id="ciudad"></td>
-            </tr>
-            <tr>
-              <td>Calle</td>
-              <td id="calle"></td>
-            </tr>
-            <tr>
-              <td>Número</td>
-              <td id="numero"></td>
-            </tr>
-          </tbody>
-        </table>
-
-
-      </div>
-
+  
       <table class="table table-bordered">
         <thead class="cabezera">
           <tr>
-            <th colspan="2">Datos profesionales:</th>
+            <th colspan="2" class="lenguaje" data-key="datosProfecionales">Datos profesionales:</th>
+          
           </tr>
         </thead>
         <tbody id="datos_profecionales">
-        <tr>
-            <td>Número de funcionario:</td>
+          <tr>
+            <td class="lenguaje" data-key="numeroF">N° funcionario:</td>
             <td id="nro_funcionario"></td>
           </tr>
+      
           <tr>
-            <td>Horas de trabajo semanales:</td>
+            <td class="lenguaje" data-key="horasTrabajo">Horas de trabajo semanales:</td>
             <td id="horas_trabajo_semanales"></td>
           </tr>
         </tbody>
@@ -194,36 +211,38 @@
      
     </div>
   </div>
-  </div>
 
   </div>
 </div>
-<!---fin del cuerpo-->
-     <footer class="row-12">
-      
-         <div class="col-12 fila piedepagina">
-                 <div class="col-4 nav d-flex justify-content-around ">
-                    <img class="arca img-fluid" src="../../../imagenes/LogoArcanet2.png" alt="Arcanet">
-                 
-                </div>
-            </div>
-          <div class="row-12 ">
-            <div class="col-12 nav d-flex justify-content-around elementopie ">
-              <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
-              <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
-               <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
-                 
-                 
-                
-              </div>
-            </div>
-          </footer>   
-          
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-          <script src="../../../js/perfiles.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-         
-  </body>
-</html>
+</div>
 
+
+<!--Fin del cuerpo-->
+<footer class="row-12">
+     
+  <div class="col-12 fila piedepagina">
+          <div class="col-4 nav d-flex justify-content-around ">
+             <img class="arca img-fluid" src="../../../imagenes/LogoArcanet2.png" alt="Arcanet">
+          
+         </div>
+     </div>
+   <div class="row-12 ">
+     <div class="col-12 nav d-flex justify-content-around elementopie ">
+          <a class="nav-link lenguaje " href="../../arcanet/arcanet.html" target="_blank" data-key="sobreNosotros">Sobre nosotros</a>
+          <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+           <a class="nav-link lenguaje" href="../../arcanet/ayuda_soporte.html" target="_blank" data-key="ayudaSoporte">Ayuda y soporte</a>
+          
+          
+         
+       </div>
+     </div>
+   </footer>  
+   <script src="../../../js/lengRoles.js"></script>  
+   <script src="../../../js/formularios.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="../../../js/perfiles.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</body>
+</html>

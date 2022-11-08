@@ -129,7 +129,7 @@ class Usuario{
         $scoutProfile = $db->query("SELECT u.nombre,u.apellido,u.fecha_nac,u.ci_usuario,u.nacionalidad,u.telefono,u.email,u.calle,u.numero,u.ciudad,s.experiencia
         FROM usuario as u
         INNER JOIN scout as s on u.ci_usuario=s.ci_scout
-        HAVING u.ci_usuario=$ses;");
+        HAVING u.ci_usuario=$ci;");
 
         if (count($scoutProfile)){
             return $scoutProfile;

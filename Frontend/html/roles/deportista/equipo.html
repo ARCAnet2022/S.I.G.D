@@ -11,65 +11,72 @@
     <title>Equipo</title>
   </head>
   <body >
-
-    <!--Navegación primaria-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
+  <!--Navegación primaria-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra row">
      
-      <div class="col-1 navbar-brand">
-        <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
-     </div>
-     
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="col-1 navbar-brand">
+      <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
+   </div>
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <ul class="navbar-nav mr-auto texto row">
+    <ul class="navbar-nav mx-auto texto col-12">
 
-        
-          <li class="nav-item col-2">
-            <a class="nav-link textoprinPrincipal" href="../../roles/deportista/deportista.html">Inicio</a>
-          </li>
-     
-
-          <li class="nav-item col-1">
-            <a class="nav-link textoprin" href="Perfil.html">Perfil</a>
-          </li>
       
-          <li class="nav-item col-2">
-            <a class="nav-link textoprin" href="equipo.html">Equipo</a>
-          </li>
-            
-      
-              <li class="nav-item col-1">
-                <a class="nav-link textoprin" href="torneo.html">Torneos</a>
+        <li class="nav-item col-2">
+          <a class="nav-link textoprinPrincipal lenguaje" href="../../roles/deportista/deportista.html" data-key="1">Inicio</a>
+        </li>
+   
+
+        <li class="nav-item col-1">
+          <a class="nav-link textoprin lenguaje" data-key="perfil" href="Perfil.html">Perfil</a>
+        </li>
+    
+        <li class="nav-item col-2">
+          <a class="nav-link textoprin lenguaje" href="equipo.html" data-key="4.2">Equipos</a>
+        </li>
+          
+    
+            <li class="nav-item col-1">
+              <a class="nav-link textoprin lenguaje"  href="torneo.html" data-key="4.3">Torneos</a>
+            </li>
+    
+            <li class="nav-item col-2">
+              <a class="nav-link textoprin lenguaje" href="partidos.html" data-key="4.4">Partidos</a>
+            </li>
+             
+              <li class="nav-item dropdown col-2">
+                <a class="nav-link dropdown-toggle textoprin lenguaje" href="#" id="navbarDropdown-estadisticas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-key="4.5">
+                  Estadisticas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown-estadisticas">
+                  <a class="dropdown-item lenguaje " href="estadisticas_personales.html" data-key="misEstadisticas">Mis estadisticas</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item lenguaje" href="estadisticas.html" data-key="general">Generales</a>
+                </div>
               </li>
-      
-              <li class="nav-item col-2">
-                <a class="nav-link textoprin" href="partidos.html">Partidos</a>
-              </li>
-               
-                <li class="nav-item dropdown col-2">
-                  <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-estadisticas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Estadisticas
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown-estadisticas">
-                    <a class="dropdown-item" href="estadisticas_personales.html">Mis estadisticas</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="estadisticas.html">Generales</a>
-                  </div>
-                </li>
 
-        
-          <li class="nav-item  col-1">
-            <a href="../../../../Backend/App/Controladorlogout.php" class="btn textoprinPrincipal" role="button">Salir</a>
-          </li>     
-        
+      
+              <li class="nav-item col-1 ">
+                <a href="../../../../Backend/App/Controladores/logoutController.php" class="btn textoprinPrincipal lenguaje " role="button" onclick="logout()" data-key="7">Salir</a>
+              </li>  
+
+              <li class="nav-item col-md-1">
+                <div class="idiomas">
+                <button  class="idioma" type="button" id="esp">ESP <img src="../../../imagenes/ingles/Español.png" alt="ingles" class="imaIdioma"> </button><br>
+                <button  class=" idioma" type="submit" id="ing">ING  <img src="../../../imagenes/ingles/Ingles.png" alt="español" class="imaIdioma"></button>
+              </div>
+            </li>
+      
 </ul>
 </div> 
 
 </nav>
 <!--Fin de la navegación primaria-->
+
 
 <!--Cuerpo de la pagina-->
 
@@ -77,10 +84,8 @@
 <div class="jumbotron">
  
   <div class="row"> 
-<div class="titulo col-md-12" id="miEquipo"></div>
+<div class="titulo col-md-12 lenguaje" data-key="miEquipo">MI EQUIPO</div>
 
-
-<div id="mostrar" class="titulo"></div>
 <div class="container  cuerpo-partido">
   <div class="row">
     <div class="table-responsive">
@@ -91,21 +96,35 @@
               <th scope="col">Partidos</th>
               <th scope="col">Pases</th>
               <th scope="col">Anotaciones</th>
-              <th scope="col" id="Pos">Posesión Promedio</th>
+              <th scope="col">Poseciones</th>
               <th scope="col">Tiros</th>
-              <th scope="col" id="Efic"></th>
-              <th scope="col" id="Rebote"></th>
+              <th scope="col">Rebotes</th>
             </tr>
           </thead>
           <tbody id="tabla-actuaciones">
             <tr>
-              <td id="Partidos"></td>
-              <td id="Pases"></td>
-              <td id="Anotaciones"></td>
-              <td id="Posesion"></td>
-              <td id="Tiros"></td>
-              <td id="Eficiencia"></td>
-              <td id="Rebotes"></td>
+              <th scope="row">Fecha_1:</th>
+              <td>5</td>
+              <td>10</td>
+              <td>34</td>
+              <td>7</td>
+              <td>67</td>
+            </tr>
+            <tr>
+              <th scope="row">Fecha_2:</th>
+              <td>5</td>
+              <td>10</td>
+              <td>34</td>
+              <td>7</td>
+              <td>67</td>
+            </tr>
+            <tr>
+              <th scope="row">Fecha_3:</th>
+              <td>5</td>
+              <td>10</td>
+              <td>34</td>
+              <td>7</td>
+              <td>67</td>
             </tr>
           </tbody>
     </table>
@@ -113,132 +132,304 @@
 
   </div>
 </div>
+  </div>
 
-  </div>
-  <div class="row">
-    
-      <div class="container  cuerpo-partido">
-        <div class="table-responsive">
-          <table class="table">
-            <thead class="cabezera">
-              <tr>
-                <th scope="col">Partidos ganados</th>
-                <th scope="col">Partidos empatados</th>
-                <th scope="col">Partidos perdidos</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td id="Ganados"></td>
-                <td id="Perdidos"></td>
-                <td id="Empatados"></td>
-              </tr>
-          </table>
-  
-          <table class="table">
-            <thead class="cabezera">
-              <tr>
-                <th scope="col" id="TarjAmar"></th>
-                <th scope="col" id="TarjRoja"></th>
-                <th scope="col" id="Exclusion"></th>
-                <th scope="col" id="FaltaPers"></th>
-                <th scope="col" id="FaltaAntidepor"></th>
-                <th scope="col" id="FaltaDescal"></th>
-                <th scope="col" id="FaltaTec"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td id="TarjetasAmarillas"></td>
-                <td id="TarjetasRojas"></td>
-                <td id="Exclusion"></td>
-                <td id="FaltaPersonal"></td>
-                <td id="FaltaAntideportiva"></td>
-                <td id="FaltaDescalificante"></td>
-                <td id="FaltaTecnica"></td>
-              </tr>
-            </table>
-  
-          </div>
-    </div>
-  </div>
 
       
 
-<div class="titulo col-md-12">PLANTEL</div>
+    <div class="titulo col-md-12 lenguaje" data-key="plantel">PLANTEL</div>
 
-<div id="mostrarPlantel" class="row"></div> 
+<div class="row">
+
+  <div class="container cuerpo-partido col-11">
+      <div class="row">
 
 
+
+        <div class="col-md-4">
+          <table class="table">
+              <thead class="cabezera">
+                <tr>
+                  <th scope="col">N° camiseta</th>
+                </tr>
+              </thead>
+              <tbody class="borde-tabla">
+                  <tr>
+                      <td>Nombre jugador</td>
+                    </tr>
+                <tr>
+                  <td>Apellido jugador</td>
+                </tr>
+                <tr>
+                <td>Edad de jugador</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+
+
+        <div class="col-md-4">
+           <table class="table">
+              <thead class="cabezera">
+                <tr>
+                  <th scope="col">N° camiseta</th>
+                </tr>
+              </thead>
+              <tbody class="borde-tabla">
+                  <tr>
+                      <td>Nombre jugador</td>
+                    </tr>
+                <tr>
+                  <td>Apellido jugador</td>
+                </tr>
+                <tr>
+                <td>Edad de jugador</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+
+
+
+        <div class="col-md-4">
+          <table class="table">
+              <thead class="cabezera">
+                <tr>
+                  <th scope="col">N° camiseta</th>
+                </tr>
+              </thead>
+              <tbody class="borde-tabla">
+                  <tr>
+                      <td>Nombre jugador</td>
+                    </tr>
+                <tr>
+                  <td>Apellido jugador</td>
+                </tr>
+                <tr>
+                <td>Edad de jugador</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        
+      </div>
+
+      <div class="row">
+          <div class="col-sm">
+              <table class="table">
+                  <thead class="cabezera">
+                    <tr>
+                      <th scope="col">N° camiseta</th>
+                    </tr>
+                  </thead>
+                  <tbody class="borde-tabla">
+                      <tr>
+                          <td>Nombre jugador</td>
+                        </tr>
+                    <tr>
+                      <td>Apellido jugador</td>
+                    </tr>
+                    <tr>
+                    <td>Edad de jugador</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+          </div>
+          <div class="col-sm">
+              <table class="table">
+                  <thead class="cabezera">
+                    <tr>
+                      <th scope="col">N° camiseta</th>
+                    </tr>
+                  </thead>
+                  <tbody class="borde-tabla">
+                      <tr>
+                          <td>Nombre jugador</td>
+                        </tr>
+                    <tr>
+                      <td>Apellido jugador</td>
+                    </tr>
+                    <tr>
+                    <td>Edad de jugador</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+          <div class="col-sm">
+              <table class="table">
+                  <thead class="cabezera">
+                    <tr>
+                      <th scope="col">N° camiseta</th>
+                    </tr>
+                  </thead>
+                  <tbody class="borde-tabla">
+                      <tr>
+                          <td>Nombre jugador</td>
+                        </tr>
+                    <tr>
+                      <td>Apellido jugador</td>
+                    </tr>
+                    <tr>
+                    <td>Edad de jugador</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+              <table class="table">
+                  <thead class="cabezera">
+                    <tr>
+                      <th scope="col">N° camiseta</th>
+                    </tr>
+                  </thead>
+                  <tbody class="borde-tabla">
+                      <tr>
+                          <td>Nombre jugador</td>
+                        </tr>
+                    <tr>
+                      <td>Apellido jugador</td>
+                    </tr>
+                    <tr>
+                    <td>Edad de jugador</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+          </div>
+          <div class="col-sm">
+              <table class="table">
+                  <thead class="cabezera">
+                    <tr>
+                      <th scope="col">N° camiseta</th>
+                    </tr>
+                  </thead>
+                  <tbody class="borde-tabla">
+                      <tr>
+                          <td>Nombre jugador</td>
+                        </tr>
+                    <tr>
+                      <td>Apellido jugador</td>
+                    </tr>
+                    <tr>
+                    <td>Edad de jugador</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+          <div class="col-sm">
+              <table class="table">
+                  <thead class="cabezera">
+                    <tr>
+                      <th scope="col">N° camiseta</th>
+                    </tr>
+                  </thead>
+                  <tbody class="borde-tabla">
+                      <tr>
+                          <td>Nombre jugador</td>
+                        </tr>
+                    <tr>
+                      <td>Apellido jugador</td>
+                    </tr>
+                    <tr>
+                    <td>Edad de jugador</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+        </div>
+    </div>
+</div>
  
 
 
 
  
 <div class="row">
-<div class="titulo col-md-12">JUGADORES ESTRELLA</div>
+<div class="titulo col-md-12 lenguaje" data-key="mejorJugador">JUGADOR ESTRELLA</div>
 
 <div class="container cuerpo-partido">
 <table class="table">
 <thead class="cabezera">
 <tr>
-  <th></th>
-  <th scope="col" >Nº Camiseta</th>
-  <th scope="col">Nombre</th>
-  <th scope="col">Anotaciones</th>
-  <th scope="col">Asistencias</th>
-  <th scope="col">Pases</th>
-  <th scope="col">Tiros</th>
-  <th scope="col">Quites</th>
-  <th scope="col" id="Rebot"></th>
-  <th scope="col">Partidos jugados</th>
+<th scope="col">Nombre</th>
+<th scope="col">Pases</th>
+<th scope="col">Anotaciones</th>
+<th scope="col">Posesión</th>
+<th scope="col">Tiros</th>
+<th scope="col">Rebotes</th>
+<th scope="col">Partidos jugados</th>
 </tr>
 </thead>
 <tbody class="borde-tabla">
 <tr>
-  <td><strong>MAS ANOTACIONES:</strong></td>
-  <td id="NumeroCamisetaMVPGoles"></td>
-  <td id="NombreMVPGoles"></td>
-  <td id="AnotacionesMVPGoles"></td>
-  <td id="AsistenciasMVPGoles"></td>
-  <td id="PasesMVPGoles"></td>
-  <td id="TirosMVPGoles"></td>
-  <td id="QuitesMVPGoles"></td>
-  <td id="RebotesMVPGoles"></td>
-  <td id="PartidosJugadosMVPGoles"></td>
+<td>Mark</td>
+<td>Otto</td>
+<td>Mark</td>
+<td>Otto</td>
+<td>Mark</td>
+<td>Otto</td>
+<td>Mark</td>
 </tr>
-<tr>
-  <td><strong>MAS PASES:</strong></td>
-  <td id="NumeroCamisetaMVPPases"></td>
-  <td id="NombreMVPPases"></td>
-  <td id="AnotacionesMVPPases"></td>
-  <td id="AsistenciasMVPPases"></td>
-  <td id="PasesMVPPases"></td>
-  <td id="TirosMVPPases"></td>
-  <td id="QuitesMVPPases"></td>
-  <td id="RebotesMVPPases"></td>
-  <td id="PartidosJugadosMVPPases"></td>
-</tr>
-<tr>
-  <td><strong>MAS ASISTENCIAS:</strong></td>
-  <td id="NumeroCamisetaMVPAsistencias"></td>
-  <td id="NombreMVPAsistencias"></td>
-  <td id="AnotacionesMVPAsistencias"></td>
-  <td id="AsistenciasMVPAsistencias"></td>
-  <td id="PasesMVPAsistencias"></td>
-  <td id="TirosMVPAsistencias"></td>
-  <td id="QuitesMVPAsistencias"></td>
-  <td id="RebotesMVPAsistencias"></td>
-  <td id="PartidosJugadosMVPAsistencias"></td>
-</tr>
+
 </tbody>
 </table>
-
 </div>
 </div>
 
 
+<div class="row">
+      <div class="titulo col-md-12 lenguaje" data-key="resultado">RESULTADOS</div>
 
+      <div class="container  cuerpo-partido">
+        
+
+        <div class="table-responsive">
+            <table class="table">
+              <thead class="cabezera">
+                <tr>
+            
+                  <th scope="col">Partidos ganados</th>
+                  <th scope="col">Partidos empatados</th>
+                  <th scope="col">Partidos perdidos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+               
+                  <td>6</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>
+             </table>
+
+        
+              <table class="table">
+                <thead class="cabezera">
+                  <tr>
+                  
+                    <th scope="col">Tarjeta roja</th>
+                    <th scope="col">Tarjeta verde</th>
+                    <th scope="col">Tarjeta amarilla</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                  
+                    <td>2</td>
+                    <td>0</td>
+                    <td>4</td>
+                  </tr>
+               </table>
+
+        </div>
+</div>
+
+      </div>
 
 
 
@@ -246,32 +437,31 @@
 
 <!---Fin del cuerpo-->
 
-<!--Inicio de pie de pagina-->
-     <footer class="row-12">
-      
-         <div class="col-12 fila piedepagina">
-                 <div class="col-4 nav d-flex justify-content-around ">
-                    <img class="arca img-fluid" src="../../../imagenes/LogoArcanet2.png" alt="Arcanet">
-                 
-                </div>
-            </div>
-          <div class="row-12 ">
-            <div class="col-12 nav d-flex justify-content-around elementopie ">
-              <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
-              <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
-               <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
-                 
-                 
-                
-              </div>
-            </div>
-          </footer>   
+<!--Fin del cuerpo-->
+<footer class="row-12">
+     
+  <div class="col-12 fila piedepagina">
+          <div class="col-4 nav d-flex justify-content-around ">
+             <img class="arca img-fluid" src="../../../imagenes/LogoArcanet2.png" alt="Arcanet">
           
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-          <script src="../../../js/equipo.js"></script>
+         </div>
+     </div>
+   <div class="row-12 ">
+     <div class="col-12 nav d-flex justify-content-around elementopie ">
+          <a class="nav-link lenguaje " href="../../arcanet/arcanet.html" target="_blank" data-key="sobreNosotros">Sobre nosotros</a>
+          <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+           <a class="nav-link lenguaje" href="../../arcanet/ayuda_soporte.html" target="_blank" data-key="ayudaSoporte">Ayuda y soporte</a>
+          
+          
          
-         
-  </body>
+       </div>
+     </div>
+   </footer>   
+   <script src="../../../js/formularios.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="../../../js/lengRoles.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       
+</body>
 </html>

@@ -12,64 +12,72 @@
   </head>
   <body >
 
-    <!--Navegación primaria-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
+  <!--Navegación primaria-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
      
-      <div class="col-1 navbar-brand">
-        <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
-     </div>
+    <div class="col-1 navbar-brand">
+      <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
+   </div>
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mx-auto texto row">
+
      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-      <ul class="navbar-nav mr-auto row texto">
-
-       
-
-          <li class="nav-item col-2 ">
-            <a class="nav-link textoprin" href="../../roles/administrativo/administrativo.html">Inicio</a>
-          </li>
-      
-       
-        
- 
-          <li class="nav-item col-1">
-            <a class="nav-link textoprin" href="perfil.html">Perfil</a>
-          </li>
-
-          <li class="nav-item dropdown col-2">
-            <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-cargardatos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Cargar datos
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown-cargardatos">
-              <a class="dropdown-item" href="cargar_usuarios.html">Cargar usuarios</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="usuarios_cargados.html">Ver usuarios cargados</a>
-              
-           
-            </div>
-          </li>
-              <li class="nav-item col-2">
-                <a class="nav-link textoprin" href="partidos.html">Partidos</a>
-              </li>
-              <li class="nav-item col-2">
-                <a class="nav-link textoprin" href="torneo.html">Torneos</a>
-              </li>
-               
-              <li class="nav-item col-2">
-                <a class="nav-link textoprin" href="estadisticas.html">Estadisticas</a>
-              </li>
-
-
-
+        <li class="nav-item col-2 ">
+          <a class="nav-link textoprin lenguaje" href="../../roles/administrativo/administrativo.html" data-key="1">Inicio</a>
+        </li>
     
+     
+      
 
-  <li class="nav-item col-1 textoprin">
-    <a href="../../../../Backend/App/Controladores/logout.php" class="btn boton" role="button">Salir</a>
-  </li>     
+        <li class="nav-item col-1">
+          <a class="nav-link textoprin lenguaje" href="Perfil.html" data-key="perfil">Perfil</a>
+        </li>
+
+        <li class="nav-item dropdown col-2">
+          <a class="nav-link dropdown-toggle textoprin lenguaje" href="#" id="navbarDropdown-cargardatos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-key="cargarDatos">
+           Cargar datos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown-cargardatos">
+            <a class="dropdown-item lenguaje" href="cargar_usuarios.html" data-key="cargarUsuario">Cargar usuarios</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item lenguaje" href="usuarios_cargados.html" data-key="verUsuario">Ver usuarios cargados</a>
+            
+         
+          </div>
+        </li>
+            <li class="nav-item col-1">
+              <a class="nav-link textoprin lenguaje" href="partidos.html" data-key="4.4">Partidos</a>
+            </li>
+            <li class="nav-item col-2">
+              <a class="nav-link textoprin lenguaje" href="torneo.html" data-key="4.3">Torneos</a>
+            </li>
+             
+            <li class="nav-item col-2">
+              <a class="nav-link textoprin lenguaje" href="estadisticas.html" data-key="4.5">Estadisticas</a>
+        </li>
+
+
+
+  
+
+            <li class="nav-item col-1 ">
+              <a href="../../../../Backend/App/Controladores/logoutController.php" class="btn textoprinPrincipal lenguaje" role="button" onclick="logout()" data-key="7">Salir</a>
+            </li>   
+
+            
+            <li class="nav-item col-md-1">
+              <div class="idiomas">
+              <button  class="idioma" type="button" id="esp">ESP <img src="../../../imagenes/ingles/Español.png" alt="ingles" class="imaIdioma"> </button><br>
+              <button  class=" idioma" type="submit" id="ing">ING  <img src="../../../imagenes/ingles/Ingles.png" alt="español" class="imaIdioma"></button>
+            </div>
+          </li>  
 
 </ul>
 </div>
@@ -85,12 +93,12 @@
     <div class="box caja"> 
       
       
-   <div class="titulo col-md-12">SISTEMA DE GESTIÓN DEPORTIVA</div>
+   <div class="titulo col-md-12 lenguaje" data-key="titulo">SISTEMA DE GESTIÓN DEPORTIVA</div>
 
 
  <div class="formulario">
    <div class="row">
-     <div class="col-md-6">Hola! estas en el sistema como administrativo, al ingresar como administrativo, eres aquella persona que se dedica al conjunto de medios y
+     <div class="col-md-6 lenguaje" data-key="administrativo">Hola! estas en el sistema como administrativo, al ingresar como administrativo, eres aquella persona que se dedica al conjunto de medios y
        actividades necesarias para llevar a cabo y desarrollar una correcta utilización del deporte, con la misión de permitirle a los usuarios ejecutar sus actividades 
        en las mejores condiciones posibles.<br><br>
 En el sistema podras asignar los tipos de usuarios, a si mismo también tendras cargar los usuarios y viualizar los usuarios que ingresaste!
@@ -103,31 +111,33 @@ En el sistema podras asignar los tipos de usuarios, a si mismo también tendras 
     </div>
  </div>
 
-<!--Inicio de pie de pagina-->
-     <footer class="row-12">
-      
-         <div class="col-12 fila piedepagina">
-                 <div class="col-4 nav d-flex justify-content-around ">
-                    <img class="arca img-fluid" src="../../../imagenes/LogoArcanet2.png" alt="Arcanet">
-                 
-                </div>
-            </div>
-          <div class="row-12 ">
-            <div class="col-12 nav d-flex justify-content-around elementopie ">
-              <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
-              <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
-               <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
-                 
-                 
-                
-              </div>
-            </div>
-          </footer>   
+
+<!--Fin del cuerpo-->
+<footer class="row-12">
+     
+  <div class="col-12 fila piedepagina">
+          <div class="col-4 nav d-flex justify-content-around ">
+             <img class="arca img-fluid" src="../../../imagenes/LogoArcanet2.png" alt="Arcanet">
           
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+         </div>
+     </div>
+   <div class="row-12 ">
+     <div class="col-12 nav d-flex justify-content-around elementopie ">
+          <a class="nav-link lenguaje " href="../../arcanet/arcanet.html" target="_blank" data-key="sobreNosotros">Sobre nosotros</a>
+          <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+           <a class="nav-link lenguaje" href="../../arcanet/ayuda_soporte.html" target="_blank" data-key="ayudaSoporte">Ayuda y soporte</a>
+          
+          
          
-  </body>
+       </div>
+     </div>
+   </footer> 
+   <script src="../../../js/formularios.js"></script>  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="../../../js/lengRoles.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       
+</body>
 </html>
 

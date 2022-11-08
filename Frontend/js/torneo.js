@@ -131,7 +131,7 @@ class Torneo{
             
             datos.filter(function(elem){
                 
-                for (let i=1; elem.id_partido.length;i++) {
+                for (let i=1; i<elem.id_partido.length;i++) {
                     
                     if(elem.id_partido==i){
                         

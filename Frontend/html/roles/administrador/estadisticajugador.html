@@ -12,10 +12,10 @@
   </head>
   <body >
 
-   <!--Navegación primaria-->
-   <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
+  <!--Navegación primaria-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra row">
      
-    <div class="col-2 navbar-brand">
+    <div class="col-1 navbar-brand">
       <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
    </div>
    
@@ -24,82 +24,89 @@
     </button>
   <div class="collapse navbar-collapse " id="navbarSupportedContent">
 
-    <ul class="navbar-nav mr-auto  row texto">
+    <ul class="navbar-nav mx-auto col-12 texto">
 
      
         <li class="nav-item col-1">
-          <a class="nav-link textoprinPrincipal" href="../../roles/administrador/administrador.html">Inicio</a>
+          <a class="nav-link textoprinPrincipal lenguaje" href="../../roles/administrador/administrador.html" data-key="1">Inicio</a>
         </li>
     
         <li class="nav-item dropdown col-md-2">
-          <a class="nav-link dropdown-toggle textoprin" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Usuarios</a>
+          <a class="nav-link dropdown-toggle textoprin lenguaje" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-key="usuario">Usuarios</a>
           <div class="dropdown-menu col-12 ">
-            <a class="dropdown-item " href="Perfil.html">Mi perfil</a>
+            <a class="dropdown-item lenguaje" href="Perfil.html" data-key="perfil">Mi perfil</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="cargar_usuarios.html">Cargar usuarios</a>
+            <a class="dropdown-item lenguaje" href="cargar_usuarios.html" data-key="cargarUsuario">Cargar usuarios</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="usuarios_cargados.html">Ver usuarios</a>
+            <a class="dropdown-item lenguaje" href="usuarios_cargados.html" data-key="verUsuario">Ver usuarios</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="modificar_usuario.html">Modificar usuarios</a>
+            <a class="dropdown-item lenguaje" href="modificar_usuario.html" data-key="modificarUsuario">Modificar usuarios</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="eliminar_usuario.html">Eliminar usuarios</a>
+            <a class="dropdown-item lenguaje" href="eliminar_usuario.html" data-key="eliminarUsuario">Eliminar usuarios</a>
             </div>
         </li>
 
 
 
         <li class="nav-item dropdown col-md-1">
-          <a class="nav-link dropdown-toggle textoprin" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Equipos</a>
+          <a class="nav-link dropdown-toggle textoprin lenguaje" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-key="4.2">Equipos</a>
            <div class="dropdown-menu col-12 ">
-            <a class="dropdown-item " href="crear_equipo.html">Crear equipos</a>
+            <a class="dropdown-item lenguaje" href="crear_equipo.html" data-key="crearEquipo">Crear equipos</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="ver_equipo.html">Ver equipos</a>
+            <a class="dropdown-item lenguaje" href="ver_equipo.html" data-key="verEquipo">Ver equipos</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="equipo.html">Todos los equipos</a>
+            <a class="dropdown-item lenguaje" href="equipo.html" data-key="todosLosEquipos">Todos los equipos</a>
           </div>
         </li>
 
 
         <li class="nav-item dropdown col-md-2">
-          <a class="nav-link dropdown-toggle textoprin" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Partidos</a>
+          <a class="nav-link dropdown-toggle textoprin lenguaje" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-key="4.4">Partidos</a>
           <div class="dropdown-menu col-12 ">
-            <a class="dropdown-item " href="cargar_partido.html">Cargar partidos</a>
+            <a class="dropdown-item lenguaje" href="cargar_partido.html" data-key="cargarLosPartidos">Cargar partidos</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="partidos.html">Ver partidos</a>
+            <a class="dropdown-item lenguaje" href="partidos.html" data-key="verPartidos">Ver partidos</a>
            </div>
         </li>
  
         <li class="nav-item dropdown col-md-1">
-          <a class="nav-link dropdown-toggle textoprin" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Torneos</a>
+          <a class="nav-link dropdown-toggle textoprin lenguaje " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-key="4.3">Torneos</a>
           <div class="dropdown-menu col-12 ">
-            <a class="dropdown-item " href="cargar_campeonato.html">Cargar torneo</a>
+            <a class="dropdown-item lenguaje" href="cargar_campeonato.html" data-key="cargarLosTorneo">Cargar torneo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="torneo.html">Ver torneo</a>
+            <a class="dropdown-item lenguaje" href="torneo.html" data-key="verTorneo">Ver torneo</a>
             </div>
         </li>
        
         <li class="nav-item dropdown col-md-2">
-          <a class="nav-link dropdown-toggle textoprin" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estadisticas</a>
+          <a class="nav-link dropdown-toggle textoprin lenguaje" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-key="4.5">Estadisticas</a>
           <div class="dropdown-menu col-12 ">
-            <a class="dropdown-item " href="estadisticas_personales.html">Estadisticas personales</a>
+            <a class="dropdown-item lenguaje" href="estadisticas_personales.html" data-key="estadisticaPersonales">Estadisticas personales</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="validar_sancion.html">Validar sansión</a>
+            <a class="dropdown-item lenguaje" href="validar_sancion.html" data-key="validarSancion">Validar sansión</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="cargar_estadisticas.html">Cargar estadisticas</a>
+            <a class="dropdown-item lenguaje" href="cargar_estadisticas.html" data-key="cargarEstadistica">Cargar estadisticas</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="estadisticajugador.html">Estadisticas comparativas</a>
+            <a class="dropdown-item lenguaje" href="estadisticajugador.html" data-key="estadisticaComparativa">Estadisticas comparativas</a>
             
             </div>
         </li>
 
         <li class="nav-item col-md-1">
-          <a class="nav-link textoprin" href="modificaciones.html">Sistema</a>
+          <a class="nav-link textoprin lenguaje" href="modificaciones.html" data-key="sistema">Sistema</a>
         </li> 
 
 
-<li class="nav-item col-1 ">
-  <a href="../../../../Backend/App/Controladores/logout.php" class="btn boton textoprinPrincipal" role="button">Salir</a>
-</li>     
+        <li class="nav-item col-1 ">
+          <a href="../../../../Backend/App/Controladores/logoutController.php" class="btn textoprinPrincipal lenguaje" role="button" onclick="logout()" data-key="7">Salir</a>
+        </li>   
+
+        <li class="nav-item col-md-1">
+          <div class="idiomas">
+          <button  class="idioma" type="button" id="esp">ESP <img src="../../../imagenes/ingles/Español.png" alt="ingles" class="imaIdioma"> </button><br>
+          <button  class=" idioma" type="submit" id="ing">ING  <img src="../../../imagenes/ingles/Ingles.png" alt="español" class="imaIdioma"></button>
+        </div>
+      </li>  
 
 </ul>
 </div>
@@ -110,163 +117,1119 @@
 
 <div class="jumbotron">
     <div class="row"> 
-     <div class="titulo col-md-12">ESTADISTICAS COMPARATIVAS</div>
+     <div class="titulo col-md-12 lenguaje" data-key="estadisticaCompara">ESTADISTICAS COMPARATIVAS</div>
  
-     <div class="container cuerpo-partido"> 
-        
-        <div class="dropdown">
-          <button class="btn  dropdown-toggle drop-boton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Elige deporte
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Fútbol</a>
-            <a class="dropdown-item" href="#">Basquetbol</a>
-            <a class="dropdown-item" href="#">Handbol</a>
-          </div>
-        </div>
-      <div class="col-md-9">
-        <div class="box caja"> 
-        
-         <form class="row"  id="form-param">
-             <div class=" container">
-                 <div class="">
-                     <input type="text" class="parametro" placeholder="parametro"><input type="number" class="valor" placeholder="valor">
-                 </div> 
-               
-                 <div class="">
-                     <input type="text" class="parametro" placeholder="parametro"><input type="number" class="valor" placeholder="valor">
-                 </div>
-                
-             </div>
-             <div class=" buttons">
-                 <button type="button" class="addParam ">Agregar Parametro</button>
-                 <button type="button" class="showResults">Mostrar resultados</button>
-             </div>
-         </form>
-         <div id="grafico"></div>
-       </div>
-     </div>
-     </div>
-    
-
-
-         
-    <div class="titulo col-md-12">JUGADORES ESTRELLAS</div>
-
-    <div class="container tabla-partido">
-     <table class="table ">
-        
-           <tr>
-            <th class="cabezera">Nombres:</th>
-             <td>Robert</td>
-             <td>Robert</td>
-             <td>Robert</td>
-
-           </tr>
-           <tr><th scope="col">Nombre equipo:</th>
-            <td>los equipos</td>
-            <td>los equipos</td>
-            <td>los equipos</td>
-           </tr>
-
-           <tr>
-            <th class="cabezera">Telefonos:</th> 
-            <td>58396390</td>
-            <td>68040349</td>
-            <td>24934584</td>
-         </tr>
-
-            <tr>
-               <th scope="col">Amodestación:</th> 
-               <td>10</td>
-               <td>10</td>
-               <td>10</td>
-            </tr>
-
-             <tr>
-                 <th class="cabezera">Rebotes:</th>
-                 <td>3</td>
-                 <td>3</td>
-                 <td>3</td>
-             </tr>
-
-            <tr>
-                 <th scope="col">Pases:</th>
-                  <td>7</td>
-                  <td>7</td>
-                  <td>7</td>
-            </tr>
-
-            <tr> <th class="cabezera">Asistencias:</th>
-                 <td>12</td>
-                 <td>12</td>
-                 <td>12</td>
-            </tr>
-
-            <tr>
-              <th scope="col">Anotaciones:</th>
-              <td>2</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-
-             <tr>
-                <th class="cabezera">Faltas:</th>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-             </tr>
-
-            <tr>
-             <th scope="col">Quites:</th>
-             <td>4</td>
-             <td>4</td>
-             <td>4</td>
-           </tr>
-         
-         
-         </tbody>
-       
-       </table>
-        </div>
- 
- 
-       </div>
-      </div>
-  
- 
- 
- 
-    
- 
-  
- 
- <!--Inicio de pie de pagina-->
- <footer class="row-12">
-       
-   <div class="col-12 fila piedepagina">
-           <div class="col-4 nav d-flex justify-content-around ">
-              <img class="arca img-fluid" src="../../../imagenes/LogoArcanet2.png" alt="Arcanet">
-           
-          </div>
-      </div>
-    <div class="row-12 ">
-      <div class="col-12 nav d-flex justify-content-around elementopie ">
-        <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
-        <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
-         <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
-           
-           
-          
-        </div>
-      </div>
-    </footer>   
-    <script src="../../../js/estadistica.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
    
- </body>
- </html>
+<!--Cuerpo de la pagina-->
+
+
+
+
+
+<div class="dropdown dropright col-md-6">
+
+<select class="btn boton-deporte dropdown-toggle col-6" type="button" id="dropdownMenuButton-deporte" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<option class="lenguaje" data-key="elegirDeporte">Elegir deportes</option>  
+
+
+  <option class="dropdown-item lenguaje" data-key="2.0" href="#">Fútbol</a>
+  <option class="dropdown-item lenguaje" data-key="2.1" href="#">Basquetbol</a>
+  <option class="dropdown-item lenguaje" data-key="2.2" href="#">Balonmano</a>
+</select>
+</div>
+
+<div class="dropdown dropright col-md-6">
+
+<select class="btn boton-deporte dropdown-toggle col-6" type="button" id="dropdownMenuButton-torneo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<option class="lenguaje" data-key="elegirEquipos">Elegir equipo</option> 
+
+
+  <option class="dropdown-item lenguaje" data-key="" href="#">NombreEquipo</a>
+  <option class="dropdown-item lenguaje" data-key="" href="#">NombreEquipo1</a>
+  <option class="dropdown-item lenguaje" data-key="" href="#">NombreEquipo2</a>
+</select>
+</div>
+
+
+
+
+
+
+<nav class="nav nav-pills nav-justified datos col-md-12 contenidos">
+    <a class="nav-item nav-link col">Nombre equipo</a>
+    <a class="nav-item nav-link col">Nombre entrenador</a>
+    <a class="nav-item nav-link col">Grupo</a>
+    <a class="nav-item nav-link col">Nombre equipo</a>
+  </nav>
+
+</div>
+
+
+
+    <div class="row tablas">
+
+      <div class="col-md-4">
+
+        <table class="table ">
+            <thead class="cabezera">
+              <tr>
+                <th scope="col">N° camiseta</th>
+              </tr>
+            </thead>
+            <tbody class="borde-tabla">
+                <tr>
+                    <td>Nombre jugador</td>
+                  </tr>
+              <tr>
+                <td>Apellido jugador</td>
+              </tr>
+              <tr>
+              <td>Edad de jugador</td>
+              </tr>
+
+              <tr>
+                <td >
+
+<!-- Large modal -->
+<button type="button" class="btn boton-enviar" data-toggle="modal" data-target="#modalGrande">Ver más información</button>
+
+<div class="modal fade bd-example-modal-lg" id="modalGrande" tabindex="-1" role="dialog" aria-labelledby="modalGrandeTitulo" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content col-md-12">
+
+<div class="container  cuerpo-partido">
+  <div class="row">
+    <div class="table-responsive">
+      <div class="modal-title" id="modalGrandeTitulo">Estadistícas</div>
+      <table class="table">
+        
+        <thead class="cabezera" id="actuaciones-9">
+            <tr>
+              <th scope="col">Asistencias</th>
+              <th scope="col">Pases</th>
+              <th scope="col">Anotaciones</th>
+              <th scope="col">Poseciones</th>
+              <th scope="col">Tiros</th>
+              <th scope="col">Rebotes</th>
+              <th scope="col">Sanción</th>
+              <th scope="col">Quites</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-actuaciones-9">
+            <tr>
+              <td>12</td>
+              <td>5</td>
+              <td>10</td>
+              <td>34</td>
+              <td>7</td>
+              <td>67</td>
+              <td>7</td>
+              <td>67</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>5</td>
+              <td>10</td>
+              <td>34</td>
+              <td>7</td>
+              <td>67</td>
+              <td>7</td>
+              <td>67</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>5</td>
+              <td>10</td>
+              <td>34</td>
+              <td>7</td>
+              <td>67</td>
+              <td>7</td>
+              <td>67</td>
+            </tr>
+          </tbody>
+    </table>
+    </div>
+
+  </div>
+
+
+</div>
+  <div class="modal-footer">
+       <button type="button" class="btn boton-enviar" data-dismiss="modal">Cerrar</button>
+ </div>
+</div>
+</div>
+
+</div>
+     </td>
+        </tr> 
+
+        </tbody>
+          </table>
+           
+      </div>
+
+
+
+            <div class="col-sm-4">
+
+              <table class="table">
+                  <thead class="cabezera">
+                    <tr>
+                      <th scope="col">N° camiseta</th>
+                    </tr>
+                  </thead>
+                  <tbody class="borde-tabla">
+                      <tr>
+                          <td>Nombre jugador</td>
+                        </tr>
+                    <tr>
+                      <td>Apellido jugador</td>
+                    </tr>
+                    <tr>
+                    <td>Edad de jugador</td>
+                    </tr>
+
+                    <tr>
+                      <td >
+
+<!-- Large modal -->
+<button type="button" class="btn boton-enviar" data-toggle="modal" data-target="#modalGrande1">Ver más información</button>
+
+<div class="modal fade bd-example-modal-lg" id="modalGrande1" tabindex="-1" role="dialog" aria-labelledby="modalGrandeTitulo1" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content col-md-12">
+
+<div class="container  cuerpo-partido">
+  <div class="row">
+    <div class="table-responsive">
+      <div class="modal-title" id="modalGrandeTitulo1">Estadistícas</div>
+      <table class="table">
+             
+              <thead class="cabezera" id="actuaciones-1">
+                  <tr>
+                    <th scope="col">Asistencias</th>
+                    <th scope="col">Pases</th>
+                    <th scope="col">Anotaciones</th>
+                    <th scope="col">Poseciones</th>
+                    <th scope="col">Tiros</th>
+                    <th scope="col">Rebotes</th>
+                    <th scope="col">Sanción</th>
+                    <th scope="col">Quites</th>
+                  </tr>
+                </thead>
+                <tbody id="tabla-actuaciones-1">
+                  <tr>
+                    <td>12</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>34</td>
+                    <td>7</td>
+                    <td>67</td>
+                    <td>7</td>
+                    <td>67</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>34</td>
+                    <td>7</td>
+                    <td>67</td>
+                    <td>7</td>
+                    <td>67</td>
+                  </tr>
+                  <tr>
+                    <td>18</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>34</td>
+                    <td>7</td>
+                    <td>67</td>
+                    <td>7</td>
+                    <td>67</td>
+                  </tr>
+                </tbody>
+          </table>
+          </div>
+    
+        </div>
+
+     
+    </div>
+        <div class="modal-footer">
+             <button type="button" class="btn boton-enviar" data-dismiss="modal">Cerrar</button>
+       </div>
+  </div>
+ </div>
+
+</div>
+           </td>
+              </tr> 
+ 
+              </tbody>
+                </table>
+                  </div>
+
+
+
+                  <div class="col-sm-4">
+
+                    <table class="table">
+                        <thead class="cabezera">
+                          <tr>
+                            <th scope="col">N° camiseta</th>
+                          </tr>
+                        </thead>
+                        <tbody class="borde-tabla">
+                            <tr>
+                                <td>Nombre jugador</td>
+                              </tr>
+                          <tr>
+                            <td>Apellido jugador</td>
+                          </tr>
+                          <tr>
+                          <td>Edad de jugador</td>
+                          </tr>
+      
+                          <tr>
+                            <td >
+      
+<!-- Large modal -->
+<button type="button" class="btn boton-enviar" data-toggle="modal" data-target="#modalGrande2">Ver más información</button>
+
+<div class="modal fade bd-example-modal-lg" id="modalGrande2" tabindex="-1" role="dialog" aria-labelledby="modalGrandeTitulo2" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content col-md-12">
+
+<div class="container  cuerpo-partido">
+  <div class="row">
+    <div class="table-responsive">
+      <div class="modal-title" id="modalGrandeTitulo2">Estadistícas</div>
+      <table class="table">
+                   
+                    <thead class="cabezera" id="actuaciones-2">
+                        <tr>
+                          <th scope="col">Asistencias</th>
+                          <th scope="col">Pases</th>
+                          <th scope="col">Anotaciones</th>
+                          <th scope="col">Poseciones</th>
+                          <th scope="col">Tiros</th>
+                          <th scope="col">Rebotes</th>
+                          <th scope="col">Sanción</th>
+                          <th scope="col">Quites</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tabla-actuaciones-2">
+                        <tr>
+                          <td>12</td>
+                          <td>5</td>
+                          <td>10</td>
+                          <td>34</td>
+                          <td>7</td>
+                          <td>67</td>
+                          <td>7</td>
+                          <td>67</td>
+                        </tr>
+                        <tr>
+                          <td>14</td>
+                          <td>5</td>
+                          <td>10</td>
+                          <td>34</td>
+                          <td>7</td>
+                          <td>67</td>
+                          <td>7</td>
+                          <td>67</td>
+                        </tr>
+                        <tr>
+                          <td>18</td>
+                          <td>5</td>
+                          <td>10</td>
+                          <td>34</td>
+                          <td>7</td>
+                          <td>67</td>
+                          <td>7</td>
+                          <td>67</td>
+                        </tr>
+                      </tbody>
+                </table>
+                </div>
+          
+              </div>
+      
+          </div>
+              <div class="modal-footer">
+                   <button type="button" class="btn boton-enviar" data-dismiss="modal">Cerrar</button>
+             </div>
+        </div>
+       </div>
+      
+      </div>
+                 </td>
+                    </tr> 
+       
+                    </tbody>
+                      </table>
+                        </div>
+    </div>
+    
+
+
+
+
+
+
+<div class="row ">
+
+<div class="col-sm">
+
+<table class="table">
+  <thead class="cabezera">
+    <tr>
+      <th scope="col">N° camiseta</th>
+    </tr>
+  </thead>
+  <tbody class="borde-tabla">
+      <tr>
+          <td>Nombre jugador</td>
+        </tr>
+    <tr>
+      <td>Apellido jugador</td>
+    </tr>
+    <tr>
+    <td>Edad de jugador</td>
+    </tr>
+
+    <tr>
+      <td >
+
+<!-- Large modal -->
+<button type="button" class="btn boton-enviar" data-toggle="modal" data-target="#modalGrande4">Ver más información</button>
+
+<div class="modal fade bd-example-modal-lg" id="modalGrande4" tabindex="-1" role="dialog" aria-labelledby="modalGrandeTitulo3" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content col-md-12">
+
+<div class="container  cuerpo-partido">
+  <div class="row">
+    <div class="table-responsive">
+      <div class="modal-title" id="modalGrandeTitulo3">Estadistícas</div>
+      <table class="table">
+
+<thead class="cabezera" id="actuaciones-3">
+  <tr>
+    <th scope="col">Asistencias</th>
+    <th scope="col">Pases</th>
+    <th scope="col">Anotaciones</th>
+    <th scope="col">Poseciones</th>
+    <th scope="col">Tiros</th>
+    <th scope="col">Rebotes</th>
+    <th scope="col">Sanción</th>
+    <th scope="col">Quites</th>
+  </tr>
+</thead>
+<tbody id="tabla-actuaciones-3">
+  <tr>
+    <td>12</td>
+    <td>5</td>
+    <td>10</td>
+    <td>34</td>
+    <td>7</td>
+    <td>67</td>
+    <td>7</td>
+    <td>67</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>5</td>
+    <td>10</td>
+    <td>34</td>
+    <td>7</td>
+    <td>67</td>
+    <td>7</td>
+    <td>67</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>5</td>
+    <td>10</td>
+    <td>34</td>
+    <td>7</td>
+    <td>67</td>
+    <td>7</td>
+    <td>67</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+</div>
+
+
+</div>
+<div class="modal-footer">
+<button type="button" class="btn boton-enviar" data-dismiss="modal">Cerrar</button>
+</div>
+</div>
+</div>
+
+</div>
+</td>
+</tr> 
+
+</tbody>
+</table>
+  </div>
+
+
+  <div class="col-sm">
+
+    <table class="table">
+        <thead class="cabezera">
+          <tr>
+            <th scope="col">N° camiseta</th>
+          </tr>
+        </thead>
+        <tbody class="borde-tabla">
+            <tr>
+                <td>Nombre jugador</td>
+              </tr>
+          <tr>
+            <td>Apellido jugador</td>
+          </tr>
+          <tr>
+          <td>Edad de jugador</td>
+          </tr>
+
+          <tr>
+            <td >
+
+<!-- Large modal -->
+<button type="button" class="btn boton-enviar" data-toggle="modal" data-target="#modalGrande5">Ver más información</button>
+
+<div class="modal fade bd-example-modal-lg" id="modalGrande5" tabindex="-1" role="dialog" aria-labelledby="modalGrandeTitulo5" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content col-md-12">
+
+<div class="container  cuerpo-partido">
+  <div class="row">
+    <div class="table-responsive">
+      <div class="modal-title" id="modalGrandeTitulo5">Estadistícas</div>
+      <table class="table">
+   
+    <thead class="cabezera" id="actuaciones-4">
+        <tr>
+          <th scope="col">Asistencias</th>
+          <th scope="col">Pases</th>
+          <th scope="col">Anotaciones</th>
+          <th scope="col">Poseciones</th>
+          <th scope="col">Tiros</th>
+          <th scope="col">Rebotes</th>
+          <th scope="col">Sanción</th>
+          <th scope="col">Quites</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-actuaciones-4">
+        <tr>
+          <td>12</td>
+          <td>5</td>
+          <td>10</td>
+          <td>34</td>
+          <td>7</td>
+          <td>67</td>
+          <td>7</td>
+          <td>67</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>5</td>
+          <td>10</td>
+          <td>34</td>
+          <td>7</td>
+          <td>67</td>
+          <td>7</td>
+          <td>67</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>5</td>
+          <td>10</td>
+          <td>34</td>
+          <td>7</td>
+          <td>67</td>
+          <td>7</td>
+          <td>67</td>
+        </tr>
+      </tbody>
+</table>
+</div>
+
+</div>
+
+
+</div>
+<div class="modal-footer">
+   <button type="button" class="btn boton-enviar" data-dismiss="modal">Cerrar</button>
+</div>
+</div>
+</div>
+
+</div>
+ </td>
+    </tr> 
+
+    </tbody>
+      </table>
+        </div>
+
+
+
+        <div class="col-sm">
+
+          <table class="table">
+              <thead class="cabezera">
+                <tr>
+                  <th scope="col">N° camiseta</th>
+                </tr>
+              </thead>
+              <tbody class="borde-tabla">
+                  <tr>
+                      <td>Nombre jugador</td>
+                    </tr>
+                <tr>
+                  <td>Apellido jugador</td>
+                </tr>
+                <tr>
+                <td>Edad de jugador</td>
+                </tr>
+
+                <tr>
+                  <td >
+
+<!-- Large modal -->
+<button type="button" class="btn boton-enviar" data-toggle="modal" data-target="#modalGrande7">Ver más información</button>
+
+<div class="modal fade bd-example-modal-lg" id="modalGrande7" tabindex="-1" role="dialog" aria-labelledby="modalGrandeTitulo7" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content col-md-12">
+
+<div class="container  cuerpo-partido">
+  <div class="row">
+    <div class="table-responsive">
+      <div class="modal-title" id="modalGrandeTitulo7">Estadistícas</div>
+      <table class="table">
+         
+          <thead class="cabezera" id="actuaciones-5">
+              <tr>
+                <th scope="col">Asistencias</th>
+                <th scope="col">Pases</th>
+                <th scope="col">Anotaciones</th>
+                <th scope="col">Poseciones</th>
+                <th scope="col">Tiros</th>
+                <th scope="col">Rebotes</th>
+                <th scope="col">Sanción</th>
+                <th scope="col">Quites</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-actuaciones-5">
+              <tr>
+                <td>12</td>
+                <td>5</td>
+                <td>10</td>
+                <td>34</td>
+                <td>7</td>
+                <td>67</td>
+                <td>7</td>
+                <td>67</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>5</td>
+                <td>10</td>
+                <td>34</td>
+                <td>7</td>
+                <td>67</td>
+                <td>7</td>
+                <td>67</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>5</td>
+                <td>10</td>
+                <td>34</td>
+                <td>7</td>
+                <td>67</td>
+                <td>7</td>
+                <td>67</td>
+              </tr>
+            </tbody>
+      </table>
+      </div>
+
+    </div>
+
+</div>
+    <div class="modal-footer">
+         <button type="button" class="btn boton-enviar" data-dismiss="modal">Cerrar</button>
+   </div>
+</div>
+</div>
+
+</div>
+       </td>
+          </tr> 
+
+          </tbody>
+            </table>
+              </div>
+
+
+</div>
+
+
+<div class="row tablas">
+
+<div class="col-sm">
+
+<table class="table">
+  <thead class="cabezera">
+    <tr>
+      <th scope="col">N° camiseta</th>
+    </tr>
+  </thead>
+  <tbody class="borde-tabla">
+      <tr>
+          <td>Nombre jugador</td>
+        </tr>
+    <tr>
+      <td>Apellido jugador</td>
+    </tr>
+    <tr>
+    <td>Edad de jugador</td>
+    </tr>
+
+    <tr>
+      <td >
+
+<!-- Large modal -->
+<button type="button" class="btn boton-enviar" data-toggle="modal" data-target="#modalGrande8">Ver más información</button>
+
+<div class="modal fade bd-example-modal-lg" id="modalGrande8" tabindex="-1" role="dialog" aria-labelledby="modalGrandeTitulo8" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content col-md-12">
+
+<div class="container  cuerpo-partido">
+  <div class="row">
+    <div class="table-responsive">
+      <div class="modal-title" id="modalGrandeTitulo8">Estadistícas</div>
+      <table class="table">
+
+<thead class="cabezera" id="actuaciones-6">
+  <tr>
+    <th scope="col">Asistencias</th>
+    <th scope="col">Pases</th>
+    <th scope="col">Anotaciones</th>
+    <th scope="col">Poseciones</th>
+    <th scope="col">Tiros</th>
+    <th scope="col">Rebotes</th>
+    <th scope="col">Sanción</th>
+    <th scope="col">Quites</th>
+  </tr>
+</thead>
+<tbody id="tabla-actuaciones-6">
+  <tr>
+    <td>12</td>
+    <td>5</td>
+    <td>10</td>
+    <td>34</td>
+    <td>7</td>
+    <td>67</td>
+    <td>7</td>
+    <td>67</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>5</td>
+    <td>10</td>
+    <td>34</td>
+    <td>7</td>
+    <td>67</td>
+    <td>7</td>
+    <td>67</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>5</td>
+    <td>10</td>
+    <td>34</td>
+    <td>7</td>
+    <td>67</td>
+    <td>7</td>
+    <td>67</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+</div>
+
+
+</div>
+<div class="modal-footer">
+<button type="button" class="btn boton-enviar" data-dismiss="modal">Cerrar</button>
+</div>
+</div>
+</div>
+
+</div>
+</td>
+</tr> 
+
+</tbody>
+</table>
+  </div>
+
+
+  <div class="col-sm">
+
+    <table class="table">
+        <thead class="cabezera">
+          <tr>
+            <th scope="col">N° camiseta</th>
+          </tr>
+        </thead>
+        <tbody class="borde-tabla">
+            <tr>
+                <td>Nombre jugador</td>
+              </tr>
+          <tr>
+            <td>Apellido jugador</td>
+          </tr>
+          <tr>
+          <td>Edad de jugador</td>
+          </tr>
+
+          <tr>
+            <td >
+
+<!-- Large modal -->
+<button type="button" class="btn boton-enviar" data-toggle="modal" data-target="#modalGrande9">Ver más información</button>
+
+<div class="modal fade bd-example-modal-lg" id="modalGrande9" tabindex="-1" role="dialog" aria-labelledby="modalGrandeTitulo9" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content col-md-12">
+
+<div class="container  cuerpo-partido">
+  <div class="row">
+    <div class="table-responsive">
+      <div class="modal-title" id="modalGrandeTitulo9">Estadistícas</div>
+      <table class="table">
+   
+    <thead class="cabezera" id="actuaciones-7">
+        <tr>
+          <th scope="col">Asistencias</th>
+          <th scope="col">Pases</th>
+          <th scope="col">Anotaciones</th>
+          <th scope="col">Poseciones</th>
+          <th scope="col">Tiros</th>
+          <th scope="col">Rebotes</th>
+          <th scope="col">Sanción</th>
+          <th scope="col">Quites</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-actuaciones-7">
+        <tr>
+          <td>12</td>
+          <td>5</td>
+          <td>10</td>
+          <td>34</td>
+          <td>7</td>
+          <td>67</td>
+          <td>7</td>
+          <td>67</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>5</td>
+          <td>10</td>
+          <td>34</td>
+          <td>7</td>
+          <td>67</td>
+          <td>7</td>
+          <td>67</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>5</td>
+          <td>10</td>
+          <td>34</td>
+          <td>7</td>
+          <td>67</td>
+          <td>7</td>
+          <td>67</td>
+        </tr>
+      </tbody>
+</table>
+</div>
+
+</div>
+
+
+</div>
+<div class="modal-footer">
+   <button type="button" class="btn boton-enviar" data-dismiss="modal">Cerrar</button>
+</div>
+</div>
+</div>
+
+</div>
+ </td>
+    </tr> 
+
+    </tbody>
+      </table>
+        </div>
+
+
+
+        <div class="col-sm">
+
+          <table class="table">
+              <thead class="cabezera">
+                <tr>
+                  <th scope="col">N° camiseta</th>
+                </tr>
+              </thead>
+              <tbody class="borde-tabla">
+                  <tr>
+                      <td>Nombre jugador</td>
+                    </tr>
+                <tr>
+                  <td>Apellido jugador</td>
+                </tr>
+                <tr>
+                <td>Edad de jugador</td>
+                </tr>
+
+                <tr>
+                  <td >
+
+<!-- Large modal -->
+<button type="button" class="btn boton-enviar" data-toggle="modal" data-target="#modalGrande10">Ver más información</button>
+
+<div class="modal fade bd-example-modal-lg" id="modalGrande10" tabindex="-1" role="dialog" aria-labelledby="modalGrandeTitulo10" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content col-md-12">
+
+<div class="container  cuerpo-partido">
+  <div class="row">
+    <div class="table-responsive">
+      <div class="modal-title" id="modalGrandeTitulo10">Estadistícas</div>
+      <table class="table">
+         
+          <thead class="cabezera" id="actuaciones-8">
+              <tr>
+                <th scope="col">Asistencias</th>
+                <th scope="col">Pases</th>
+                <th scope="col">Anotaciones</th>
+                <th scope="col">Poseciones</th>
+                <th scope="col">Tiros</th>
+                <th scope="col">Rebotes</th>
+                <th scope="col">Sanción</th>
+                <th scope="col">Quites</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-actuaciones-8">
+              <tr>
+                <td>12</td>
+                <td>5</td>
+                <td>10</td>
+                <td>34</td>
+                <td>7</td>
+                <td>67</td>
+                <td>7</td>
+                <td>67</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>5</td>
+                <td>10</td>
+                <td>34</td>
+                <td>7</td>
+                <td>67</td>
+                <td>7</td>
+                <td>67</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>5</td>
+                <td>10</td>
+                <td>34</td>
+                <td>7</td>
+                <td>67</td>
+                <td>7</td>
+                <td>67</td>
+              </tr>
+            </tbody>
+      </table>
+      </div>
+
+    </div>
+
+
+</div>
+    <div class="modal-footer">
+         <button type="button" class="btn boton-enviar" data-dismiss="modal">Cerrar</button>
+   </div>
+</div>
+</div>
+
+</div>
+       </td>
+          </tr> 
+
+          </tbody>
+            </table>
+              </div>
+
+
+</div>
+
+
+    
+
+
+      
+
+
+
+   
+   
+  
+ 
+   
+<div class="row"> 
+
+    <div class="titulo col-md-12 lenguaje" data-key="mejorEquipo">MEJOR EQUIPO</div>
+
+<div class="container cuerpo-partido">
+   
+      <table class="table borde-tabla col-md-5">
+      <tbody class="thead-light">
+        <tr>
+          <th class="col-md-6 ">Nombre equipo</th>
+      </tr>
+      </tbody>
+        <tr>
+            <th class="col-md-6 cabezera">Partidos ganados:</th>
+        </tr>
+        <tr>
+       <td>5</td>
+        </tr>
+        <tr>
+            <th class="col-md-3 cabezera">Partidos perdidos:</th>
+        </tr>
+        <tr>
+        <td>1</td>
+      </tr>
+    <tr>
+            <th class="col-md-3 cabezera">Partidos empatados:</th>
+        </tr>
+      <tr>
+        <td>2</td>
+      </tr>
+     </table>
+    </div>
+    
+</div>
+
+
+<div class="row"> 
+ 
+    <div class="titulo col-md-12 lenguaje" data-key="mejoresJugadores">JUGADORES ESTRELLAS</div>
+
+    <div class="container cuerpo-partido">
+
+    <table class="table">
+    <thead class="cabezera">
+    <tr>
+    <th scope="col">Nombre</th>
+    <th scope="col">Pases</th>
+    <th scope="col">Anotaciones</th>
+    <th scope="col">Posesión</th>
+    <th scope="col">Tiros</th>
+    <th scope="col">Rebotes</th>
+    <th scope="col">Partidos jugados</th>
+    </tr>
+    </thead>
+    <tbody class="borde-tabla">
+    <tr>
+    <td>Mark</td>
+    <td>8</td>
+    <td>12</td>
+    <td>5</td>
+    <td>10</td>
+    <td>6</td>
+    <td>4</td>
+    </tr>
+    <tr>
+      <td>Ottp</td>
+      <td>5</td>
+      <td>10</td>
+      <td>7</td>
+      <td>10</td>
+      <td>3</td>
+      <td>6</td>
+      </tr>
+      <tr>
+      <td>Carlos</td>
+      <td>5</td>
+      <td>10</td>
+      <td>7</td>
+      <td>10</td>
+      <td>3</td>
+      <td>6</td>
+      </tr>
+    
+    </tbody>
+    </table>
+    </div>
+   </div>
+ 
+  </div>     
+</div>
+
+
+  
+ 
+<!--Fin del cuerpo-->
+<footer class="row-12">
+     
+  <div class="col-12 fila piedepagina">
+          <div class="col-4 nav d-flex justify-content-around ">
+             <img class="arca img-fluid" src="../../../imagenes/LogoArcanet2.png" alt="Arcanet">
+          
+         </div>
+     </div>
+   <div class="row-12 ">
+     <div class="col-12 nav d-flex justify-content-around elementopie ">
+          <a class="nav-link lenguaje " href="../../arcanet/arcanet.html" target="_blank" data-key="sobreNosotros">Sobre nosotros</a>
+          <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+           <a class="nav-link lenguaje" href="../../arcanet/ayuda_soporte.html" target="_blank" data-key="ayudaSoporte">Ayuda y soporte</a>
+          
+          
+         
+       </div>
+     </div>
+   </footer>   
+
+   <script src="../../../js/formularios.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="../../../js/lengRoles.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       
+</body>
+</html>
  
  

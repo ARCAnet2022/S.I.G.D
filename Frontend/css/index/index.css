@@ -15,14 +15,6 @@ body.html{
     0 0 20px rgb(233, 238, 255);
 }
 
-.modalError{
-    font-size: small;
-    color:red;
-}
-
-.modalChangeColor{
-    border: red,1px,solid;
-}
 .texto{
     text-align:center;
 }
@@ -247,34 +239,11 @@ h3{
 }
 
 
-#form-param{
-    padding: 20px;
-    background-color: #fff;
-    display:flex;
-}
-#form-param .container{
-    flex:2;
-}
-#form-param .buttons{
-    flex:1;
-    }
-input{
-    padding: 5px;
-    margin: 6px;
-    width: 42%;
-}
-button{
-    border:none;
-    padding: 9px;
-    display: block;
-    margin: 6px;
-}
-button:first-child{
-    background-color: #48e;
-    color: #fff;
-}
+
+
 .imagen{
     width: 100%;
+ 
 }
 .columna{
     padding-top: 5%;
@@ -318,6 +287,24 @@ button:first-child{
 .tabla{
     text-align:center;
     margin-top: 5%;
+}
+.idioma{
+    font-family: verdana;
+    color: rgb(32, 107, 169); 
+    cursor: pointer;
+    background-color:white !important ;
+    border: 1px solid white;
+    font-size:small;
+}
+.idioma:hover{
+    color: rgb(0, 114, 245); 
+    font-weight: bolder;
+}
+.imaIdioma{
+    width: 20%;
+}
+.idiomas{
+    border-left: 2px solid rgba(0, 128, 255, 0.178);
 }
 
 .formulario{
@@ -461,5 +448,19 @@ table th{
         animation: float 3s linear infinite;
        
     }
+    .sugerencia{
+        margin-top: 7%;
+        width: 100%;
+        height: 170vh !important;
+        text-align: center;
+       
+    }
 }
 
+.soporte{
+    background-color: #2c2c2c;
+    box-shadow: 
+    0 0 2px rgb(33, 62, 109),
+    0 0 8px rgb(84, 99, 124),
+    0 0 12px rgb(128, 152, 176) ;
+}

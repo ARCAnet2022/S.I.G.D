@@ -12,93 +12,98 @@
   </head>
   <body >
 
-     <!--Navegación primaria-->
-     <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
+  <!--Navegación primaria-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra row">
      
-      <div class="col-1 navbar-brand">
-        <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
-     </div>
-     
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="col-1 navbar-brand">
+      <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
+   </div>
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <ul class="navbar-nav mr-auto texto row">
+    <ul class="navbar-nav mx-auto texto col-12">
 
-        
-          <li class="nav-item col-2">
-            <a class="nav-link textoprinPrincipal" href="../../roles/deportista/deportista.html">Inicio</a>
-          </li>
-     
-
-          <li class="nav-item col-1">
-            <a class="nav-link textoprin" href="Perfil.html">Perfil</a>
-          </li>
       
-          <li class="nav-item col-2">
-            <a class="nav-link textoprin" href="equipo.html">Equipo</a>
-          </li>
-            
-      
-              <li class="nav-item col-1">
-                <a class="nav-link textoprin" href="torneo.html">Torneos</a>
+        <li class="nav-item col-2">
+          <a class="nav-link textoprinPrincipal lenguaje" href="../../roles/deportista/deportista.html" data-key="1">Inicio</a>
+        </li>
+   
+
+        <li class="nav-item col-1">
+          <a class="nav-link textoprin lenguaje" data-key="perfil" href="Perfil.html">Perfil</a>
+        </li>
+    
+        <li class="nav-item col-2">
+          <a class="nav-link textoprin lenguaje" href="equipo.html" data-key="4.2">Equipos</a>
+        </li>
+          
+    
+            <li class="nav-item col-1">
+              <a class="nav-link textoprin lenguaje"  href="torneo.html" data-key="4.3">Torneos</a>
+            </li>
+    
+            <li class="nav-item col-2">
+              <a class="nav-link textoprin lenguaje" href="partidos.html" data-key="4.4">Partidos</a>
+            </li>
+             
+              <li class="nav-item dropdown col-2">
+                <a class="nav-link dropdown-toggle textoprin lenguaje" href="#" id="navbarDropdown-estadisticas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-key="4.5">
+                  Estadisticas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown-estadisticas">
+                  <a class="dropdown-item lenguaje " href="estadisticas_personales.html" data-key="misEstadisticas">Mis estadisticas</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item lenguaje" href="estadisticas.html" data-key="general">Generales</a>
+                </div>
               </li>
-      
-              <li class="nav-item col-2">
-                <a class="nav-link textoprin" href="partidos.html">Partidos</a>
-              </li>
-               
-                <li class="nav-item dropdown col-2">
-                  <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-estadisticas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Estadisticas
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown-estadisticas">
-                    <a class="dropdown-item" href="estadisticas_personales.html">Mis estadisticas</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="estadisticas.html">Generales</a>
-                  </div>
-                </li>
 
-        
-          <li class="nav-item  col-1">
-            <a href="../../../../Backend/App/Controladorlogout.php" class="btn textoprinPrincipal" role="button">Salir</a>
-          </li>     
-        
+      
+              <li class="nav-item col-1 ">
+                <a href="../../../../Backend/App/Controladores/logoutController.php" class="btn textoprinPrincipal lenguaje " role="button" onclick="logout()" data-key="7">Salir</a>
+              </li>  
+
+              <li class="nav-item col-md-1">
+                <div class="idiomas">
+                <button  class="idioma" type="button" id="esp">ESP <img src="../../../imagenes/ingles/Español.png" alt="ingles" class="imaIdioma"> </button><br>
+                <button  class=" idioma" type="submit" id="ing">ING  <img src="../../../imagenes/ingles/Ingles.png" alt="español" class="imaIdioma"></button>
+              </div>
+            </li>
+      
 </ul>
 </div> 
 
 </nav>
 <!--Fin de la navegación primaria-->
 
+
 <!---inicio de el cuerpo-->
 
 <div class="jumbotron">
   <div class="row"> 
 
-<div class="titulo col-md-12">TODOS LOS PARTIDOS</div>
+<div class="titulo col-md-12 lenguaje" data-key="todosPartidos">TODOS LOS PARTIDOS</div>
 
 
-
-<div class="dropdown dropright row">
-
-  <div class="dropdown dropright col-md-12">
-      
-    <select name="dropdownMenuButton-deporte" id="dropdownMenuButton-deporte" onchange="javascript:init.mostrarPartidosJugados();" class="btn boton-deporte dropdown-toggle col-6" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-     <option >Elegir Deporte</option>
-     <option class="dropdown-item" value="Futbol">Futbol</a>
-     <option class="dropdown-item" value="Basquetbol">Basquetbol</a>
-     <option class="dropdown-item" value="Balonmano">Balonmano</a>
-    </select>
-    <div id="mostrarErrorDeporte"></div>
-  </div>
+<div class="col-md-5"></div>
+<div class="dropdown dropright col-12">
+  
+  <select class="btn boton-deporte dropdown-toggle"  id="dropdownMenuButton-deportes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   <option class="lenguaje" data-key="elegirDeporte">Elegir deporte</option> 
+ 
+ 
+    <option class="lenguaje" data-key="2.0">Fútbol</option>
+    <option class="lenguaje" data-key="2.1">Basquetbol</option>
+    <option class="lenguaje" data-key="2.2">Balonmano</option>
+ </select>
 </div>
-
 <div class="container cuerpo-partido"> 
 
 
  
-<h4>Proximos</h4>
+<h4 class="lenguaje" data-key="proximos">Proximos</h4>
   <table class="table ">
    <thead class="cabezera">
      <tr>
@@ -109,14 +114,89 @@
        <th scope="col">Torneo</th>
        </tr>
    </thead>
-   <tbody class="borde-tabla" id="mostrarPartido">
+   <tbody class="borde-tabla">
+     <tr>
+       <td>15/04/2022</td>
+       <td>Regimiento 9</td>
+       <td>  
+ <div class="row ">
+   <div class="col-md-3">
+     Danubio
+   </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+   </div>
+<div class="alert alert-primary col-md-3" role="alert">
+     VS
+     </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+   </div>
+   <div class="col-md-2">
+     Danubio
+   </div>
+   </div> 
+   </td>
+       <td> 12:50</td>
+       <td>Nombre de torneo</td>
+      </tr>
+      <tr>
+       <td>15/04/2022</td>
+       <td>Regimiento 9</td>
+       <td>  
+ <div class="row ">
+   <div class="col-md-3">
+     Danubio
+   </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+   </div>
+<div class="alert alert-primary col-md-3" role="alert">
+     VS
+     </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+   </div>
+   <div class="col-md-2">
+     Danubio
+   </div>
+   </div> 
+   </td>
+       <td> 12:50</td>
+       <td>Nombre de torneo</td>
+      </tr>
+      <tr>
+       <td>15/04/2022</td>
+       <td>Regimiento 9</td>
+       <td>  
+ <div class="row ">
+   <div class="col-md-3">
+     Danubio
+   </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+   </div>
+<div class="alert alert-primary col-md-3" role="alert">
+     VS
+     </div>
+<div class="col-md-2">
+     <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+   </div>
+   <div class="col-md-2">
+     Danubio
+   </div>
+   </div> 
+   </td>
+       <td> 12:50</td>
+       <td>Nombre de torneo</td>
+      </tr>
 
-    </tbody>
+      </tbody>
  </table>
 </div>
 
 <div class="container cuerpo-partido"> 
-   <h4>Ya jugados</h4>
+   <h4 class="lenguaje" data-key="jugados">Ya jugados</h4>
       <table class="table ">
        <thead class="cabezera">
          <tr>
@@ -127,11 +207,88 @@
            <th scope="col">Torneo</th>
            </tr>
        </thead>
-       <tbody class="borde-tabla" id="mostrarProximos">
-         
-      </tbody>
-  </table>
-</div>
+       <tbody class="borde-tabla">
+         <tr>
+           <td>15/05/2022</td>
+           <td>Regimiento 9</td>
+           <td>  
+     <div class="row ">
+       <div class="col-md-3">
+         Danubio
+       </div>
+   <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+       </div>
+   <div class="alert alert-primary col-md-3" role="alert">
+         VS
+         </div>
+    <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+       </div>
+       <div class="col-md-2">
+         Danubio
+       </div>
+       </div> 
+       </td>
+           <td> 12:50</td>
+           <td>Nombre de torneo</td>
+          </tr>
+          <tr>
+           <td>15/05/2022</td>
+           <td>Regimiento 9</td>
+           <td>  
+     <div class="row ">
+       <div class="col-md-3">
+         Danubio
+       </div>
+   <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+       </div>
+   <div class="alert alert-primary col-md-3" role="alert">
+         VS
+         </div>
+    <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+       </div>
+       <div class="col-md-2">
+         Danubio
+       </div>
+       </div> 
+       </td>
+           <td> 12:50</td>
+           <td>Nombre de torneo</td>
+          </tr>
+          <tr>
+           <td>15/05/2022</td>
+           <td>Regimiento 9</td>
+           <td>  
+     <div class="row ">
+       <div class="col-md-3">
+         Danubio
+       </div>
+   <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo1">
+       </div>
+   <div class="alert alert-primary col-md-3" role="alert">
+         VS
+         </div>
+    <div class="col-md-2">
+         <img class="foto-equipo" src="../../../imagenes/foto-equipo.png" alt="equipo2">
+       </div>
+       <div class="col-md-2">
+         Danubio
+       </div>
+       </div> 
+       </td>
+           <td> 12:50</td>
+           <td>Nombre de torneo</td>
+          </tr>
+   
+          </tbody>
+     </table>
+    
+   
+   </div>
 
 
 
@@ -143,9 +300,9 @@
 
  
 
-<!--Inicio de pie de pagina-->
+<!--Fin del cuerpo-->
 <footer class="row-12">
-      
+     
   <div class="col-12 fila piedepagina">
           <div class="col-4 nav d-flex justify-content-around ">
              <img class="arca img-fluid" src="../../../imagenes/LogoArcanet2.png" alt="Arcanet">
@@ -154,20 +311,21 @@
      </div>
    <div class="row-12 ">
      <div class="col-12 nav d-flex justify-content-around elementopie ">
-      <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
-      <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
-       <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
+          <a class="nav-link lenguaje " href="../../arcanet/arcanet.html" target="_blank" data-key="sobreNosotros">Sobre nosotros</a>
+          <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+           <a class="nav-link lenguaje" href="../../arcanet/ayuda_soporte.html" target="_blank" data-key="ayudaSoporte">Ayuda y soporte</a>
           
           
          
        </div>
      </div>
    </footer>   
-   
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="../../../js/formularios.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   <script src="../../../js/partidos.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="../../../js/lengRoles.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       
 </body>
 </html>
 

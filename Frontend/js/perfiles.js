@@ -79,6 +79,7 @@ class Profile{
                 document.getElementById("carne_salud").innerHTML = dat[0].carne_salud;
                 document.getElementById("nombre_equipo").innerHTML = dat[0].nombre_equipo;
                 document.getElementById("posicion").innerHTML = dat[0].posicion;
+                document.getElementById("nro_camiseta").innerHTML = dat[0].nro_camiseta;
             }
         
 

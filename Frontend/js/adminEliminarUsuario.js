@@ -32,7 +32,7 @@ class adminEliminarUsuario{
                         '<td id="'+i+"-"+dat[i].apellido+'">'+dat[i].apellido+'</td>'+
                         '<td id="'+i+"-"+dat[i].ci_usuario+'">'+dat[i].ci_usuario+'</td>'+
                         '<td id="'+i+"-"+dropdownRoles+'">'+dropdownRoles+'</td>'+
-                        '<td><button type="button" data-toggle="modal" data-target="#myModal'+i+'" class="btn btn-outline-info bg-light btn-sm" id="'+dat[i].ci_usuario+'" >Eliminar</button></td>'+
+                        '<td><button type="button" data-toggle="modal" data-target="#myModal'+i+'" class="btn btn-outline-info bg-light btn-sm lenguaje" data-key="eliminar" id="'+dat[i].ci_usuario+'" >Eliminar</button></td>'+
                     '</tr>'+
                     '<div class="modal" id="myModal'+i+'">'+
                     '<div class="modal-dialog">'+

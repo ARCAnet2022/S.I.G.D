@@ -12,80 +12,93 @@
   </head>
   <body >
 
-    <!--Navegación primaria-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
+ <!--Navegación primaria-->
+ <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra row ">
       
-      <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
-  
-   
-   
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    <ul class="navbar-nav mr-auto row texto">
 
-     <li class="nav-item col-2">
-          <a class="nav-link textoprinPrincipal" href="../../roles/scouts/scouts.html">Inicio</a>
-        </li>
-    
-      <li class="nav-item col-1">
-    <a class="nav-link textoprin" href="Perfil.html">Perfil</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+<ul class="navbar-nav mr-auto col-12 texto">
+
+ <li class="nav-item col-2">
+      <a class="nav-link textoprinPrincipal lenguaje" href="scout.html" data-key="1">Inicio</a>
+    </li>
+
+  <li class="nav-item col-1">
+<a class="nav-link textoprin lenguaje" href="Perfil.html" data-key="perfil">Perfil</a>
+</li>
+
+<li class="nav-item col-2">
+  <a class="nav-link textoprin lenguaje " href="equipo.html" data-key="4.2">Equipos</a>
+</li>
+
+  <li class="nav-item col-1">
+    <a class="nav-link textoprin lenguaje" href="torneo.html" data-key="4.3">Torneos</a>
   </li>
 
-    <li class="nav-item col-2">
-      <a class="nav-link textoprin" href="equipo.html">Equipos</a>
-    </li>
+  <li class="nav-item col-2">
+    <a class="nav-link textoprin lenguaje" href="partido.html" data-key="4.4">Partidos</a>
+  </li>
    
-      <li class="nav-item col-1">
-        <a class="nav-link textoprin" href="torneo.html">Torneos</a>
-      </li>
+    <li class="nav-item dropdown col-2">
+      <a class="nav-link dropdown-toggle textoprin lenguaje" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-key="4.5">
+        Estadisticas
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item lenguaje" href="estadisticajugador.html" data-key="comparativa">Comparativa</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item lenguaje" href="graficacomparativa.html" data-key="detallada">Detalladas</a>
+      </div>
+    </li>
+    
+ 
+    <li class="nav-item col-1 ">
+      <a href="../../../../Backend/App/Controladores/logoutController.php" class="btn textoprinPrincipal lenguaje" role="button" onclick="logout()" data-key="7">Salir</a>
+    </li>   
 
-      <li class="nav-item col-2">
-        <a class="nav-link textoprin" href="partido.html">Partidos</a>
-      </li>
-       
-        <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Estadisticas
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="estadisticajugador.html">Comparativa</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="graficacomparativa.html">Detalladas</a>
-          </div>
-        </li>
-        
-     
-<li class="nav-item col-1 ">
-  <a href="../../../../Backend/App/Controladores/logout.php" class="btn textoprinPrincipal" role="button">Salir</a>
-</li>     
+
+    <li class="nav-item col-md-1">
+      <div class="idiomas">
+      <button  class="idioma" type="button" id="esp">ESP <img src="../../../imagenes/ingles/Español.png" alt="ingles" class="imaIdioma"> </button><br>
+      <button  class=" idioma" type="submit" id="ing">ING  <img src="../../../imagenes/ingles/Ingles.png" alt="español" class="imaIdioma"></button>
+    </div>
+  </li> 
 
 </ul>
 </div>
 </nav>
 <!--Fin de la navegación primaria-->
-
 <!---inicio de el cuerpo-->
 
 <div class="jumbotron">
   <div class="row"> 
 
-    <div class="titulo col-md-12">PARTIDOS</div>
+    <div class="titulo col-md-12 lenguaje" data-key="partidos">PARTIDOS</div>
 
-    <div class="dropdown dropright row">
-      <div class="col-md-5"></div>
-      <button class="btn boton-deporte dropdown-toggle " type="button" id="dropdownMenuButton-deportes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Elegir deporte
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-deportes">
-        <a class="dropdown-item" href="#">Fútbol</a>
-        <a class="dropdown-item" href="#">Basquetbol</a>
-        <a class="dropdown-item" href="#">Balonmano</a>
-      </div>
+
+ <div class="col-md-5"></div>
+
+
+    <div class="dropdown dropright col-12">
+     
+
+      <select class="btn boton-deporte dropdown-toggle" id="dropdownMenuButton-deportes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+      <option class="lenguaje" data-key="elgirDeporte">Elegir deporte</option> 
+      
+     
+        <option class="lenguaje" data-key="2.0">Fútbol</option>
+        <option class="lenguaje" data-key="2.1">Basquetbol</option>
+        <option class="lenguaje" data-key="2.2">Balonmano</option>
+  </select>
     </div>
+  
 <div class="container cuerpo-partido"> 
 
 
@@ -300,20 +313,21 @@
     </div>
   <div class="row-12 ">
     <div class="col-12 nav d-flex justify-content-around elementopie ">
-      <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
+      <a class="nav-link lenguaje" data-key="sobreNosotros" href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
       <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
-       <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
+       <a class="nav-link lenguaje" data-key="ayudaSoporte" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
          
          
         
       </div>
     </div>
   </footer>   
-  
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="../../../js/formularios.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
- 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../../../js/lengRoles.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
 </body>
 </html>
 

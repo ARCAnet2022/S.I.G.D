@@ -12,14 +12,154 @@
   </head>
   <body >
 
+ 
     <!--Navegación primaria-->
+<nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra row">
+     
+  <div class="col-1 navbar-brand">
+    <img src="../../imagenes/logo.png"   alt="s.i.g.d." class="d-inline-block align-top ">
+ </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto  texto ">
+
     
+      <li class="nav-item col-3 ">
+        <a class="nav-link textoprinPrincipal lenguaje" href="../../index.html" data-key="1">Inicio</a>
+      </li>
+   
+    
+    <li class="nav-item dropdown col-2">
+      <a class="nav-link dropdown-toggle textoprin lenguaje" href="#" id="navbarDropdown-deporte" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-key="2">
+        Deportes
+      </a>
+      <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown-deporte">
+        
+        <a class="dropdown-item lenguaje" href="../información/deportes/futbol.html" data-key="2.0">Fútbol</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item lenguaje" href="../información/deportes/basquetbol.html" data-key="2.1">Basquetbol</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item lenguaje" href="../información/deportes/handbol.html" data-key="2.3">Handbol</a>
+      </div>
+    </li>
+    
+    
+    <li class="nav-item dropdown col-3">
+      <a class="nav-link dropdown-toggle textoprin lenguaje" href="#" id="navbarDropdown-emt" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-key="3">
+        EMT-Deporte
+      </a>
+      <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown-emt">
+        <a class="dropdown-item lenguaje" href="../información/emt_deportes/historia.html" data-key="3.0">Historia</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item lenguaje" href="../información/emt_deportes/objetivo.html" data-key="3.1">Objetivo</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item lenguaje" href="../información/emt_deportes/egresados.html " data-key="3.2">Egresados</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item " href="https://www.utu.edu.uy/educacion-media-tecnologica-deporte-y-recreacion" target="_blank">UTU-Deporte</a>
+      </div>
+    </li>
+
+
+    <li class="nav-item dropdown col-2">
+      <a class="nav-link dropdown-toggle textoprin lenguaje" href="#" id="navbarDropdown-sigd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-key="4">
+        S.I.G.D.
+      </a>
+      <div class="dropdown-menu col-12" aria-labelledby="navbarDropdown-sigd">
+        <a class="dropdown-item lenguaje" href="../información/sigd/historia.html" data-key="4.0">Historia</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item lenguaje" href="../información/sigd/objetivos.html" data-key="4.1">Objetivo</a>
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item lenguaje" href="../roles/usuario/equipo.html" data-key="4.2">Equipos</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item lenguaje" href="../roles/usuario/torneo.html" data-key="4.3">Torneos</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item lenguaje" href="../roles/usuario/partidos.html" data-key="4.4">Partidos</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item lenguaje" href="../roles/usuario/estadisticas.html" data-key="4.5">Estadisticas</a>
+      </div>
+    </li>
+
+  
+    <li class="nav-item col-2 ">
+      <a class="nav-link textoprin lenguaje" href="../información/sugerencias/sugerencia.html" data-key="5">Sugerencias</a>
+    </li>
+
+<li class="nav-item col-2">
+<!-- Modal Boton-->
+<a class="nav-link textoprinPrincipal lenguaje" href="#" data-toggle="modal" data-target="#modalIngresar" data-key="6">Ingresar</a>
+<!-- Modal -->
+  <div class="modal fade " id="modalIngresar" tabindex="-1" role="dialog" aria-labelledby="modalIngresarBody" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header ">
+          
+          <h5 class="modal-title modal-cabezera" id="modalIngresarBody"><img src="../../imagenes/logo.png" alt="logo"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+          <form action="" onsubmit = "return validar()">
+            <h4 class="lenguaje" data-key="6.0">Formulario de iniciar sesión</h4>
+            <div class="form-group">
+              <label class="modal-color lenguaje" for="ci_usuario" data-key="6.1">Cédula:</label>
+              <input type="text" class="form-control" id="ci_usuario" name="ci_usuario" >
+            </div>
+            <div class="form-group">
+              <label  class="modal-color lenguaje" for="contrasena" data-key="6.2">Contraseña:</label>
+              <input type="password" class="form-control" id="contrasena" name="contrasena">
+            </div>
+            <div class="form-group">
+              <h2 class="color-estudiante lenguaje" data-key="6.3">ESTUDIANTES</h2>
+              <label class="modal-color lenguaje" for="ci_deportista" data-key="6.4">Cédula:</label>
+              <input type="text" class="form-control" id="ci_deportista" name="ci_deportista" >
+            </div>
+            <div class="form-group">
+              <a href="contraseña.html"> <h4 class="lenguaje" data-key="6.5">¿Olvidaste tu contraseña?</h4> </a>
+               </div>
+              
+           
+<div class="modal-footer">
+
+          <button type="submit" class="btn boton-enviar lenguaje" data-key="7">Salir</button>
+          <button type="submit" class="btn boton-enviar lenguaje" data-key="8" value="enviar">Ingresar</button>
+         
+         
+        </div>
+            
+          </form>
+          <div id="error"></div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</li> 
+
+      <li class="nav-item col-md-2">
+        <div class="idiomas">
+        <button  class=" idioma" type="button" id="esp">ESP <img src="../../imagenes/ingles/Español.png" alt="ingles" class="imaIdioma"> </button><br>
+        <button  class=" idioma" type="submit" id="ing">ING <img src="../../imagenes/ingles/Ingles.png" alt="español" class="imaIdioma"></button> 
+      </div>
+      </li> 
+
+</ul>
+</div>
+</nav>
+<!--Fin de la navegación primaria-->
+
 <!--Cuerpo de la pagina-->
 
 <div class="jumbotron">
 
      
-   <div class="titulo ">SISTEMA DE GESTIÓN DEPORTIVA</div>
+   <div class="titulo lenguaje" data-key="titulo">SISTEMA DE GESTIÓN DEPORTIVA</div>
 
 
 
@@ -33,15 +173,15 @@
  
         
         <div class="col-12">
-          <h1 class="col-12">Si eres estudiante</h1>
-               <p class="col-12">Recuerda que si eres estudiante deberas ingresar con tu cédula! Si no puede ingresar con tus datos rellena el formulario.</p>
+          <h1 class="col-12 lenguaje" data-key="eresEstudiante">Si eres estudiante</h1>
+               <p class="col-12 lenguaje" data-key="recuerda">Recuerda que si eres estudiante deberas ingresar con tu cédula! Si no puede ingresar con tus datos rellena el formulario.</p>
         </div>
 
 
          <div class="col-12">
-            <h1 class="col-12">Si olvidaste tu contraseña</h1>
-                <p class="col-12">Recuerda que para ingresar al sistema deberas entrar con tu cédula y tu contraseña que al inicio sera tu cédula que luego podras cambiarla para mayor seguridad</p>
-                <p class="col-12">Si no podes entrar con tus datos deberas llenar el formulario.</p>
+            <h1 class="col-12 lenguaje" data-key="olvidasteContraseña">Si olvidaste tu contraseña</h1>
+                <p class="col-12 lenguaje" data-key="ingresarSistema">Recuerda que para ingresar al sistema deberas entrar con tu cédula y tu contraseña que al inicio sera tu cédula que luego podras cambiarla para mayor seguridad</p>
+                <p class="col-12 lenguaje" data-key="formulario">Si no podes entrar con tus datos deberas llenar el formulario.</p>
         </div>
 </div>
 
@@ -52,21 +192,21 @@
 
     <form class="col-12" id="error-contraseña">
        <div class="form-group ">
-          <label for="exampleDropdownFormEmail2">Nombre completo:</label>
+          <label for="exampleDropdownFormEmail2" class="lenguaje" data-key="nombreCompleto">Nombre completo:</label>
           <input type="text" class="form-control" id="nombrecompleto" placeholder="Jose Pedro...">
         </div>
         <div class="form-group">
-          <label for="exampleDropdownFormEmail2">Escribe tu telefono:</label>
+          <label for="exampleDropdownFormEmail2" class="lenguaje" data-key="escribeTelefono">Escribe tu telefono:</label>
           <input type="tel" class="form-control" id="exampleDropdownFormEmail2" placeholder="Ejem 0984864...">
         </div>
         <div class="form-group">
-          <label for="exampleDropdownFormEmail2">Ingresa tu correo:</label>
+          <label for="exampleDropdownFormEmail2" class="lenguaje" data-key="ingreseCorreo">Ingresa tu correo:</label>
           <input type="email" class="form-control "  id="correo" placeholder="ejemplo@gmail.com">
         </div>
         
      
-        <button type="button" class="btn boton-enviar">Enviar</button>
-        <a href="../../index.html" class="btn boton-enviar" role="button" aria-pressed="true">Ir al inicio</a>
+        <button type="button" class="btn boton-enviar lenguaje" data-key="enviar">Enviar</button>
+        <a href="../index.html" class="btn boton-enviar lenguaje" role="button" aria-pressed="true" data-key="irInicio">Ir al inicio</a>
       </form>
 </div>
 </div>
@@ -77,30 +217,38 @@
 
 
 <!--Inicio de pie de pagina-->
-     <footer class="row-12">
+<footer>
+
+
+  <div class="row">
+
+<div class="col-12 piedepagina ">
+      <div class="col-4 nav d-flex justify-content-around ">
+         <img class="arca img-fluid col-md-2" src="../../imagenes/LogoArcanet2.png" alt="Arcanet">
       
-         <div class="col-12 fila piedepagina">
-                 <div class="col-4 nav d-flex justify-content-around ">
-                    <img class="arca img-fluid" src="../../imagenes/LogoArcanet2.png" alt="Arcanet">
-                 
-                </div>
-            </div>
-          <div class="row-12 ">
-            <div class="col-12 nav d-flex justify-content-around elementopie ">
-              <a class="nav-link " href="../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
-              <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
-               <a class="nav-link" href="../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
-                 
-                 
-                
-              </div>
-            </div>
-          </footer>   
-          
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-         
-  </body>
+     </div>
+ </div>
+
+
+ <div class="col-12 nav d-flex justify-content-around elementopie">
+      <a class="nav-link col-md-4 lenguaje" data-key="sobreNosotros" href="../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
+      <a class="nav-link col-md-4" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+      <a class="nav-link col-md-4 lenguaje" data-key="ayudaSoporte" href="../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
+      
+      
+     
+   </div>
+ </div>
+
+</footer> 
+
+
+       
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../../js/formularios.js"></script>
+      <script src="../../js/contraseña.js"></script> 
+</body>
 </html>
 

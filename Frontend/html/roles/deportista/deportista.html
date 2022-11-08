@@ -13,7 +13,7 @@
   <body >
 
     <!--Navegación primaria-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white cajasombra">
      
       <div class="col-1 navbar-brand">
         <img src="../../../imagenes/logo.png"  class="d-inline-block align-top " alt="s.i.g.d.">
@@ -23,54 +23,62 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-      <ul class="navbar-nav mr-auto texto row">
-
+  
+      <ul class="navbar-nav mx-auto texto row">
+  
         
           <li class="nav-item col-2">
-            <a class="nav-link textoprinPrincipal" href="../../roles/deportista/deportista.html">Inicio</a>
+            <a class="nav-link textoprinPrincipal lenguaje" href="../../roles/deportista/deportista.html" data-key="1">Inicio</a>
           </li>
      
-
+  
           <li class="nav-item col-1">
-            <a class="nav-link textoprin" href="Perfil.html">Perfil</a>
+            <a class="nav-link textoprin lenguaje" data-key="perfil" href="Perfil.html">Perfil</a>
           </li>
       
           <li class="nav-item col-2">
-            <a class="nav-link textoprin" href="equipo.html">Equipo</a>
+            <a class="nav-link textoprin lenguaje" href="equipo.html" data-key="4.2">Equipos</a>
           </li>
             
       
               <li class="nav-item col-1">
-                <a class="nav-link textoprin" href="torneo.html">Torneos</a>
+                <a class="nav-link textoprin lenguaje"  href="torneo.html" data-key="4.3">Torneos</a>
               </li>
       
               <li class="nav-item col-2">
-                <a class="nav-link textoprin" href="partidos.html">Partidos</a>
+                <a class="nav-link textoprin lenguaje" href="partidos.html" data-key="4.4">Partidos</a>
               </li>
                
                 <li class="nav-item dropdown col-2">
-                  <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown-estadisticas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle textoprin lenguaje" href="#" id="navbarDropdown-estadisticas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-key="4.5">
                     Estadisticas
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown-estadisticas">
-                    <a class="dropdown-item" href="estadisticas_personales.html">Mis estadisticas</a>
+                    <a class="dropdown-item lenguaje " href="estadisticas_personales.html" data-key="misEstadisticas">Mis estadisticas</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="estadisticas.html">Generales</a>
+                    <a class="dropdown-item lenguaje" href="estadisticas.html" data-key="general">Generales</a>
                   </div>
                 </li>
-
+  
         
-          <li class="nav-item  col-1">
-            <a href="../../../../Backend/App/Controladorlogout.php" class="btn textoprinPrincipal" role="button">Salir</a>
-          </li>     
+                <li class="nav-item col-1 ">
+                  <a href="../../../../Backend/App/Controladores/logoutController.php" class="btn textoprinPrincipal lenguaje " role="button" onclick="logout()" data-key="7">Salir</a>
+                </li>  
+  
+                <li class="nav-item col-md-1">
+                  <div class="idiomas">
+                  <button  class="idioma" type="button" id="esp">ESP <img src="../../../imagenes/ingles/Español.png" alt="ingles" class="imaIdioma"> </button><br>
+                  <button  class=" idioma" type="submit" id="ing">ING  <img src="../../../imagenes/ingles/Ingles.png" alt="español" class="imaIdioma"></button>
+                </div>
+              </li>
         
-</ul>
-</div> 
-
-</nav>
-<!--Fin de la navegación primaria-->
-
+  </ul>
+  </div> 
+  
+  </nav>
+  <!--Fin de la navegación primaria-->
+  
+  
 
 
 <!--Cuerpo de la pagina-->
@@ -79,12 +87,12 @@
 <div class="row">
     <div class="box caja"> 
  
-      <div class="titulo col-md-12">SISTEMA DE GESTIÓN DEPORTIVA</div>
+      <div class="titulo col-md-12 lenguaje" data-key="titulo">SISTEMA DE GESTIÓN DEPORTIVA</div>
 
 
  <div class="formulario">
    <div class="row">
-     <div class="col-md-6 texto-inicio">Hola! Estás en el sistema como deportista, 
+     <div class="col-md-6 texto-inicio lenguaje" data-key="deportista">Hola! Estás en el sistema como deportista, 
      eres una persona que se dedica al deporte, en cualquiera de sus disciplinas, 
      es decir, que practica cualquier actividad física, bien sea como aficionado o profesional. 
       <br><br>
@@ -99,31 +107,33 @@
     </div>
  </div>
 
-<!--Inicio de pie de pagina-->
-     <footer class="row-12">
-      
-         <div class="col-12 fila piedepagina">
-                 <div class="col-4 nav d-flex justify-content-around ">
-                    <img class="arca img-fluid" src="../../../imagenes/LogoArcanet2.png" alt="Arcanet">
-                 
-                </div>
-            </div>
-          <div class="row-12 ">
-            <div class="col-12 nav d-flex justify-content-around elementopie ">
-              <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
-              <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
-               <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
-                 
-                 
-                
-              </div>
-            </div>
-          </footer>   
+<!--Fin del cuerpo-->
+<footer class="row-12">
+     
+  <div class="col-12 fila piedepagina">
+          <div class="col-4 nav d-flex justify-content-around ">
+             <img class="arca img-fluid" src="../../../imagenes/LogoArcanet2.png" alt="Arcanet">
           
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+         </div>
+     </div>
+   <div class="row-12 ">
+     <div class="col-12 nav d-flex justify-content-around elementopie ">
+          <a class="nav-link lenguaje " href="../../arcanet/arcanet.html" target="_blank" data-key="sobreNosotros">Sobre nosotros</a>
+          <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
+           <a class="nav-link lenguaje" href="../../arcanet/ayuda_soporte.html" target="_blank" data-key="ayudaSoporte">Ayuda y soporte</a>
+          
+          
          
-  </body>
+       </div>
+     </div>
+   </footer>   
+
+   <script src="../../../js/formularios.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="../../../js/lengRoles.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       
+</body>
 </html>
 

@@ -95,6 +95,7 @@ class AnalistaCargarPartido{
                             '<td id="'+i+"-"+dat[i].ci_usuario+'">'+dat[i].ci_usuario+'</td>'+
                             '<td><button type="button" data-toggle="modal" data-target="#myModal'+i+'" class="btn btn-outline-info bg-light btn-sm" id="'+dat[i].ci_usuario+'" onclick="javascript:init.seleccionadoJuez('+dat[i].ci_usuario+');">Seleccionar</button></td>'+
                         '</tr>';
+                        
                 }     
             
             
@@ -179,6 +180,7 @@ class AnalistaCargarPartido{
             { 
             alert("Algo salió mal cargando los datos..."); 
             });
+
     }
 
 

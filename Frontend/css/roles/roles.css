@@ -127,6 +127,25 @@ body.html{
     color: rgb(80, 125, 171) !important;
     font-family:'Franklin Gothic Medium';
  }
+
+ .idioma{
+    font-family: verdana;
+    color: rgb(32, 107, 169); 
+    cursor: pointer;
+    background-color:white !important ;
+    border: 1px solid white;
+    font-size:small;
+}
+.idioma:hover{
+    color: rgb(0, 114, 245); 
+    font-weight: bolder;
+}
+.imaIdioma{
+    width: 20%;
+}
+.idiomas{
+    border-left: 2px solid rgba(0, 128, 255, 0.178);
+}
  
 .color{
     text-align: center!important;
@@ -281,32 +300,7 @@ h3{
     0 0 20px rgb(233, 238, 255);
 
 }
-#form-param{
-    padding: 20px;
-    background-color: #fff;
-    display:flex;
-}
-#form-param .container{
-    flex:2;
-}
-#form-param .buttons{
-    flex:1;
-    }
-input{
-    padding: 5px;
-    margin: 6px;
-    width: 42%;
-}
-button{
-    border:none;
-    padding: 9px;
-    display: block;
-    margin: 6px;
-}
-button:first-child{
-    background-color: #48e;
-    color: #fff;
-}
+
 .imagen{
     width: 100%;
 }

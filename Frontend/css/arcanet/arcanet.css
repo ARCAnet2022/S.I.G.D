@@ -1,9 +1,10 @@
-body{
-    background-color: rgba(44, 144, 202, 0.644) !important;
-}
 
+.jumbotron{
+    background-color: #125d889b !important;
+}
 .arca-contenedor{
-    background-image: url(../../imagenes/arcanet/agua.jpg);
+    background: rgb(34,153,195);
+    background: linear-gradient(0deg, rgba(34,153,195,1) 0%, rgba(241,248,250,1) 100%);
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center;
@@ -47,8 +48,10 @@ body{
     }
 }
 .navegacion{
-    border-bottom: 1px solid rgb(255, 255, 255);
-    border-top: 1px solid rgb(255, 255, 255);
+    background-color: #2299c3;
+   
+    border-bottom: 2px solid #1d6681;
+   
 }
 .letra-nav{
     color:rgb(254, 254, 255) !important;
@@ -68,7 +71,7 @@ body{
     padding: 3%;
     display: flex;
     justify-content: center;
-    background-color: rgb(255, 255, 255)!important; 
+   
 }
 .preguntas{
     width: 40%;
@@ -77,15 +80,22 @@ body{
     background-color: rgb(255, 255, 255)!important; 
 }
 .preguntas1{
-    width: 50%;
-    float: right;
+  
+    padding: 6%;
+    margin-top: 5%;
     color: black;
     margin-right: 2%;
-    border-left: 10px solid rgba(39, 163, 115, 0.589);
-    border-top: 10px solid rgb(39, 163, 115, 0.589);
-    border-right: 10px solid rgb(39, 163, 115, 0.589);
-    border-bottom: 10px solid rgb(39, 163, 115, 0.589);
-    background-color: rgb(12, 74, 102)!important; 
+    border-left: 1px solid rgba(255, 255, 255, 0.548);
+    border-right: 1px solid rgba(255, 255, 255, 0.548);
+    color: azure;
+    background-color: #1728334b !important;
+}
+.contenido{
+    display: grid;
+    justify-content: center;
+    width: 50%;
+    height: 50vh; 
+    margin-left: 3%;
 }
 
 
@@ -93,5 +103,36 @@ body{
     margin-top:2%;
     margin-right: 5%;
     text-align: center;
-    color: rgb(0, 0, 0) !important;
+    color: rgb(237, 231, 231) !important;
+    font-family: verdana;
+  
 }
+
+.card-img-top{
+    width: 100% !important;
+    height: 35vh;
+    border: 1px solid rgba(29, 29, 29, 0.805);
+    
+}
+.card-body{
+    background-color: #12607d9d !important;
+    border: 1px solid rgba(29, 29, 29, 0.805);
+}
+.contenedor{
+    margin-top: 5%;
+    background-color: #13567db5 !important;
+}
+.contenifo-info{
+    padding: 5%;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+}
+p{
+    margin: 5%;
+    padding: 5%;
+    border-left: 1px solid rgba(255, 255, 255, 0.548);
+    border-right: 1px solid rgba(255, 255, 255, 0.548);
+    color: azure;
+    background-color: #02040416;
+  }

@@ -28,40 +28,49 @@
     <ul class="navbar-nav mr-auto row texto">
 
      <li class="nav-item col-2">
-          <a class="nav-link textoprinPrincipal" href="../../roles/scouts/scouts.html">Inicio</a>
+          <a class="nav-link textoprinPrincipal lenguaje" href="scout.html" data-key="1">Inicio</a>
         </li>
     
       <li class="nav-item col-1">
-    <a class="nav-link textoprin" href="Perfil.html">Perfil</a>
+    <a class="nav-link textoprin lenguaje" href="Perfil.html" data-key="perfil">Perfil</a>
   </li>
 
     <li class="nav-item col-2">
-      <a class="nav-link textoprin" href="equipo.html">Equipos</a>
+      <a class="nav-link textoprin lenguaje" href="equipo.html" data-key="4.2">Equipos</a>
     </li>
    
       <li class="nav-item col-1">
-        <a class="nav-link textoprin" href="torneo.html">Torneos</a>
+        <a class="nav-link textoprin lenguaje" href="torneo.html" data-key="4.3">Torneos</a>
       </li>
 
       <li class="nav-item col-2">
-        <a class="nav-link textoprin" href="partido.html">Partidos</a>
+        <a class="nav-link textoprin lenguaje" href="partido.html" data-key="4.4">Partidos</a>
       </li>
        
         <li class="nav-item dropdown col-2">
-          <a class="nav-link dropdown-toggle textoprin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle textoprin lenguaje" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-key="4.5">
             Estadisticas
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="estadisticajugador.html">Comparativa</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="graficacomparativa.html">Detalladas</a>
+            <a class="dropdown-item lenguaje" href="estadisticajugador.html" data-key="comparativa">Comparativa</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item lenguaje" href="graficacomparativa.html" data-key="detallada">Detalladas</a>
           </div>
         </li>
         
      
-<li class="nav-item col-1 ">
-  <a href="../../../../Backend/App/Controladores/logout.php" class="btn textoprinPrincipal" role="button">Salir</a>
-</li>     
+        <li class="nav-item col-1 ">
+          <a href="../../../../Backend/App/Controladores/logoutController.php" class="btn textoprinPrincipal lenguaje" role="button" onclick="logout()" data-key="7">Salir</a>
+        </li>    
+
+
+        <li class="nav-item col-md-1">
+          <div class="idiomas">
+          <button  class="idioma" type="button" id="esp">ESP <img src="../../../imagenes/ingles/Español.png" alt="ingles" class="imaIdioma"> </button><br>
+          <button  class=" idioma" type="submit" id="ing">ING  <img src="../../../imagenes/ingles/Ingles.png" alt="español" class="imaIdioma"></button>
+        </div>
+      </li> 
+
 
 </ul>
 </div>
@@ -72,11 +81,11 @@
 <div class="row">
   
    <div class="box caja"> 
-<div class="titulo col-md-12">SISTEMA DE GESTIÓN DEPORTIVA</div>
+<div class="titulo col-md-12 lenguaje" data-key="titulo">SISTEMA DE GESTIÓN DEPORTIVA</div>
 
 <div class="formulario">
   <div class="row">
-    <div class="col-md-6">Hola estas en el sistema como Scout, quiere decir que tu actividad consiste en analizar jugadores y determinar características para seleccionarlos para nuestro club. Analizar jugadores propios en partido o entrenamiento para extraer información de cualquiera de las estructuras del jugador y así mejorar o potenciar su rendimiento.
+    <div class="col-md-6 lenguaje" data-key="analista">Hola estas en el sistema como Scout, quiere decir que tu actividad consiste en analizar jugadores y determinar características para seleccionarlos para nuestro club. Analizar jugadores propios en partido o entrenamiento para extraer información de cualquiera de las estructuras del jugador y así mejorar o potenciar su rendimiento.
       En el sistema podras ver los partidos del torneo, estadisticas que podras visualizar en el menú de arriba donde encontraras las estadisticas detalladas de los jugadores, además de una impresionante grafica que contendra las comparativa de los jugadores más destacados y en partidos encontraras todos los partidos del torneo
         </div>
     <div class="col-md-5"><img src="../../../imagenes/inicio/scout.png" alt="hola" class="img-fluid imagen"></div>
@@ -97,20 +106,21 @@
             </div>
           <div class="row-12 ">
             <div class="col-12 nav d-flex justify-content-around elementopie ">
-              <a class="nav-link " href="../../arcanet/arcanet.html" target="_blank">Sobre nosotros</a>
+              <a class="nav-link lenguaje" href="../../arcanet/arcanet.html" data-key="sobreNosotros" target="_blank">Sobre nosotros</a>
               <a class="nav-link" href="https://www.google.com/intl/es/gmail/about/" target="_blank">arcanet2022@gmail.com</a>
-               <a class="nav-link" href="../../arcanet/ayuda_soporte.html" target="_blank">Ayuda y soporte</a>
+               <a class="nav-link lenguaje" href="../../arcanet/ayuda_soporte.html" data-key="ayudaSoporte" target="_blank">Ayuda y soporte</a>
                  
                  
                 
               </div>
             </div>
           </footer>   
-          
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+          <script src="../../../js/formularios.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-         
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+          <script src="../../../js/lengRoles.js"></script>
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+             
   </body>
 </html>
 

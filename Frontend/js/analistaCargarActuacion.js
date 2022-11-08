@@ -108,7 +108,7 @@ class AnalistaCargarActuacion{
                         for (let i=0; i<dat.length;i++) {
 
                             document.getElementById('mostrarJugadores').innerHTML +=
-                            '<div class="card bg-light mb-3 col-3" style="max-width: 18rem;">'+
+                            '<div class="card bg-light mb-3 col-mb-4" style="max-width: 18rem;">'+
                                 '<div class="card-header">'+dat[i].posicion+'</div>'+
                                 '<div class="card-header">'+dat[i].nombre+' '+dat[i].apellido+'</div>'+
                                 '<div class="card-header" id="ci_usuario'+i+'">'+dat[i].ci_usuario+'</div>'+
@@ -163,7 +163,7 @@ class AnalistaCargarActuacion{
                     }else{
                         for (let i=0; i<dat.length;i++) {
                             document.getElementById('mostrarJugadores').innerHTML +=
-                                '<div class="card bg-light mb-3 col-3" style="max-width: 18rem;">'+
+                                '<div class="card bg-light mb-3 col-mb-4" style="max-width: 18rem;">'+
                                     '<div class="card-header">'+dat[i].posicion+'</div>'+
                                     '<div class="card-header">'+dat[i].nombre+' '+dat[i].apellido+'</div>'+
                                     '<div class="card-header" id="ci_usuario'+i+'">'+dat[i].ci_usuario+'</div>'+
@@ -226,7 +226,7 @@ class AnalistaCargarActuacion{
                     }else{
                         for (let i=0; i<dat.length;i++) {
                             document.getElementById('mostrarJugadores').innerHTML +=
-                                '<div class="card bg-light mb-3 col-3" style="max-width: 18rem;">'+
+                                '<div class="card bg-light mb-3 col-md-4" style="max-width: 18rem;">'+
                                     '<div class="card-header">'+dat[i].posicion+'</div>'+
                                     '<div class="card-header">'+dat[i].nombre+' '+dat[i].apellido+'</div>'+
                                     '<div class="card-header" id="ci_usuario'+i+'">'+dat[i].ci_usuario+'</div>'+
@@ -255,7 +255,7 @@ class AnalistaCargarActuacion{
                                 '</div>'+
                                 '</div>'+
                                 '</div>'+
-                                '<div class="col-1"></div>';
+                                '<div class="col-2"></div>';
                                 formularios=i;
                         }
                         document.getElementById('botonEnviar').innerHTML =
@@ -277,7 +277,7 @@ class AnalistaCargarActuacion{
         }
         for (let a=0;a<formularios;a++) {
             /*Futbol Estadisticas */
-            alert(a);
+            
             
             let anotaciones = document.getElementById('anotaciones'+a).value;
             let pases = document.getElementById('pases'+a).value;
@@ -430,7 +430,7 @@ class AnalistaCargarActuacion{
         }
         for (let a=0;a<formularios;a++) {
             /*Futbol Estadisticas */
-            alert(a);
+            
             
             let anotaciones = document.getElementById('anotaciones'+a).value;
             let pases = document.getElementById('pases'+a).value;

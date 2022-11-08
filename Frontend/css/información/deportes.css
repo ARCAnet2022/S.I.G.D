@@ -115,38 +115,25 @@ body.html{
     background-size: cover;
     background-repeat: no-repeat ;
     background-position: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    
+    align-items: center; 
 }
-
 
 .parrafo {
-    font-size: 1.6vmin;
-    height: 54vh;
-    margin: 3em;
-    overflow: auto;
-    color: rgb(71, 71, 71);
-    background-color:#cde8f1d2 ;
-    border-radius: 10%;
-    padding: 3%;
-}
+
+     font-family: Verdana;
+     font-size: 0.73vw;
+     height: 60vh;
+     color: rgb(0, 0, 0);
+     background-color: rgba(0, 128, 255, 0.178);;
+     border-left: 2px solid rgb(86, 133, 197);
+     padding: 3%;
+   
+  }
 
 
 
-.colorfondo {
-    max-width: 100%;
-    background-size:cover;
-    background-image: url(../../imagenes/deportes/fondo\ \(1\).png);
-    background-repeat: no-repeat ;
-    background-attachment:local;
-    background-position: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
 
-}
+
 .contenedor-parrafo{
     height: 70vh;
     background-color: #644a4a; 
@@ -204,7 +191,7 @@ body.html{
     
 }
 .modal-contenido{
-    background-color: #ffffff;
+    background-color: rgba(0, 128, 255, 0.178);
     color: #666666;
     width: 60%;
     height: 60vh;
@@ -227,11 +214,30 @@ body.html{
 }
 
 .jumbotron{
-    
+    padding: 5%!important;
     margin-top: 1%;
     display: flex;
     justify-content: center;
     background-color: rgb(255, 255, 255) !important;
+}
+
+.idioma{
+    font-family: verdana;
+    color: rgb(32, 107, 169); 
+    cursor: pointer;
+    background-color:white !important ;
+    border: 1px solid white;
+    font-size:small;
+}
+.idioma:hover{
+    color: rgb(0, 114, 245); 
+    font-weight: bolder;
+}
+.imaIdioma{
+    width: 20%;
+}
+.idiomas{
+    border-left: 2px solid rgba(0, 128, 255, 0.178);
 }
 
 .piedepagina{
@@ -265,30 +271,33 @@ body.html{
 }
 
 
-                                              /*responsive*/
+                                             /*responsive*/
 
 
 @media only screen and (max-width:412px){
     .imagen{
         height:10vh;
     }
-  
 
-    .parrafo{
-       
-        height: 40vh;
-        font-size: 3vmin; 
-       
-    }
-    .colorfondo{
-       width: 100%;
-        height: 55vh;
-       
-    }
+    .parrafo {
+
+        font-family: Verdana;
+        font-size: 3vw;
+        height: 80vh;
+        color: rgb(0, 0, 0);
+        background-color: rgba(0, 128, 255, 0.178);;
+        border-left: 2px solid rgb(86, 133, 197);
+        padding: 3%;
+      
+     }
+   
+
     .jumbotron{
     margin-top: 1%;
-     height: 150vh;
+     height: 200vh;
     }
+
+
      .piedepagina{
         margin-left: 4%;
         background-size:unset;
@@ -300,6 +309,7 @@ body.html{
         display: flex;
         justify-content: center;
     }
+
     .arca{
     
         width: 4em;
@@ -312,29 +322,61 @@ body.html{
         text-align:justify;
         padding: 5%;
         background-color: #a1cef023;
-        height: 80vh !important;
+        height: 120vh !important;
         width: 100%;  
 }
- 
+.contenido-informativoObjetivo{
+    text-align:justify;
+    padding: 5%;
+    background-color: #a1cef023;
+    height: 80vh !important;
+    width: 100%;  
 }
-
-
-@media only screen and (max-width:1000px){
-    .card{
-        flex-direction: column;
-        
-        width: 100%;
-        
-       
+.contenido-informativo-egresados{
+    text-align:justify;
+    padding: 5%;
+    background-color: #a1cef023;
+    height: 130vh !important;
+    width: 100%;  
+}
+.contenido-informativos{
+    text-align:justify;
+    padding: 5%;
+    background-color: #a1cef023;
+    height: 72vh !important;
+    width: 100%;  
+}
+  
+    .contenido-informativoEMT{
+        text-align:justify;
+        padding: 5%;
+        background-color: #a1cef023;
+        height: 160vh !important;
+        width: 100%;  
     }
+
 }
 
 .contenido-informativo{
         text-align:justify;
         padding: 5%;
         background-color: #a1cef023;
-        height: 60vh;
+        height: 66vh;
         width: 100%;  
+}
+.contenido-informativos{
+    text-align:justify;
+    padding: 5%;
+    background-color: #a1cef023;
+    height: 48vh;
+    width: 100%;  
+}
+.contenido-informativoEMT{
+    text-align:justify;
+    padding: 5%;
+    background-color: #a1cef023;
+    height: 120vh;
+    width: 100%;  
 }
 .contenido-informativoObjetivo{
     text-align:justify;
@@ -347,7 +389,7 @@ body.html{
     text-align:justify;
     padding: 5%;
     background-color: #a1cef023;
-    height: 60vh;
+    height: 65vh;
     width: 100%;  
 }
 .cabezera{
@@ -362,3 +404,9 @@ body.html{
     border-right: 1px solid rgb(59, 121, 146);
     border-bottom: 1px solid rgba(59, 121, 146, 0.116);
 }
+
+.card{
+    background-color: transparent !important;
+    border: 0 !important;
+}
+
