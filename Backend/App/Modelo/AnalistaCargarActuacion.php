@@ -28,9 +28,9 @@
             inner join deportista as d on d.ci_deportista=u.ci_usuario
             inner join equipo as e on e.nombre_equipo=d.nombre_equipo
             inner join fixture as f on f.nombre_equipo=e.nombre_equipo
-            and d.carne_salud = "SI"
+            and d.carne_salud="SI"
             and d.nombre_equipo="'.$nombre_equipo.'"
-            and id_partido = '.$id_partido.'
+            and f.id_partido='.$id_partido.'
             order by d.posicion desc;');
 
             if($deportistas){
@@ -91,12 +91,12 @@
             return $success;
         }
 
-        public function insertEstadisticaBasquetbol($ci_deportista,$ci_entrenador,$anotaciones,$pases,$asistencias,$quites,$tiros,$nombre_equipo,$id_partido,$faltas,$resultado,$falta_antideportiva,$falta_descalificante,$falta_personal,$falta_tecnica){
+        public function insertEstadisticaBasquetbol($ci_deportista,$ci_entrenador,$anotaciones,$pases,$asistencias,$quites,$tiros,$nombre_equipo,$id_partido,$faltas,$resultado,$falta_antideportiva,$falta_descalificante,$falta_personal,$falta_tecnica,$rebotes){
             $db = new Conexion;
             $insertEstadistica = $db->queryInsert('INSERT into estadistica (rebotes,pases,asistencias,anotaciones,faltas,quites,tiros,ci_deportista,nombre_equipo,id_partido,ci_entrenador)
             values('.$rebotes.','.$pases.','.$asistencias.','.$anotaciones.','.$faltas.','.$quites.','.$tiros.','.$ci_deportista.',"'.$nombre_equipo.'",'.$id_partido.','.$ci_entrenador.');');
 
-            $selectEstadisticas = $db->query('SELECT sum(anotaciones) as "anotaciones",sum(pases) as "pases",sum(asistencias) as "asistencias",sum(faltas) as "faltas",sum(tiros) as "tiros",sum(rebotes) as "Rebotes"
+            $selectEstadisticas = $db->query('SELECT sum(anotaciones) as "anotaciones",sum(pases) as "pases",sum(asistencias) as "asistencias",sum(faltas) as "faltas",sum(tiros) as "tiros",sum(rebotes) as "rebotes"
             from estadistica
             where nombre_equipo="'.$nombre_equipo.'"
             and id_partido='.$id_partido.';');
@@ -124,6 +124,65 @@
                 ('.$selectEstadisticas[0]['rebotes'].','.$selectEstadisticas[0]['anotaciones'].','.$selectEstadisticas[0]['pases'].','.$selectEstadisticas[0]['tiros'].',1);');
             }
 
+            if ($falta_tecnica >= 1) {
+                $insertSancion1 = $db->queryInsert('INSERT into sancion(cantidad,suspendido,tipo,id_partido,ci_deportista,ci_entrenador)
+                values('.$falta_tecnica.',"NO","Falta Tecnica",'.$id_partido.','.$ci_deportista.','.$ci_entrenador.');');
+            }
+            if ($falta_antideportiva >= 1) {
+                $insertSancion1 = $db->queryInsert('INSERT into sancion(cantidad,suspendido,tipo,id_partido,ci_deportista,ci_entrenador)
+                values('.$falta_antideportiva.',"NO","Falta Antideportiva",'.$id_partido.','.$ci_deportista.','.$ci_entrenador.');');
+            }
+            if ($falta_descalificante) {
+                $insertSancion1 = $db->queryInsert('INSERT into sancion(cantidad,suspendido,tipo,id_partido,ci_deportista,ci_entrenador)
+                values('.$falta_descalificante.',"NO","Falta Descalificante",'.$id_partido.','.$ci_deportista.','.$ci_entrenador.');');
+            }
+            if ($falta_personal) {
+                $insertSancion1 = $db->queryInsert('INSERT into sancion(cantidad,suspendido,tipo,id_partido,ci_deportista,ci_entrenador)
+                values('.$falta_personal.',"NO","Falta Personal",'.$id_partido.','.$ci_deportista.','.$ci_entrenador.');');
+            }
+            
+            if ($faltas >= 2) {
+                $insertSancion2 = $db->queryInsert('INSERT into sancion(cantidad,suspendido,tipo,id_partido,ci_deportista,ci_entrenador)
+                values('.$faltas.',"NO","Falta Tecnica",'.$id_partido.','.$ci_deportista.','.$ci_entrenador.');');
+
+            }
+            $success = "Se cargaron los datos.";
+            return $success;
+        }
+
+        public function insertEstadisticaHandbol($ci_deportista,$ci_entrenador,$anotaciones,$pases,$asistencias,$quites,$tiros,$nombre_equipo,$id_partido,$faltas,$tarjetaAmarilla,$tarjetaRoja,$resultado,$exclusion){
+            $db = new Conexion;
+            $insertEstadistica = $db->queryInsert('INSERT into estadistica (pases,asistencias,anotaciones,faltas,quites,tiros,ci_deportista,nombre_equipo,id_partido,ci_entrenador)
+            values('.$pases.','.$asistencias.','.$anotaciones.','.$faltas.','.$quites.','.$tiros.','.$ci_deportista.',"'.$nombre_equipo.'",'.$id_partido.','.$ci_entrenador.');');
+
+            $selectEstadisticas = $db->query('SELECT sum(anotaciones) as "anotaciones",sum(pases) as "pases",sum(asistencias) as "asistencias",sum(faltas) as "faltas",sum(tiros) as "tiros"
+            from estadistica
+            where nombre_equipo="'.$nombre_equipo.'"
+            and id_partido='.$id_partido.';');
+            
+            $selectIdActuacion = $db->query('SELECT id_actuacion 
+            from actuacion
+            order by id_actuacion desc
+            LIMIT 1;');
+
+            $updateFixture = $db->queryInsert('UPDATE fixture
+            set id_actuacion='.$selectIdActuacion[0]['id_actuacion'].'
+            where nombre_equipo="'.$nombre_equipo.'"
+            and id_partido='.$id_partido.'');
+
+            if ($resultado == 'gano') {
+                $updateActuacionSuma = $db->queryInsert('INSERT into actuacion(anotaciones,pases,tiros,'.$resultado.') values 
+                ('.$selectEstadisticas[0]['anotaciones'].','.$selectEstadisticas[0]['pases'].','.$selectEstadisticas[0]['tiros'].',1);');
+            }
+            if ($resultado == 'perdio') {
+                $updateActuacionSuma = $db->queryInsert('INSERT into actuacion(anotaciones,pases,faltas,tiros,'.$resultado.') values 
+                ('.$selectEstadisticas[0]['anotaciones'].','.$selectEstadisticas[0]['pases'].','.$selectEstadisticas[0]['tiros'].',1);');
+            }
+            if ($resultado == 'empato') {
+                $updateActuacionSuma = $db->queryInsert('INSERT into actuacion(anotaciones,pases,tiros,'.$resultado.') values 
+                ('.$selectEstadisticas[0]['anotaciones'].','.$selectEstadisticas[0]['pases'].','.$selectEstadisticas[0]['tiros'].',1);');
+            }
+
             if ($tarjetaRoja >= 1) {
                 $insertSancion1 = $db->queryInsert('INSERT into sancion(cantidad,suspendido,tipo,id_partido,ci_deportista,ci_entrenador)
                 values('.$tarjetaRoja.',"SI","Tarjeta Roja",'.$id_partido.','.$ci_deportista.','.$ci_entrenador.');');
@@ -135,6 +194,11 @@
 
                 $insertSancion3 = $db->queryInsert('INSERT into sancion(cantidad,suspendido,tipo,id_partido,ci_deportista,ci_entrenador)
                 values(1,"SI","Tarjeta Roja",'.$id_partido.'.$id_partido.'.$ci_deportista.','.$ci_entrenador.');');
+            }
+            if ($exclusion) {
+                $insertSancion2 = $db->queryInsert('INSERT into sancion(cantidad,suspendido,tipo,id_partido,ci_deportista,ci_entrenador)
+                values('.$tarjetaAmarilla.',"SI","Exclusion",'.$id_partido.','.$ci_deportista.','.$ci_entrenador.');');
+
             }
             $success = "Se cargaron los datos.";
             return $success;

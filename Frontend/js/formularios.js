@@ -25,8 +25,9 @@ function validar(){
         document.getElementById("mostrarContrasena").innerHTML = '<p></p>';
         document.getElementById("mostrarCedula").innerHTML = '<p></p>';
         return false;
-    }else{
-        alert("Usuario o contraseña incorrectos.");
+    }else if(ci_usuario == '' && contrasena == '' && ci_deportista != ''){
+        alert('Cargando su perfil de deportista...');        
+        return true;
     }
     
     

@@ -148,9 +148,10 @@ class AnalistaCargarActuacion{
             }
 
             if (dropdown == 'Basquetbol') {
+                
                 ajax.open(method, url, asynchronus); 
 
-                jQuery.get(url, {nombre_equipo: nombre_equipo, id_partido: id_part}, function(data) 
+                jQuery.get(url, {nombre_equip: nombre_equipo, id_partid: id_part}, function(data) 
                 { 
                     let dat = JSON.parse(data);
                     if (dat == 'No hay datos para mostrar') {
@@ -172,7 +173,7 @@ class AnalistaCargarActuacion{
                                     '<input type="number'+i+'" class="form-control card-text" id="anotaciones'+i+'" name="anotaciones'+i+'"></input>'+
                                     '<label for="pases'+i+'">Pases</label>'+
                                     '<input type="number" class="form-control card-text" id="pases'+i+'" name="pases'+i+'"></input>'+
-                                    '<label for="asistencias'+i+'">Rebotes</label>'+
+                                    '<label for="asistencias'+i+'">Asistencias</label>'+
                                     '<input type="number" class="form-control card-text" id="asistencias'+i+'" name="asistencias'+i+'"></input>'+
                                     '<label for="rebotes">Rebotes</label>'+
                                     '<input type="number'+i+'" class="form-control card-text" id="rebotes'+i+'" name="rebotes'+i+'"></input>'+
@@ -196,9 +197,9 @@ class AnalistaCargarActuacion{
                                 '</div>'+
                                 '<div class="col-2"></div>';
                                 formularios=i;
+                                document.getElementById('botonEnviar').innerHTML =
+                                        '<button type="button" class="btn boton-enviar mx-auto" onclick="javascript:init.enviarStatsBasquetbol('+id_partido+','+dat[i].ci_entrenador+','+dat[i].ci_usuario+');">Enviar</button>';
                         }
-                        document.getElementById('botonEnviar').innerHTML =
-                                '<button type="button" class="btn boton-enviar mx-auto" onclick="javascript:init.enviarStatsBasquetbol('+id_partido+','+dat[i].ci_entrenador+','+dat[i].ci_usuario+');">Enviar</button>';
                     }
 
                     
@@ -213,7 +214,7 @@ class AnalistaCargarActuacion{
             if (dropdown == 'Handbol') {
                 ajax.open(method, url, asynchronus); 
 
-                jQuery.get(url, {nombre_equipo: nombre_equipo, id_partido: id_part}, function(data) 
+                jQuery.get(url, {nombre_equipo: nombre_equipo, id_partid: id_part}, function(data) 
                 { 
                     let dat = JSON.parse(data);
                     if (dat == 'No hay datos para mostrar') {
@@ -269,10 +270,14 @@ class AnalistaCargarActuacion{
     }
 
     enviarStatsFutbol(id_partido,ci_entrenador,ci_usuario){
-        
+        if (formularios == 0) {
+            formularios=1;
+        }else{
+            formularios=0;
+        }
         for (let a=0;a<formularios;a++) {
             /*Futbol Estadisticas */
-            
+            alert(a);
             
             let anotaciones = document.getElementById('anotaciones'+a).value;
             let pases = document.getElementById('pases'+a).value;
@@ -281,6 +286,7 @@ class AnalistaCargarActuacion{
             let tiros = document.getElementById('tiros'+a).value;
             let ganador = document.getElementById('dropdown-ganador').value;
             let falta = document.getElementById('faltas'+a).value;
+            
             let resultado = JSON.stringify(ganador);
             
             /*Futbol Sanciones*/
@@ -333,72 +339,13 @@ class AnalistaCargarActuacion{
         }
     }
 
-    enviarStatsFutbol(id_partido,ci_entrenador,ci_usuario){
+    enviarStatsBasquetbol(id_partido,ci_entrenador,ci_usuario){
         
-        for (let a=0;a<formularios;a++) {
-            /*Futbol Estadisticas */
-            
-            
-            let anotaciones = document.getElementById('anotaciones'+a).value;
-            let pases = document.getElementById('pases'+a).value;
-            let asistencias = document.getElementById('asistencias'+a).value;
-            let quites = document.getElementById('quites'+a).value;
-            let tiros = document.getElementById('tiros'+a).value;
-            let ganador = document.getElementById('dropdown-ganador').value;
-            let falta = document.getElementById('faltas'+a).value;
-            let resultado = JSON.stringify(ganador);
-            
-            /*Futbol Sanciones*/
-            let tarjetaRoja = document.getElementById('tarjetaRoja'+a).value;
-            let tarjetaAmarilla = document.getElementById('tarjetaAmarilla'+a).value;
-
-            let ci_user = JSON.stringify(ci_usuario);
-            let ci_coach = JSON.stringify(ci_entrenador);
-            let goles = JSON.stringify(anotaciones);
-            let pase = JSON.stringify(pases);
-            let asist = JSON.stringify(asistencias);
-            let quite = JSON.stringify(quites);
-            let tiro = JSON.stringify(tiros);
-            let tarjRoja = JSON.stringify(tarjetaRoja);
-            let tarjAmarilla = JSON.stringify(tarjetaAmarilla);
-            let faltas = JSON.stringify(falta);
-            /*Globales */
-            let team = JSON.stringify(equipo);
-            let id_part = JSON.stringify(id_partido); 
-            let foot = '';
-            let futbol = JSON.stringify(foot);
-
-            ajax.open(method, url, asynchronus); 
-
-            jQuery.get(url, {ci_deportista: ci_user, ci_entrenador: ci_coach, anotaciones: goles, pases: pase,asistencias: asist, quites: quite,tiros:tiro,tarjetaRoja:tarjRoja,
-                            tarjetaAmarilla: tarjAmarilla,futbol:futbol, id_partido:id_part,nombre_equipo: team, resultado: resultado, faltas:faltas}, function(data) 
-            { 
-                let dat = JSON.parse(data);
-                if (dat == 'Se cargaron los datos.') {
-                    document.getElementById('mostrarForm').setAttribute("class", "alert alert-success mx-auto");
-                    document.getElementById('mostrarForm').innerHTML = 'Actuación y estadisticas cargadas con exito!';
-                    document.getElementById('mostrarForm').setAttribute("style","display:grid; justify-content:center;");
-                    setTimeout(function(){
-                        window.location.reload();
-                    }, 2000);
-                }else{
-                    document.getElementById('mostrarForm').setAttribute("class", "alert alert-danger mx-auto");
-                    document.getElementById('mostrarForm').innerHTML = 'UPS! No se cargaron los datos...';
-                    document.getElementById('mostrarForm').setAttribute("style","display:grid; justify-content:center;");
-                    setTimeout(function(){
-                        window.location.reload();
-                    }, 2000);
-                }
-
-            }).fail(function() 
-            { 
-            alert("Algo salió mal cargando los datos..."); 
-            });
-            
+        if (formularios == 0) {
+            formularios=1;
+        }else{
+            formularios=0;
         }
-    }
-
-    enviarStatsBasquetbol(){
 
         for (let a=0;a<formularios;a++) {
             /*Basquetbol Estadisticas */
@@ -411,11 +358,12 @@ class AnalistaCargarActuacion{
             let ganador = document.getElementById('dropdown-ganador').value;
             let falta = document.getElementById('faltas'+a).value;
             let rebotes = document.getElementById('rebotes'+a).value;
+
             let resultado = JSON.stringify(ganador);
             
 
             /*Basquetbol Sanciones*/
-            let faltaPersonal = document.getElementById('faltasPersonal'+a).value;
+            let faltaPersonal = document.getElementById('faltaPersonal'+a).value;
             let faltaAntideportiva = document.getElementById('faltaAntideportiva'+a).value;
             let faltaDescalificante = document.getElementById('faltaDescalificante'+a).value;
             let faltaTecnica = document.getElementById('faltaTecnica'+a).value;
@@ -436,7 +384,7 @@ class AnalistaCargarActuacion{
 
             let faltas = JSON.stringify(falta);
             /*Globales */
-            
+
             let team = JSON.stringify(equipo);
             let id_part = JSON.stringify(id_partido); 
             let bask = '';
@@ -445,8 +393,81 @@ class AnalistaCargarActuacion{
             ajax.open(method, url, asynchronus); 
 
             jQuery.get(url, {ci_deportista: ci_user, ci_entrenador: ci_coach, anotaciones: goles, pases: pase,asistencias: asist, quites: quite,tiros:tiro,
-                            rebotes:rebote,falta_personal:faltaPersonales,falta_antideportivas:faltaAntideportivas,falta_descalificante:faltaDescalificantes,falta_tecnica:faltaTecnicas,basket:basket, 
+                            rebotes:rebote,falta_personal:faltaPersonales,falta_antideportiva:faltaAntideportivas,falta_descalificante:faltaDescalificantes,falta_tecnica:faltaTecnicas,basket:basket, 
                             id_partido:id_part,nombre_equipo: team, resultado: resultado, faltas:faltas}, function(data) 
+            { 
+                let dat = JSON.parse(data);
+                
+                if (dat == 'Se cargaron los datos.') {
+                    document.getElementById('mostrarForm').setAttribute("class", "alert alert-success mx-auto");
+                    document.getElementById('mostrarForm').innerHTML = 'Actuación y estadisticas cargadas con exito!';
+                    document.getElementById('mostrarForm').setAttribute("style","display:grid; justify-content:center;");
+                    setTimeout(function(){
+                        window.location.reload();
+                    }, 2000);
+                }else{
+                    document.getElementById('mostrarForm').setAttribute("class", "alert alert-danger mx-auto");
+                    document.getElementById('mostrarForm').innerHTML = 'UPS! No se cargaron los datos...';
+                    document.getElementById('mostrarForm').setAttribute("style","display:grid; justify-content:center;");
+                    setTimeout(function(){
+                        window.location.reload();
+                    }, 2000);
+                }
+
+            }).fail(function() 
+            { 
+            alert("Algo salió mal cargando los datos..."); 
+            });
+            
+        }
+    }
+
+    enviarStatsHandbol(id_partido,ci_entrenador,ci_usuario){
+        if (formularios == 0) {
+            formularios=1;
+        }else{
+            formularios=0;
+        }
+        for (let a=0;a<formularios;a++) {
+            /*Futbol Estadisticas */
+            alert(a);
+            
+            let anotaciones = document.getElementById('anotaciones'+a).value;
+            let pases = document.getElementById('pases'+a).value;
+            let asistencias = document.getElementById('asistencias'+a).value;
+            let quites = document.getElementById('quites'+a).value;
+            let tiros = document.getElementById('tiros'+a).value;
+            let ganador = document.getElementById('dropdown-ganador').value;
+            let falta = document.getElementById('faltas'+a).value;
+            
+            let resultado = JSON.stringify(ganador);
+            
+            /*Futbol Sanciones*/
+            let tarjetaRoja = document.getElementById('tarjetaRoja'+a).value;
+            let tarjetaAmarilla = document.getElementById('tarjetaAmarilla'+a).value;
+            let exclusion = document.getElementById('exclusion'+a).value;
+
+            let exclus = JSON.stringify(exclusion);
+            let ci_user = JSON.stringify(ci_usuario);
+            let ci_coach = JSON.stringify(ci_entrenador);
+            let goles = JSON.stringify(anotaciones);
+            let pase = JSON.stringify(pases);
+            let asist = JSON.stringify(asistencias);
+            let quite = JSON.stringify(quites);
+            let tiro = JSON.stringify(tiros);
+            let tarjRoja = JSON.stringify(tarjetaRoja);
+            let tarjAmarilla = JSON.stringify(tarjetaAmarilla);
+            let faltas = JSON.stringify(falta);
+            /*Globales */
+            let team = JSON.stringify(equipo);
+            let id_part = JSON.stringify(id_partido); 
+            let hand = '';
+            let handbol = JSON.stringify(hand);
+
+            ajax.open(method, url, asynchronus); 
+
+            jQuery.get(url, {ci_deportista: ci_user, ci_entrenador: ci_coach, anotaciones: goles, pases: pase,asistencias: asist, quites: quite,tiros:tiro,tarjetaRoja:tarjRoja,
+                            tarjetaAmarilla: tarjAmarilla,handbol:handbol, id_partido:id_part,nombre_equipo: team, resultado: resultado, faltas:faltas, exclusion:exclus}, function(data) 
             { 
                 let dat = JSON.parse(data);
                 if (dat == 'Se cargaron los datos.') {

@@ -24,6 +24,7 @@
                 echo json_encode($respuesta);
                 exit();
             }
+
             if (isset($_REQUEST['basket'])) {
                 $ci_deportista = json_decode($_REQUEST['ci_deportista']);
                 $ci_entrenador = json_decode($_REQUEST['ci_entrenador']);
@@ -42,7 +43,27 @@
                 $resultado = json_decode($_REQUEST['resultado']);
                 $faltas = json_decode($_REQUEST['faltas']);
 
-                $respuesta = $init->insertEstadisticaBasquetbol($ci_deportista,$ci_entrenador,$anotaciones,$pases,$asistencias,$quites,$tiros,$nombre_equipo,$id_partido,$faltas,$resultado,$falta_antideportiva,$falta_descalificante,$falta_personal,$falta_tecnica);
+                $respuesta = $init->insertEstadisticaBasquetbol($ci_deportista,$ci_entrenador,$anotaciones,$pases,$asistencias,$quites,$tiros,$nombre_equipo,$id_partido,$faltas,$resultado,$falta_antideportiva,$falta_descalificante,$falta_personal,$falta_tecnica,$rebotes);
+                echo json_encode($respuesta);
+                exit();
+            }
+
+            if (isset($_REQUEST['handbol'])) {
+                $ci_deportista = json_decode($_REQUEST['ci_deportista']);
+                $ci_entrenador = json_decode($_REQUEST['ci_entrenador']);
+                $anotaciones = json_decode($_REQUEST['anotaciones']);
+                $pases = json_decode($_REQUEST['pases']);
+                $asistencias = json_decode($_REQUEST['asistencias']);
+                $quites = json_decode($_REQUEST['quites']);
+                $tiros = json_decode($_REQUEST['tiros']);
+                $tarjetaRoja = json_decode($_REQUEST['tarjetaRoja']);
+                $tarjetaAmarilla = json_decode($_REQUEST['tarjetaAmarilla']);
+                $id_partido = json_decode($_REQUEST['id_partido']);
+                $nombre_equipo = json_decode($_REQUEST['nombre_equipo']);
+                $resultado = json_decode($_REQUEST['resultado']);
+                $faltas = json_decode($_REQUEST['faltas']);
+                $exclusion = json_decode($_REQUEST['exclusion']);
+                $respuesta = $init->insertEstadisticaHandbol($ci_deportista,$ci_entrenador,$anotaciones,$pases,$asistencias,$quites,$tiros,$nombre_equipo,$id_partido,$faltas,$tarjetaAmarilla,$tarjetaRoja,$resultado,$exclusion);
                 echo json_encode($respuesta);
                 exit();
             }

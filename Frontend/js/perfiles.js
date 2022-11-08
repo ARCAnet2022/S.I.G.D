@@ -58,18 +58,27 @@ class Profile{
             }else if(dat[1] == 'entrenador'){
 
                 init.profileUsuario(dat);
+                document.getElementById("nro_funcionario").innerHTML = '#'+dat[0].nro_funcionario;
+                document.getElementById("horas_trabajo_semanales").innerHTML = dat[0].horas_trabajo_semanales+' Horas';
 
             }else if(dat[1] == 'scout'){
 
                 init.profileUsuario(dat);
+                document.getElementById("experiencia").innerHTML = dat[0].experiencia+' Años';
 
             }else if(dat[1] == 'juez'){
 
                 init.profileUsuario(dat);
+                document.getElementById("carne_salud").innerHTML = dat[0].carne_salud;
+                document.getElementById("horas_trabajo_semanales").innerHTML = dat[0].horas_trabajo_semanales+' Horas';
+                document.getElementById("experiencia").innerHTML = dat[0].experiencia+' Años';
 
             }else if(dat[1] == 'deportista'){
 
                 init.profileUsuario(dat);
+                document.getElementById("carne_salud").innerHTML = dat[0].carne_salud;
+                document.getElementById("nombre_equipo").innerHTML = dat[0].nombre_equipo;
+                document.getElementById("posicion").innerHTML = dat[0].posicion;
             }
         
 
